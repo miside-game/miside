@@ -7,6 +7,7 @@
   },
   "navigation": {
     "path": "/",
+    "logoText": "MiSide",
     "navbar": [
       {
         "title": "Home",
@@ -32,8 +33,9 @@
       "about": {
         "title": "About MiSide",
         "content": [
+          "“Let's imagine that you have a game in which you care for a character. But could you imagine one day getting into that game yourself?” -Aihasto",
           "MiSide is an innovative adventure game that masterfully incorporates horror elements, creating a unique blend of gameplay experiences. The game combines first-person adventure mechanics with visual novel storytelling.",
-          "The game features a distinctive art style with 3D graphics and anime influences, complemented by an authentic soundtrack that transitions from warm melodies to eerie ambient sounds as the story progresses."
+          "MiSide features a distinctive art style with 3D graphics and anime influences, complemented by an authentic soundtrack that transitions from warm melodies to eerie ambient sounds as the story progresses."
         ]
       },
       "gameplay": {
@@ -50,7 +52,7 @@
             }
           },
           {
-            "title": "Minigames and Puzzles",
+            "title": "MiSide Minigames and Puzzles",
             "content": "Engage with a variety of minigames and puzzles scattered throughout the experience, adding flavor and challenge to the gameplay.",
             "media": {
               "url": "/assets/mini.jpeg",
@@ -69,7 +71,7 @@
           },
           {
             "title": "Psychological Horror",
-            "content": "Experience a combination of psychological tension and supernatural horror, creating an unsettling atmosphere that keeps you engaged.",
+            "content": "Experience a combination of psychological tension and supernatural horror in MiSide, creating an unsettling atmosphere that keeps you engaged.",
             "media": {
               "url": "/assets/horror-element.jpeg",
               "alt": "Horror Elements",
@@ -93,7 +95,7 @@
         "content": [
           {
             "title": "Customizable Protagonist",
-            "content": "Personalize your character's appearance and attributes to enhance immersion in the game world."
+            "content": "Personalize your character's appearance and attributes to enhance immersion in the MiSide world."
           },
           {
             "title": "Dynamic Character Interactions",
@@ -109,7 +111,7 @@
           },
           {
             "title": "Progress Tracking",
-            "content": "Monitor your journey through achievements and collectibles, which provide insights into your gameplay experience."
+            "content": "Monitor your journey through achievements and collectibles, which provide insights into your MiSide gaming experience."
           },
           {
             "title": "Voice Acting Support",
@@ -158,20 +160,52 @@
         "subtitle": "Frequently Asked Questions about MiSide",
         "content": [
           {
+            "question": "What is MiSide?",
+            "answer": "MiSide is an adventure game with horror elements that tells the story of a simple guy who mysteriously finds himself in a mobile simulation."
+          },
+          {
             "question": "What kind of gameplay can I expect?",
             "answer": "MiSide combines adventure horror with visual novel elements, featuring exploration, puzzle-solving, and character interactions. Players explore dark rooms, interact with objects, and make choices that affect the story's outcome."
           },
           {
-            "question": "Is there voice acting in the game?",
+            "question": "What platforms is MiSide available on?",
+            "answer": "MiSide is available on Windows and can be downloaded from platforms like itch.io and Steam."
+          },
+          {
+            "question": "How long is the average gameplay session?",
+            "answer": "The average session lasts about half an hour."
+          },
+          {
+            "question": "Is there voice acting in MiSide?",
             "answer": "Yes, MiSide includes voice acting, currently available in Russian. This adds depth to character interactions and enhances the storytelling experience."
+          },
+          {
+            "question": "Are there multiple endings?",
+            "answer": "Yes, player choices throughout the game lead to different endings, enhancing replayability."
+          },
+          {
+            "question": "How many achievements are there in MiSide?",
+            "answer": "MiSide features 26 achievements that players can unlock through various tasks during gameplay."
           },
           {
             "question": "Can I replay chapters?",
             "answer": "Yes, players can revisit chapters from the main menu after completing the game. This feature allows you to unlock achievements or explore different narrative paths."
           },
           {
-            "question": "What platforms is MiSide available on?",
-            "answer": "MiSide is available on Windows and can be downloaded from platforms like itch.io and Steam."
+            "question": "Will there be more content added to MiSide?",
+            "answer": "Yes, updates are expected to include new content and features based on player feedback. "
+          },
+          {
+            "question": "Is there a planned sequel for MiSide?",
+            "answer": "While specific details are not confirmed, there is interest from both players and developers for potential sequels or expansions. "
+          },
+          {
+            "question": "Is there controller support in MiSide?",
+            "answer": "The game has controller support, but it may be buggy. If you experience issues, try disconnecting the controller and restarting the game."
+          },
+          {
+            "question": "What should I do if the game keeps moving to the right?",
+            "answer": "This issue may occur if you have a controller plugged in. Disconnecting it and restarting the game can resolve the problem."
           }
         ]
       }

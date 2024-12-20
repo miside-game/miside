@@ -83,19 +83,18 @@
   </script>
   
 </head>
-<body class="bg-[url('/assets/miside.jpeg')] bg-cover w-full max-w-[1000px] m-auto px-4 text-yellow font-mono bg-fixed backdrop-blur-sm">
+<body class="bg-[url('/assets/miside.jpeg')] bg-cover w-full max-w-[1200px] m-auto px-4 text-yellow font-mono bg-fixed backdrop-blur-sm">
   {# FB comment #}
   {# <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></script> #}
   {# FB comment #}
   <header class="bg-green bg-opacity-80 backdrop-blur-lg h-20 flex justify-between items-center py-4 px-4 shadow-md sticky top-0 z-[999] font-sg">
-    <a href="{{ '/' | localizeUrl(currentLang) }}" alt="Homicipher Game Guide">
+    <a href="{{ '/' | localizeUrl(currentLang) }}" alt="MiSide">
         <div class="w-60 font-black text-md flex items-center">
           <div class="w-10 h-10 rounded-full overflow-hidden">
             <img src="/assets/favicon.ico" class="w-20"/>
           </div>
-          {# <img src="/assets/logo.png" class="mt-4 w-32 md:w-40"/> #}
-          <span class="ml-2 text-light">{{ translations.pages[currentPage].hero.title }}</span>
+          <span class="ml-2 text-light font-black text-xl">{{ translations.navigation.logoText }}</span>
         </div>
     </a>
     <div class="flex items-center gap-4">
