@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+{# 获取当前语言 #}
+{% set currentLang = "en" %}
+{% for lang in ["zh", "ja", "ko", "fil", "vi", "id", "ms", "th", "ru", "uk", "de", "pt"] %}
+  {% if page.url.startsWith("/" + lang + "/") %}
+    {% set currentLang = lang %}
+  {% endif %}
+{% endfor %}
+
+{# 获取当前页面的i18n数据 #}
+{% if i18n[currentLang] %}
+  {% set translations = i18n[currentLang] %}
+{% else %}
+  {% set translations = i18n["en"] %}
+{% endif %}
+
+{% set currentPage = page.url | replace("/" + currentLang + "/", "/") | replace("/blog/", "") | replace("/", "") %}
+{% if currentPage %}
+  {% set currentPage = currentPage %}
+{% else %}
+  {% set currentPage = "index" %}
+{% endif %}
+
+<html lang="{{ translations.meta.lang }}" dir="{{ translations.meta.dir }}">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  
+  <title>{{ translations.pages[currentPage].title }}</title>
+  <meta name="description" content="{{ translations.pages[currentPage].description }}">
+  
+  {# OpenGraph和Twitter卡片标签 #}
+  <meta property="og:title" content="{{ translations.pages[currentPage].title }}" />
+  <meta property="og:description" content="{{ translations.pages[currentPage].description }}" />
+  <meta property="og:url" content="https://miside.im{{ page.url }}" />
+  <meta property="og:site_name" content="miside.im" />
+  <meta property="og:image" content="https://miside.im/assets/hero.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ translations.pages[currentPage].title }}" />
+  <meta name="twitter:description" content="{{ translations.pages[currentPage].description }}" />
+  <meta name="twitter:image" content="https://miside.im/assets/hero.jpg" />
+  <link rel="canonical" href="https://miside.im{{ page.url }}" />
+  
+  {# 添加语言替代链接 #}
+  {# {% for lang in ["en", "zh", "ja", "ko", "fil", "vi", "id", "ms", "th", "ru", "uk", "de", "pt"] %} #}
+  {# {% for lang in ["en", "zh"] %}
+    {% if lang == "en" %}
+      {% set langPath = "" %}
+    {% else %}
+      {% set langPath = "/" + lang %}
+    {% endif %}
+    <link rel="alternate" hreflang="{{ lang }}" href="https://miside.im{{ langPath }}{{ page.url | replace("/" + currentLang + "/", "/") }}" />
+  {% endfor %} #}
+  
+  <meta name="google-adsense-account" content="ca-pub-5331303144323541">
+ 
+  <link id="favicon" rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/normalize.min.css">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <!-- <link rel="stylesheet" type="text/css" href="./toastify.min.css"> -->
+  <!-- <script type="text/javascript" src="./toastify-js.js"></script> -->
+  <script src="/js/tailwindcss.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            green: '#231a22',
+            yellow: '#ffffff',
+            red: '#5f2e6b',
+            light: '#ff549d'
+          },
+          fontFamily: {
+            'sg': ['SourGummy', 'Verdana', 'Arial', 'Helvetica', 'sans-serif'],
+           
+          }
+        }
+      }
+    }
+
+  </script>
+  
+</head>
+<body class="bg-[url('/assets/miside.jpeg')] bg-cover w-full max-w-[1000px] m-auto px-4 text-yellow font-mono bg-fixed backdrop-blur-sm">
+  {# FB comment #}
+  {# <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0"></script> #}
+  {# FB comment #}
+  <header class="bg-green bg-opacity-80 backdrop-blur-lg h-20 flex justify-between items-center py-4 px-4 shadow-md sticky top-0 z-[999] font-sg">
+    <a href="{{ '/' | localizeUrl(currentLang) }}" alt="Homicipher Game Guide">
+        <div class="w-60 font-black text-md flex items-center">
+          <div class="w-10 h-10 rounded-full overflow-hidden">
+            <img src="/assets/favicon.ico" class="w-20"/>
+          </div>
+          {# <img src="/assets/logo.png" class="mt-4 w-32 md:w-40"/> #}
+          <span class="ml-2 text-light">{{ translations.pages[currentPage].hero.title }}</span>
+        </div>
+    </a>
+    <div class="flex items-center gap-4">
+      <nav id="nav-menu" class="hidden lg:block">
+        <div class="shadow-md shadow-red bg-green lg:shadow-none flex flex-col fixed z-[9999] top-14 right-4 shadow-md lg:static p-4 text-sm lg:text-md lg:flex-row items-center gap-6 font-bold">
+          {% for item in translations.navigation.navbar %}
+            <a href="{{ item.url | localizeUrl(currentLang) }}" class="nav-link hover:text-light hover:underline hover:decoration-2 hover:underline-offset-8">{{ item.title }}</a>
+          {% endfor %}
+          <!-- Language Dropdown -->
+          {# <div class="relative">
+            <button id="language-button" class="border border-red text-xs px-2 py-1 flex items-center space-x-1 hover:bg-red hover:bg-opacity-80 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"></path></svg>
+              <span>{{ translations.languageSwitcher.currentLanguage }}</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div id="language-menu" class="absolute shadow-red shadow-md right-0 mt-2 w-28 lg:w-48 bg-green bg-opacity-80 rounded shadow-lg hidden">
+              
+              {% for lang in ["en", "zh"] %}
+                {% if lang == "en" %}
+                  {% set langPath = "" %}
+                {% else %}
+                  {% set langPath = "/" + lang %}
+                {% endif %}
+                {% if i18n[lang] %}
+                  {% set langName = i18n[lang].meta.language %}
+                {% else %}
+                  {% set langName = lang %}
+                {% endif %}
+                <a href="{{ langPath }}{{ page.url | replace("/" + currentLang + "/", "/") }}"
+                  class="block px-4 py-2 hover:bg-red hover:bg-opacity-100 {% if lang == currentLang %}text-light hover:text-white{% endif %}">
+                  {{ langName }}
+                </a>
+              {% endfor %}
+            </div>
+          </div>  #}
+        </div>
+      </nav>
+      <button id="menu-toggle" class="lg:hidden p-2">
+        <img src="/assets/hum.svg" class="w-6 h-6" alt="unfold"/>
+      </button>
+     
+    
+
+    </div>
+
+  </header>
+  
+  {{ content | safe }}
+
+  <section class="bg-green bg-gradient-to-l from-green via-red to-green" id="cta">
+    <div class="text-center p-8 rounded-lg text-yellow">
+        <h2 class="text-2xl font-bold mb-2 font-sg text-light">{{ translations.cta.title }}</h2>
+        <p class="mb-6 opacity-75 font-sg text-light bg-clip-text text-transparent bg-gradient-to-r from-light to-yellow">{{ translations.cta.description }}</p>
+        <div class="flex flex-wrap justify-center gap-4 mt-6">
+          {% for platform in translations.cta.platforms %}
+          <a href="{{ platform.link }}" target="_blank" class="shadow-lg shadow-red py-3 px-6 bg-gradient-to-br from-green to-green via-red animate-gradient-x rounded-full font-black hover:scale-110 transition duration-300 font-sg text-light">
+            {{ platform.title }} →
+          </a>
+          {% endfor %}
+        </div>
+
+    </div>
+  </section>
+  <footer class="bg-green bg-opacity-80 py-5 flex flex-col justify-center items-center text-center">
+    <p class="text-xs mt-10">
+      &copy;
+      <span id="copyright"></span>
+      miside.im
+      <span id="copyright-year">{{ translations.footer.copyright }}</span>
+      
+      <a href="{{ '/privacy' | localizeUrl(currentLang) }}" class="text-light">
+        {{ translations.footer.privacyPolicy }}
+      </a>
+      <a href="{{ translations.footer.gitlink }}" target="_blank" class="ml-4 text-light">
+        {{ translations.footer.github }}
+      </a>   
+
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById('copyright').innerText = new Date().getFullYear() + '';
+    document.addEventListener("DOMContentLoaded", function() {
+      const currentUrlHash = window.location.hash;
+      const currentUrlPathname = window.location.pathname;
+      const currentUrl = currentUrlHash ? currentUrlPathname + currentUrlHash : currentUrlPathname;
+
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        // 检查当前路径是否包含blog，如果是则高亮blog链接
+        if (currentUrlPathname.includes('/blog/') && href.includes('/blogentry/')) {
+          link.classList.add('text-light');
+        }
+        // 其他精确匹配的情况
+        else if (href === currentUrl) {
+          link.classList.add('text-light');
+        }
+      });
+
+      window.addEventListener('hashchange', function() {
+        const currentUrlHash = window.location.hash;
+        const currentUrlPathname = window.location.pathname;
+        const currentUrl = currentUrlHash ? currentUrlPathname + currentUrlHash : currentUrlPathname;
+        
+        navLinks.forEach(link => {
+          link.classList.remove('text-light');
+          const href = link.getAttribute('href');
+          // 检查当前路径是否包含blog，如果是则高亮blog链接
+          if (currentUrlPathname.includes('/blog/') && href === '/blogentry/') {
+            link.classList.add('text-light');
+          }
+          // 其他精确匹配的情况
+          else if (href === currentUrl) {
+            link.classList.add('text-light');
+          }
+        });
+      });
+
+    });
+
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('hidden');
+    });
+
+    // 语言切换功能
+    {# const langButton = document.getElementById('language-button');
+    const langMenu = document.getElementById('language-menu');
+    let isMenuOpen = false;
+
+    langButton.addEventListener('click', function(e) {
+      e.stopPropagation();
+      isMenuOpen = !isMenuOpen;
+      if (isMenuOpen) {
+        langMenu.classList.remove('hidden');
+      } else {
+        langMenu.classList.add('hidden');
+      }
+    });
+
+    // 点击其他地方关闭菜单
+    document.addEventListener('click', function(e) {
+      if (!langMenu.contains(e.target) && !langButton.contains(e.target)) {
+        langMenu.classList.add('hidden');
+        isMenuOpen = false;
+      }
+    }); #}
+
+  function copyPageUrl() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      const toast = document.createElement('div');
+      toast.textContent = 'Link copied!';
+      toast.style.cssText = `
+          position: fixed;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: rgba(255, 255, 255, 0.9);
+          color: #000;
+          padding: 8px 16px;
+          border-radius: 4px;
+          z-index: 1000;
+      `;
+      document.body.appendChild(toast);
+      
+      setTimeout(() => {
+          toast.remove();
+      }, 2000);
+    }).catch(err => {
+      console.error('Failed to copy: ', err);
+    });
+  }
+  </script>
+  <!-- For Analysis -->
+  <script defer data-domain="miside.im" src="https://app.pageview.app/js/script.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FQFZFB4EEN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FQFZFB4EEN');
+  </script>
+
+
+</body>
+</html>

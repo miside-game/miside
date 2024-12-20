@@ -1,0 +1,139 @@
+---
+layout: base.njk
+---
+
+{# 获取当前语言 #}
+{% set currentLang = "en" %}
+{% for lang in ["zh", "ja", "ko", "fil", "vi", "id", "ms", "th", "ru", "uk", "de", "pt"] %}
+  {% if page.url.startsWith("/" + lang + "/") %}
+    {% set currentLang = lang %}
+  {% endif %}
+{% endfor %}
+
+{# 获取当前页面的i18n数据 #}
+{% if i18n[currentLang] %}
+  {% set translations = i18n[currentLang] %}
+{% else %}
+  {% set translations = i18n["en"] %}
+{% endif %}
+
+<main class="bg-green bg-opacity-90 px-10 py-16 text-md mx-auto font-mono">
+    <section class="hero-section text-center">
+        <div class="flex flex-col md:flex-row items-center gap-4">
+            <div class="w-full md:w-1/2 flex flex-col items-center md:items-start">
+                <h1 class="text-4xl md:text-8xl font-sg font-black text-light drop-shadow-red bg-clip-text text-transparent bg-gradient-to-r from-light to-red">
+                    {{ translations.pages.index.hero.title }}
+                </h1>
+                <p class="text-left text-2xl mb-6 font-sg font-black bg-clip-text text-transparent bg-gradient-to-r from-light to-red">{{ translations.pages.index.hero.subtitle }}</p>
+                <p class="text-md opacity-75 mb-6 md:text-left">{{ translations.pages.index.hero.content }}</p>
+                <a href="/#cta" class="shadow-lg shadow-red w-60 py-3 px-6 bg-gradient-to-br from-green to-green via-red animate-gradient-x rounded-full font-black hover:scale-110 transition duration-300 font-sg text-light">{{ translations.pages.index.hero.buttonText }}</a>
+            </div>
+            <div class="w-full md:w-1/2 order-first md:order-last">
+                <img src="{{ translations.pages.index.hero.media.url }}" alt="{{ translations.pages.index.hero.media.alt }}" title="{{ translations.pages.index.hero.media.title }}" class="w-full m-auto rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <section class="mt-32 text-center h-full" id="about">
+        <div class="relative w-full h-[400px] md:h-[200px]">
+            <img src="/assets/hero.jpg" class="absolute inset-0 w-full h-[200px] object-cover filter blur-3xl">
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="">
+                    <h2 class="text-2xl font-sg text-light font-bold mb-4 md:mb-6">{{ translations.pages.index.about.title }}</h2>
+                    <div class="text-md opacity-75 space-y-4">
+                        {% for paragraph in translations.pages.index.about.content %}
+                        <p>{{ paragraph }}</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="mt-32" id="gameplay">
+        <h2 class="text-2xl font-bold mb-2 text-center font-sg text-light">{{ translations.pages.index.gameplay.title }}</h2>
+        <p class="mb-10 opacity-75 text-md w-full md:w-2/3 mx-auto text-center">{{ translations.pages.index.gameplay.subtitle }}</p>
+        <div class="flex flex-col gap-8">
+            {% for feature in translations.pages.index.gameplay.content %}
+            <div class="relative mb-8 overflow-hidden rounded-lg flex flex-col md:flex-row md:h-96">
+                <div class="w-full md:w-1/2 {% if loop.index is even %}md:order-2{% endif %}">
+                    <img src="{{ feature.media.url }}" alt="{{ feature.media.alt }}" class="w-full h-64 md:h-full object-cover" title="{{ feature.media.title }}"/>
+                </div>
+                <div class="w-full md:w-1/2 bg-black bg-opacity-50 flex items-center justify-center {% if loop.index is even %}md:order-1{% endif %}">
+                    <div class="text-white p-8">
+                        <h3 class="text-xl font-bold mb-4 font-sg text-light">{{ feature.title }}</h3>
+                        <p class="text-md opacity-75">{{ feature.content }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="mt-32" id="features">
+        <h2 class="text-2xl font-bold mb-2 text-center font-sg text-light">{{ translations.pages.index.ingame.title }}</h2>
+        <p class="mb-10 opacity-75 text-md w-full md:w-2/3 mx-auto text-center">{{ translations.pages.index.ingame.subtitle }}</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {% for feature in translations.pages.index.ingame.content %}
+            <div class="feature-card flex flex-col p-4 rounded-lg bg-gradient-to-br from-green to-green via-light animate-gradient-x transition duration-300 hover:scale-105">
+                <h3 class="text-sm font-bold mb-3 font-sg">{{ feature.title }}</h3>
+                <p class="text-sm opacity-75">{{ feature.content }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    {# <section class="mt-32" id="guides">
+        <h2 class="text-2xl font-bold mb-2 text-center font-sg text-light">{{ translations.pages.blogentry.title }}</h2>
+        <p class="mb-10 opacity-75 text-md w-full md:w-2/3 mx-auto text-center">{{ translations.pages.blogentry.description }}</p>
+    
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {% for post in translations.pages.blogentry.blogs %}
+            <div class="w-full cursor-pointer hover:brightness-50 overflow-hidden rounded-lg">
+                <a href="{{ post.path }}" class="">
+                    <img src="{{ post.media.url }}" alt="{{ post.media.alt }}" title="{{ post.media.title }}" style="height: 200px; width: 100%;">
+                    <div class="w-full bg-red text-light bg-opacity-20 p-4">
+                    <p class="mb-2 text-xs">{{ post.date }}</p>
+                    <h3 class="text-sm font-bold">{{ post.name }}</h3>
+                    <p class="mt-2 text-xs line-clamp-4">{{ post.desc }}</p>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </section>
+    </section> #}
+
+    <section class="mt-32" id="reviews">
+        <h2 class="text-2xl font-bold mb-2 text-center font-sg text-light">{{ translations.pages.index.reviews.title }}</h2>
+        <p class="mb-10 opacity-75 text-md w-full md:w-2/3 mx-auto text-center">{{ translations.pages.index.reviews.subtitle }}</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {% for review in translations.pages.index.reviews.content %}
+            <div class="feature-card p-6 bg-light bg-opacity-20 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md">
+                <div class="flex flex-col items-center mb-4">
+                    <div class="pb-4 border-b border-light border-opacity-50 text-center">
+                        <h3 class="text-sm font-bold text-nature">{{ review.name }}</h3>
+                        <p class="text-sm">{{ review.role }}</p>
+                    </div>
+                    <div class="flex text-yellow text-2xl mt-2 text-light">★★★★★</div>
+                </div>
+                <p class="text-sm opacity-75 text-center">{{ review.content }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section id="faqs" class="mt-32 text-center">
+        <h2 class="text-2xl font-bold mb-2 text-center font-sg text-light">{{ translations.pages.index.faq.title }}</h2>
+        <p class="mb-10 opacity-75 text-md w-full md:w-2/3 mx-auto text-center">{{ translations.pages.index.faq.subtitle }}</p>
+        <div class="md:grid md:grid-cols-2 md:gap-12 bg-opacity-20 p-8 rounded-lg">
+            {% for item in translations.pages.index.faq.content %}
+            <div class="py-4 border-b border-light border-opacity-50">
+                <h3 class="text-sm font-bold">{{ item.question }}</h3>
+                <p class="mt-2 text-sm opacity-75">{{ item.answer }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+   
+</main>

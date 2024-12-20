@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "lang": "en",
+    "dir": "ltr",
+    "locale": "en",
+    "language": "English"
+  },
+  "navigation": {
+    "path": "/",
+    "navbar": [
+      {
+        "title": "Home",
+        "url": "/"
+      }
+    ]
+  },
+  "pages": {
+    "index": {
+      "title": "MiSide: Step Into The Mysterious MiSide World",
+      "description": "MiSide is a unique psychological horror adventure game that blends first-person exploration with visual novel elements, a rich storyline and interesting plot.",
+      "hero": {
+        "title": "MiSide",
+        "subtitle": "Where Reality Meets Simulation, Romance Meets Horror",
+        "content": "Step into a mysterious world where an ordinary protagonist finds himself trapped within a mobile simulation game. What begins as seemingly mundane tasks typical of romance games takes a dark turn, leading to an increasingly unsettling journey filled with tension and unpredictability.",
+        "media": {
+          "url": "/assets/hero.jpg",
+          "alt": "MiSide Hero Image",
+          "title": "MiSide"
+        },
+        "buttonText": "Play Now →"
+      },
+      "about": {
+        "title": "About MiSide",
+        "content": [
+          "MiSide is an innovative adventure game that masterfully incorporates horror elements, creating a unique blend of gameplay experiences. The game combines first-person adventure mechanics with visual novel storytelling.",
+          "The game features a distinctive art style with 3D graphics and anime influences, complemented by an authentic soundtrack that transitions from warm melodies to eerie ambient sounds as the story progresses."
+        ]
+      },
+      "gameplay": {
+        "title": "Dive Into The Mysterious MiSide World",
+        "subtitle": "Experience a unique blend of adventure and horror",
+        "content": [
+          {
+            "title": "Adventure Horror Gameplay",
+            "content": "Explore dark rooms, interact with objects, search for clues, and avoid dangers, including being stalked by an unhinged character.",
+            "media": {
+              "url": "/assets/horror.jpeg",
+              "alt": "Horror Gameplay",
+              "title": "Adventure Horror"
+            }
+          },
+          {
+            "title": "Minigames and Puzzles",
+            "content": "Engage with a variety of minigames and puzzles scattered throughout the experience, adding flavor and challenge to the gameplay.",
+            "media": {
+              "url": "/assets/mini.jpeg",
+              "alt": "Puzzle System",
+              "title": "Puzzle Mechanics"
+            }
+          },
+          {
+            "title": "Multiple Endings",
+            "content": "Your choices throughout the game lead to different endings, enhancing replayability and encouraging exploration of various narrative paths.",
+            "media": {
+              "url": "/assets/endings.jpeg",
+              "alt": "Multiple Endings",
+              "title": "Ending System"
+            }
+          },
+          {
+            "title": "Psychological Horror",
+            "content": "Experience a combination of psychological tension and supernatural horror, creating an unsettling atmosphere that keeps you engaged.",
+            "media": {
+              "url": "/assets/horror-element.jpeg",
+              "alt": "Horror Elements",
+              "title": "Horror System"
+            }
+          },
+          {
+            "title": "Choice-Driven Progression",
+            "content": "Make decisions that affect the storyline and character interactions, allowing for a personalized gaming experience.",
+            "media": {
+              "url": "/assets/choice.jpeg",
+              "alt": "Choice System",
+              "title": "Choice Mechanics"
+            }
+          }
+        ]
+      },
+      "ingame": {
+        "title": "Discover What Makes MiSide Unique",
+        "subtitle": "Explore the captivating gameplay mechanics of MiSide",
+        "content": [
+          {
+            "title": "Customizable Protagonist",
+            "content": "Personalize your character's appearance and attributes to enhance immersion in the game world."
+          },
+          {
+            "title": "Dynamic Character Interactions",
+            "content": "Engage with various characters, particularly Mita, whose personality evolves throughout the game, revealing deeper psychological themes."
+          },
+          {
+            "title": "Atmospheric Sound Design",
+            "content": "Immerse yourself in a carefully crafted soundscape featuring ambient noises and music that enhance tension and horror."
+          },
+          {
+            "title": "Unique Visual Style",
+            "content": "Experience a vivid anime-inspired art style that contrasts sharply with horror themes, creating an unnerving juxtaposition."
+          },
+          {
+            "title": "Progress Tracking",
+            "content": "Monitor your journey through achievements and collectibles, which provide insights into your gameplay experience."
+          },
+          {
+            "title": "Voice Acting Support",
+            "content": "Enjoy voice acting support (currently available in Russian) that adds depth to character interactions and enhances storytelling."
+          }
+        ]
+      },
+      "reviews": {
+        "title": "What Players Say About MiSide",
+        "subtitle": "Why people love MiSide so much",
+        "content": [
+          {
+            "name": "Horror Enthusiast",
+            "role": "Game Critic",
+            "content": "MiSide perfectly utilizes every element of the horror genre, particularly its audiovisuals. The tension-driven atmosphere and jarring aesthetics create a truly frightening experience."
+          },
+          {
+            "name": "Visual Novel Expert",
+            "role": "Content Creator",
+            "content": "The blend of charming characters and surreal horror elements is masterfully done. The ambiguous narrative encourages players to piece together events on their own."
+          },
+          {
+            "name": "Adventure Gamer",
+            "role": "Veteran Player",
+            "content": "The gameplay mechanics are reminiscent of classic adventure horror, with exploration and puzzle-solving being key components that keep you engaged."
+          },
+          {
+            "name": "Sound Designer",
+            "role": "Industry Professional",
+            "content": "The top-tier audiovisual experience creates an unnerving atmosphere without overwhelming the player. The transition from warm melodies to eerie ambient sounds is particularly effective."
+          },
+          {
+            "name": "Story Analyst",
+            "role": "Gaming Journalist",
+            "content": "Despite using the familiar trope of being sucked into a game, the story remains engaging with compelling characters and excellent voice acting."
+          },
+          {
+            "name": "Technical Reviewer",
+            "role": "Game Tester",
+            "content": "While there are occasional bugs and pacing issues, the overall experience is polished with a variety of minigames and collectibles that add depth to gameplay."
+          }
+        ]
+      },
+      "faq": {
+        "title": "MiSide FAQs",
+        "subtitle": "Frequently Asked Questions about MiSide",
+        "content": [
+          {
+            "question": "What kind of gameplay can I expect?",
+            "answer": "MiSide combines adventure horror with visual novel elements, featuring exploration, puzzle-solving, and character interactions. Players explore dark rooms, interact with objects, and make choices that affect the story's outcome."
+          },
+          {
+            "question": "Is there voice acting in the game?",
+            "answer": "Yes, MiSide includes voice acting, currently available in Russian. This adds depth to character interactions and enhances the storytelling experience."
+          },
+          {
+            "question": "Can I replay chapters?",
+            "answer": "Yes, players can revisit chapters from the main menu after completing the game. This feature allows you to unlock achievements or explore different narrative paths."
+          },
+          {
+            "question": "What platforms is MiSide available on?",
+            "answer": "MiSide is available on Windows and can be downloaded from platforms like itch.io and Steam."
+          }
+        ]
+      }
+    },
+    "privacy": {
+      "title": "Privacy Policy | MiSide",
+      "description": "Privacy policy for MiSide. Learn how we protect your information while you explore our content."
+    },
+    "blogentry": {
+      "title": "MiSide Latest Guide",
+      "description": "Explore the comprehensive MiSide guide to learn about the game's latest updates, player choices, multiple endings, and more.",
+      "subtitle": "Latest MiSide Guides",
+      "blogs": []
+
+    }
+  },
+  "common": {
+    "playNow": "Play Now",
+    "readMore": "Read More",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+    
+  },
+  "cta": {
+    "title": "Start Your MiSide Adventure Now!",
+    "description": "Download MiSide and embark on a thrilling adventure filled with horror and suspense!",
+    "button": "Download Now →",
+    "platforms": [
+      {
+        "title": "Steam",
+        "link": "https://store.steampowered.com/app/2527500/MiSide/"
+      },
+      {
+        "title": "Itch.io",
+        "link": "https://aihasto.itch.io/miside"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "github": "Github",
+    "gitlink": "https://github.com/miside-game/miside",
+    "terms": "Terms of Service",
+    "contact": "Contact Us"
+  },
+  "languageSwitcher": {
+    "selectLanguage": "Select Language",
+    "currentLanguage": "English"
+  }
+}

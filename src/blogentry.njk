@@ -1,0 +1,51 @@
+---
+layout: base.njk
+---
+{# 获取当前语言 #}
+{% set currentLang = "en" %}
+{% for lang in ["zh", "ja", "ko", "fil", "vi", "id", "ms", "th", "ru", "uk", "de", "pt"] %}
+  {% if page.url.startsWith("/" + lang + "/") %}
+    {% set currentLang = lang %}
+  {% endif %}
+{% endfor %}
+
+{# 获取当前页面的i18n数据 #}
+{% if i18n[currentLang] %}
+  {% set translations = i18n[currentLang] %}
+{% else %}
+  {% set translations = i18n["en"] %}
+{% endif %}
+
+{% set currentPage = page.url | replace("/" + currentLang + "/", "/") | replace("/blog/", "") | replace("/", "") %}
+{% if currentPage %}
+  {% set currentPage = currentPage %}
+{% else %}
+  {% set currentPage = "index" %}
+{% endif %}
+
+<section class="p-10 bg-green">
+  <h1 class="w-full md:w-1/2 mx-auto text-light text-xl lg:text-3xl font-black font-sans text-center bg-gradient-to-br from-green to-green via-red animate-gradient-x">
+    <span class="font-sg">{{translations.pages.blogentry.title}}</span>
+  </h1>
+  <p class="text-center mt-4 text-xs md:w-2/3 mx-auto">
+    {{translations.pages.blogentry.description}}
+  </p>
+  <h2 class="mt-10 mb-4 text-md lg:text-xl text-light font-black font-sans">
+    <span class="underline decoration-double font-sg">{{translations.pages.blogentry.subtitle}}</span> 
+  </h2>
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {% for post in translations.pages.blogentry.blogs %}
+    <div class="w-full cursor-pointer hover:brightness-50 overflow-hidden rounded-lg">
+      <a href="{{ post.path }}" class="">
+          <img src="{{ post.media.url }}" alt="{{ post.media.alt }}" title="{{ post.media.title }}" style="height: 200px; width: 100%;">
+          <div class="w-full bg-red text-light bg-opacity-20 p-4">
+          <p class="mb-2 text-xs">{{ post.date }}</p>
+          <h3 class="text-sm font-bold">{{ post.name }}</h3>
+          <p class="mt-2 text-xs line-clamp-4">{{ post.desc }}</p>
+          </div>
+      </a>
+    </div>
+    {% endfor %}
+         
+  </section>
+</section>

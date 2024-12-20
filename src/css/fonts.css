@@ -1,0 +1,20 @@
+/* OptimusPrincepsSemiBold */
+@font-face {
+    font-family: 'SourGummy';
+    src: url('../fonts/SourGummy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* 字体回退方案 */
+:root {
+    --main-font-family: "SourGummy", Verdana, Arial, Helvetica, sans-serif;
+}
+
+/* 应用字体 */
+body {
+    font-family: var(--main-font-family);
+}
