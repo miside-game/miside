@@ -12,6 +12,10 @@
       {
         "title": "Home",
         "url": "/"
+      },
+      {
+        "title": "Download",
+        "url": "/#cta"
       }
     ]
   },

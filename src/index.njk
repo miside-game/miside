@@ -35,8 +35,8 @@ layout: base.njk
     </section>
 
     <section class="mt-32 text-center h-full" id="about">
-        <div class="relative w-full h-[400px] md:h-[200px]">
-            <img src="/assets/hero.jpg" class="absolute inset-0 w-full h-[200px] object-cover filter blur-3xl">
+        <div class="relative w-full h-[600px] md:h-[280px]">
+            <img src="/assets/hero.jpg" class="absolute inset-0 w-full h-[300px] object-cover filter blur-3xl">
             <div class="absolute inset-0 flex items-center justify-center">
                 <div class="">
                     <h2 class="text-2xl font-sg text-light font-bold mb-4 md:mb-6">{{ translations.pages.index.about.title }}</h2>
@@ -56,9 +56,9 @@ layout: base.njk
         <p class="mb-10 opacity-75 text-md w-full md:w-2/3 mx-auto text-center">{{ translations.pages.index.gameplay.subtitle }}</p>
         <div class="flex flex-col gap-8">
             {% for feature in translations.pages.index.gameplay.content %}
-            <div class="relative mb-8 overflow-hidden rounded-lg flex flex-col md:flex-row md:h-96">
+            <div class="relative mb-8 overflow-hidden rounded-lg flex flex-col md:flex-row md:h-72">
                 <div class="w-full md:w-1/2 {% if loop.index is even %}md:order-2{% endif %}">
-                    <img src="{{ feature.media.url }}" alt="{{ feature.media.alt }}" class="w-full h-64 md:h-full object-cover" title="{{ feature.media.title }}"/>
+                    <img src="{{ feature.media.url }}" alt="{{ feature.media.alt }}" class="w-full h-64 md:h-full object-cover hover:scale-110 transition duration-300" title="{{ feature.media.title }}"/>
                 </div>
                 <div class="w-full md:w-1/2 bg-red bg-opacity-50 flex items-center justify-center {% if loop.index is even %}md:order-1{% endif %}">
                     <div class="text-white p-8">
@@ -115,7 +115,7 @@ layout: base.njk
                         <h3 class="text-sm font-bold text-nature">{{ review.name }}</h3>
                         <p class="text-sm">{{ review.role }}</p>
                     </div>
-                    <div class="flex text-yellow text-2xl mt-2 text-light">★★★★★</div>
+                    <div class="flex text-2xl mt-2 text-light">★★★★★</div>
                 </div>
                 <p class="text-sm opacity-75 text-center">{{ review.content }}</p>
             </div>
