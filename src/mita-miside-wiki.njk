@@ -1,0 +1,151 @@
+---
+layout: base.njk
+---
+
+{# 获取当前语言 #}
+{% set currentLang = "en" %}
+{% for lang in ["zh", "ja", "ko", "fil", "vi", "id", "ms", "th", "ru", "uk", "de", "pt"] %}
+  {% if page.url.startsWith("/" + lang + "/") %}
+    {% set currentLang = lang %}
+  {% endif %}
+{% endfor %}
+
+{# 获取当前页面的i18n数据 #}
+{% if i18n[currentLang] %}
+  {% set translations = i18n[currentLang] %}
+{% else %}
+  {% set translations = i18n["en"] %}
+{% endif %}
+
+{% set currentPage = page.url | replace("/" + currentLang + "/", "/") | replace("/blog/", "") | replace("/", "") %}
+{% if currentPage %}
+  {% set currentPage = currentPage %}
+{% else %}
+  {% set currentPage = "index" %}
+{% endif %}
+
+<div class="bg-green px-10 py-6 text-md mx-auto font-mono container max-w-[1200px] md:flex md:space-x-4">
+    <!-- 左侧导航栏 -->
+    <nav class="w-full md:w-72 bg-red bg-opacity-20 md:bg-opacity-0 px-4 py-6 md:block">
+        <div class="logo mb-6">
+            <h1 class="text-xl lg:text-3xl font-black underline decoration-double font-sans">{{ translations.pages[currentPage].subtitle }}</h1>
+        </div>
+        <div class="nav-links space-y-2">
+            <h3 class="text-sm font-bold text-light mb-2">Navigation</h3>
+            <ul class="space-y-1 text-xs">
+                {% for item in translations.pages[currentPage].navigation %}
+                    {% if item.children.length > 0 %}
+                        <li>
+                            <a href="{{ item.path | localizeUrl(currentLang) }}" class="hover:text-light underline">{{ item.name }}</a>
+                            <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
+                                {% for child in item.children %}
+                                    {% if child.children.length > 0 %}
+                                        <li>
+                                            <a href="{{ child.path | localizeUrl(currentLang) }}" class="hover:text-light underline">{{ child.name }}</a>
+                                            <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
+                                                {% for grandchild in child.children %}
+                                                    <li><a href="{{ grandchild.path | localizeUrl(currentLang) }}" class="hover:text-light underline">{{ grandchild.name }}</a></li>
+                                                {% endfor %}
+                                            </ul>
+                                        </li>
+                                    {% else %}
+                                        <li><a href="{{ child.path | localizeUrl(currentLang) }}" class="hover:text-light underline">{{ child.name }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% else %}
+                        <li><a href="{{ item.path | localizeUrl(currentLang) }}" class="hover:text-light underline">{{ item.name }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- 主要内容区 -->
+    <main class="py-6 flex-1">
+        <article class="prose prose-invert">
+            <!-- Header -->
+            <header class="mb-8">
+                <h2 class="text-2xl font-black text-light mb-4">{{ translations.pages[currentPage].character }}</h2>
+                <div class="flex flex-col md:flex-row gap-8 bg-red bg-opacity-10 p-6 rounded-lg">
+                  <!-- Character Image -->
+                  <img src="{{ translations.pages[currentPage].media.url }}" 
+                      alt="{{ translations.pages[currentPage].media.alt }}" 
+                      title="{{ translations.pages[currentPage].media.title }}"
+                      class="w-full md:w-1/2 max-w-2xl mx-auto rounded-lg shadow-lg object-cover object-top max-h-[300px]">
+
+                  <!-- Quick Info Box -->
+                  <div class="mb-8 md:mb-0 text-xs">
+                      <h2 class="text-xl font-bold text-light mb-4">Quick Information</h2>
+                      <ul class="space-y-4">
+                        {% for item in translations.pages[currentPage]['quick-information'].content %}
+                          <li>
+                            <h3 class="font-bold">{{ item.title }}</h3> 
+                            <p class="mt-2 opacity-75">{{ item.content }}</p>
+                        </li>
+                        {% endfor %}
+                      </ul>
+                  </div>
+
+                   <!-- Character Image -->
+                  <img src="{{ translations.pages[currentPage].media2.url }}" 
+                      alt="{{ translations.pages[currentPage].media2.alt }}" 
+                      title="{{ translations.pages[currentPage].media2.title }}"
+                      class="w-full md:w-1/2 max-w-2xl mx-auto rounded-lg shadow-lg object-cover object-top max-h-[300px]">
+                </div>
+                
+            </header>
+
+
+            <!-- Overview Section -->
+            <section id="overview" class="mb-8">
+                <h2 class="text-xl font-bold text-light mb-4">Overview</h2>
+                {% for item in translations.pages[currentPage].overview %}
+                <p class="mb-4">{{ item | safe }}</p>
+                {% endfor %}
+            </section>
+
+            <!-- Personality Section -->
+            <section id="personality" class="mb-8">
+                <h2 class="text-xl font-bold text-light mb-4">Personality</h2>
+                {% for item in translations.pages[currentPage].personality %}
+                <p class="mb-4">{{ item | safe }}</p>
+                {% endfor %}
+            </section>
+
+            <!-- Relationships Section -->
+            <section id="appearance" class="mb-8">
+                <h2 class="text-xl font-bold text-light mb-4">Appearance</h2>
+                {% for item in translations.pages[currentPage].appearance %}
+                <p class="mb-4">{{ item | safe }}</p>
+                {% endfor %}
+            </section>
+
+            <!-- Gameplay Role Section -->
+            <section id="narrative-role" class="mb-8">
+                <h2 class="text-xl font-bold text-light mb-4">Narrative Role</h2>
+                {% for item in translations.pages[currentPage]['narrative-role'] %}
+                <p class="mb-4">{{ item | safe }}</p>
+                {% endfor %}
+            </section>
+
+
+            <!-- Related Links -->
+            {# <section class="mt-12">
+                <h2 class="text-xl font-bold text-light mb-4">Related Pages</h2>
+                <div class="grid gap-4">
+                    <a href="/blog/homicipher-characters/" class="block p-4 bg-red bg-opacity-10 hover:bg-opacity-20 rounded-lg">
+                        <h3 class="font-bold">All Homicipher Characters</h3>
+                        <p class="text-sm">Explore the complete cast of characters</p>
+                    </a>
+                    <a href="/blog/homicipher-all-endings-walkthrough/" class="block p-4 bg-red bg-opacity-10 hover:bg-opacity-20 rounded-lg">
+                        <h3 class="font-bold">All Homicipher Endings Guide</h3>
+                        <p class="text-sm">Discover how Mr. Crawling influences different endings</p>
+                    </a>
+                </div>
+            </section> #}
+        </article>
+    </main>
+</div>

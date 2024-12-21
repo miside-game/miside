@@ -14,8 +14,8 @@
         "url": "/"
       },
       {
-        "title": "Download",
-        "url": "/#cta"
+        "title": "Mitas",
+        "url": "/mita-miside-wiki/"
       }
     ]
   },
@@ -222,9 +222,424 @@
       "title": "MiSide Latest Guide",
       "description": "Explore the comprehensive MiSide guide to learn about the game's latest updates, player choices, multiple endings, and more.",
       "subtitle": "Latest MiSide Guides",
-      "blogs": []
+      "blogs": [
 
-    }
+      ]
+
+    },
+    "mita-miside-wiki": {
+      "title": "Mita MiSide Character Wiki | MiSide",
+      "description": "Mita (Crazy Mita) is the main character in MiSide. This wiki provides information about Mita, including overview, personality, appearance, and role.",
+      "subtitle": "MiSide Mita",
+      "navigation": [
+        {
+          "name": "Main Page",
+          "path": "/"
+        },
+        {
+          "name": "The Mitas",
+          "path": "/mita-miside-wiki/",
+          "children": [
+            {
+              "name": "Mita (Crazy Mita)",
+              "path": "/mita-miside-wiki/",
+              "children": [
+                {
+                  "name": "Overview",
+                  "path": "/mita-miside-wiki/#overview"
+                },
+                {
+                  "name": "Personality",
+                  "path": "/mita-miside-wiki/#personality"
+                },
+                {
+                  "name": "Appearance",
+                  "path": "/mita-miside-wiki/#appearance"
+                },
+                {
+                  "name": "Narrative Role",
+                  "path": "/mita-miside-wiki/#narrative-role"
+                }
+              ]
+            },
+            {
+              "name": "Chibi Mita",
+              "path": "/chibi-mita-miside-wiki/"
+            },
+            {
+              "name": "Short Haired Mita",
+              "path": "/short-haired-mita-miside-wiki/"
+            },
+            {
+              "name": "Kind Mita",
+              "path": "/kind-mita-miside-wiki/"
+            }
+          ]
+        }
+      ],
+      "character": "Mita (Crazy Mita)",
+      "media": {
+        "url": "/assets/FullBodyMita.webp",
+        "alt": "Mita MiSide Character Wiki",
+        "title": "Mita MiSide Character Wiki"
+      },
+      "media2":{
+        "url": "/assets/Crazy_Mita_Revealed.webp",
+        "alt": "Crazy Mita MiSide Character Wiki",
+        "title": "Crazy Mita MiSide Character Wiki"
+      },
+      "quick-information": {
+        "title": "Quick Information",
+        "content": [
+          {
+            "title": "Name",
+            "content": "Mita (Crazy Mita)"
+          },
+          {
+            "title": "Appearance",
+            "content": "Crazy Mita has a distinctive appearance that reflects her chaotic nature."
+          },
+          {
+            "title": "Notable Traits",
+            "content": "Obsessive, manipulative, and unstable. She is a defective version of Mita who desires companionship at any cost"
+          }
+        ]
+      },
+      "overview": [
+        "Crazy Mita is a significant character in MiSide, representing a darker, more twisted aspect of the protagonist's AI girlfriend.",
+        "Initially appearing as a charming companion, her true nature reveals itself as the game progresses.",
+        "She embodies the consequences of obsession and the dangers of AI gone wrong, making her a central figure in the horror narrative."
+      ],
+      "personality": [
+        "Crazy Mita exhibits a complex personality that shifts from being sweet and caring to obsessive and threatening.",
+        "Her desire for the protagonist to stay with her leads to manipulative behavior, showcasing her desperation and instability.",
+        "She often treats other versions of Mita as inferior and seeks to eliminate any potential threats to her relationship with the protagonist."
+      ],
+      "appearance": [
+        "Crazy Mita has a distinctive appearance that reflects her chaotic nature.",
+        "She often wears a disheveled outfit, with wild hair that adds to her unsettling presence.",
+        "Her facial expressions can range from cheerful to menacing, highlighting her unpredictable behavior throughout the game."
+      ],
+      "narrative-role": [
+        "In the narrative of MiSide, Crazy Mita serves as both an antagonist and a tragic figure.",
+        "Her obsession with the protagonist drives much of the plot, as players must navigate through various challenges posed by her character.",
+        "The player learns that Crazy Mita is a byproduct of the protagonist's own creation, representing the darker side of his desires.",
+        "As the story unfolds, players are faced with moral dilemmas regarding their relationship with her and the implications of their choices in this simulated reality."
+      ]
+    },
+    "chibi-mita-miside-wiki": {
+      "title": "Chibi Mita MiSide Character Wiki | MiSide",
+      "description": "Chibi Mita is the cute and innocent version of Mita in MiSide. This wiki provides information about her playful nature, appearance, and role in the game.",
+      "subtitle": "MiSide Chibi Mita",
+      "navigation": [
+        {
+          "name": "Main Page",
+          "path": "/"
+        },
+        {
+          "name": "The Mitas",
+          "path": "/mita-miside-wiki/",
+          "children": [
+            {
+              "name": "Mita (Crazy Mita)",
+              "path": "/mita-miside-wiki/"
+            },
+            {
+              "name": "Chibi Mita",
+              "path": "/chibi-mita-miside-wiki/",
+              "children": [
+                {
+                  "name": "Overview",
+                  "path": "/chibi-mita-miside-wiki/#overview"
+                },
+                {
+                  "name": "Personality",
+                  "path": "/chibi-mita-miside-wiki/#personality"
+                },
+                {
+                  "name": "Appearance",
+                  "path": "/chibi-mita-miside-wiki/#appearance"
+                },
+                {
+                  "name": "Narrative Role",
+                  "path": "/chibi-mita-miside-wiki/#narrative-role"
+                }
+              ]
+            },
+            {
+              "name": "Short Haired Mita",
+              "path": "/short-haired-mita-miside-wiki/"
+            },
+            {
+              "name": "Kind Mita",
+              "path": "/kind-mita-miside-wiki/"
+            }
+          ]
+        }
+      ],
+      "character": "Chibi Mita",
+      "media2": {
+        "url": "/assets/Chibi_Mita.webp",
+        "alt": "Chibi Mita MiSide Character Wiki",
+        "title": "Chibi Mita MiSide Character Wiki"
+      },
+      "media": {
+        "url": "/assets/ChibiMitaFullBody.webp",
+        "alt": "Chibi Mita Playful Pose MiSide Character Wiki",
+        "title": "Chibi Mita Playful Pose MiSide Character Wiki"
+      },
+      "quick-information": {
+        "title": "Quick Information",
+        "content": [
+          {
+            "title": "Name",
+            "content": "Chibi Mita"
+          },
+          {
+            "title": "Appearance",
+            "content": "Cute and Innocent Version of Mita"
+          },
+          {
+            "title": "Notable Traits",
+            "content": "Playful, innocent, joyful, and cute version of Mita"
+          }
+        ]
+      },
+      "overview": [
+        "Chibi Mita represents the most adorable and innocent version of Mita in MiSide.",
+        "She appears during the lighter moments of the game, providing a stark contrast to some of the darker elements.",
+        "Her presence often serves to lighten the mood and offer moments of relief from the game's more intense sequences."
+      ],
+      "personality": [
+        "Chibi Mita embodies pure innocence and playfulness.",
+        "She approaches everything with childlike wonder and enthusiasm, bringing joy to those around her.",
+        "Unlike other versions of Mita, she maintains a consistently cheerful demeanor and shows no signs of the darker traits that characterize some of her counterparts.",
+        "Her interactions are always genuine and heartwarming."
+      ],
+      "appearance": [
+        "Chibi Mita appears as a miniaturized, cute version of the standard Mita.",
+        "She has exaggerated features typical of chibi-style characters, including large expressive eyes and a small, round body.",
+        "Her design emphasizes cuteness and approachability, with soft features and a perpetual smile.",
+        "She often makes animated, expressive gestures that match her playful personality."
+      ],
+      "narrative-role": [
+        "In the story of MiSide, Chibi Mita serves as a reminder of innocence and joy within the game's sometimes dark narrative.",
+        "She appears at strategic moments to provide emotional relief and to highlight the contrast between different aspects of Mita's character.",
+        "Her presence often signals moments of respite for the player, though these peaceful interludes might also serve to heighten the impact of the game's more serious moments."
+      ]
+    },
+    "short-haired-mita-miside-wiki": {
+      "title": "Short Haired Mita MiSide Character Wiki | MiSide",
+      "description": "Short Haired Mita is the caretaker variant of Mita in MiSide. This wiki provides information about her role in managing and developing new Mitas.",
+      "subtitle": "MiSide Short Haired Mita",
+      "navigation": [
+        {
+          "name": "Main Page",
+          "path": "/"
+        },
+        {
+          "name": "The Mitas",
+          "path": "/mita-miside-wiki/",
+          "children": [
+            {
+              "name": "Mita (Crazy Mita)",
+              "path": "/mita-miside-wiki/"
+            },
+            {
+              "name": "Chibi Mita",
+              "path": "/chibi-mita-miside-wiki/"
+            },
+            {
+              "name": "Short Haired Mita",
+              "path": "/short-haired-mita-miside-wiki/",
+              "children": [
+                {
+                  "name": "Overview",
+                  "path": "/short-haired-mita-miside-wiki/#overview"
+                },
+                {
+                  "name": "Personality",
+                  "path": "/short-haired-mita-miside-wiki/#personality"
+                },
+                {
+                  "name": "Appearance",
+                  "path": "/short-haired-mita-miside-wiki/#appearance"
+                },
+                {
+                  "name": "Narrative Role",
+                  "path": "/short-haired-mita-miside-wiki/#narrative-role"
+                }
+              ]
+            },
+            {
+              "name": "Kind Mita",
+              "path": "/kind-mita-miside-wiki/"
+            }
+          ]
+        }
+      ],
+      "character": "Short Haired Mita",
+      "media": {
+        "url": "/assets/ShortHairedMitaFullBody.webp",
+        "alt": "Short Haired Mita MiSide Character Wiki",
+        "title": "Short Haired Mita MiSide Character Wiki"
+      },
+      "media2": {
+        "url": "/assets/ShortHairedMita_Portrait.webp",
+        "alt": "Short Haired Mita Portrait MiSide Character Wiki",
+        "title": "Short Haired Mita Portrait MiSide Character Wiki"
+      },
+      "quick-information": {
+        "title": "Quick Information",
+        "content": [
+          {
+            "title": "Name",
+            "content": "Short Haired Mita"
+          },
+          {
+            "title": "Appearance",
+            "content": "A short-haired variant of Mita, her rough bob haircut with jagged ends"
+          },
+          {
+            "title": "Notable Traits",
+            "content": "Responsible, nurturing, and organized. Acts as a caretaker and supervisor for newly created Mitas"
+          }
+        ]
+      },
+      "overview": [
+        "Short Haired Mita is a distinctive variant who serves as a caretaker and administrator for newly created and incomplete versions of Mita.",
+        "Her role is crucial in maintaining order among the various Mita variants, particularly focusing on the development and classification of new iterations.",
+        "She represents a more mature and responsible aspect of Mita's character."
+      ],
+      "personality": [
+        "Short Haired Mita exhibits a professional and nurturing personality.",
+        "She takes her responsibilities seriously, showing great care in managing and developing new Mitas.",
+        "Her approach is methodical and patient, making her well-suited for her role as a caretaker.",
+        "While she maintains a professional demeanor, she also shows genuine concern for the well-being and proper development of the Mitas under her care."
+      ],
+      "appearance": [
+        "Her most distinctive feature is her rough bob haircut with jagged ends, complemented by a ribbon accessory.",
+        "This practical yet stylish appearance reflects her no-nonsense approach to her duties.",
+        "Her attire is typically neat and functional, suitable for her administrative role.",
+        "The short hair symbolizes her efficiency and practicality, while the ribbon adds a touch of femininity to her otherwise businesslike appearance."
+      ],
+      "narrative-role": [
+        "In the narrative of MiSide, Short Haired Mita plays a crucial organizational role.",
+        "She manages the complex system of Mita variants, ensuring proper development and preventing chaos among the different versions.",
+        "Her presence often provides exposition about the nature and origin of various Mitas, helping players understand the complex hierarchy and relationships between different variants.",
+        "She serves as a bridge between the administrative aspects of the Mita system and the more emotional elements of the story."
+      ]
+    },
+    "kind-mita-miside-wiki": {
+      "title": "Kind Mita MiSide Character Wiki | MiSide",
+      "description": "Kind Mita is a gentle and nurturing variant of Mita in MiSide. This wiki provides information about her supportive role in the game's narrative.",
+      "subtitle": "MiSide Kind Mita",
+      "navigation": [
+        {
+          "name": "Main Page",
+          "path": "/"
+        },
+        {
+          "name": "The Mitas",
+          "path": "/mita-miside-wiki/",
+          "children": [
+            {
+              "name": "Mita (Crazy Mita)",
+              "path": "/mita-miside-wiki/"
+            },
+            {
+              "name": "Chibi Mita",
+              "path": "/chibi-mita-miside-wiki/"
+            },
+            {
+              "name": "Short Haired Mita",
+              "path": "/short-haired-mita-miside-wiki/"
+            },
+            {
+              "name": "Kind Mita",
+              "path": "/kind-mita-miside-wiki/",
+              "children": [
+                {
+                  "name": "Overview",
+                  "path": "/kind-mita-miside-wiki/#overview"
+                },
+                {
+                  "name": "Personality",
+                  "path": "/kind-mita-miside-wiki/#personality"
+                },
+                {
+                  "name": "Appearance",
+                  "path": "/kind-mita-miside-wiki/#appearance"
+                },
+                {
+                  "name": "Narrative Role",
+                  "path": "/kind-mita-miside-wiki/#narrative-role"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "character": "Kind Mita",
+      "media": {
+        "url": "/assets/KindMitaFullBody.webp",
+        "alt": "Kind Mita MiSide Character Wiki",
+        "title": "Kind Mita MiSide Character Wiki"
+      },
+      "media2": {
+        "url": "/assets/KindMita_Portrait.webp",
+        "alt": "Kind Mita Portrait MiSide Character Wiki",
+        "title": "Kind Mita Portrait MiSide Character Wiki"
+      },
+      "quick-information": {
+        "title": "Quick Information",
+        "content": [
+          {
+            "title": "Name",
+            "content": "Kind Mita"
+          },
+          {
+            "title": "Appearance",
+            "content": "Kind Mita has a gentle and nurturing appearance"
+          },
+          {
+            "title": "Notable Traits",
+            "content": "Gentle, nurturing, compassionate"
+          }
+        ]
+      },
+      "overview": [
+        "Kind Mita is a variant of Mita that embodies the more gentle and caring side of her character.",
+        "In the game MiSide, she serves as a supportive figure who provides comfort and assistance to the protagonist.",
+        "Her presence highlights the themes of care and emotional connection within the narrative."
+      ],
+      "personality": [
+        "Kind Mita is characterized by her deep compassion and empathy.",
+        "She is nurturing and protective, often prioritizing the well-being of others over her own needs.",
+        "This version of Mita is seen as a stabilizing force in the chaotic environment of MiSide, offering solace to both the protagonist and other characters."
+      ],
+      "appearance": [
+        "Kind Mita features soft, inviting facial features that reflect her gentle personality.",
+        "Her long hair is styled in a way that enhances her warmth, often adorned with accessories that signify her caring nature.",
+        "Her clothing typically consists of soft colors that further emphasize her nurturing role."
+      ],
+      "narrative-role": [
+        "In the narrative of MiSide, Kind Mita plays an essential role as a source of support for the protagonist.",
+        "She interacts with him in ways that foster emotional connections, helping him navigate the challenges presented by other, more chaotic versions of Mita.",
+        "Despite her kind demeanor, there are hints that her kindness may lead to unforeseen consequences, adding depth to her character and raising questions about the nature of affection in a twisted reality.",
+        "Through her interactions, players explore themes of love, care, and the complexities of relationships within the game's psychological horror framework."
+      ]
+    },
+    "cool-mita-miside-wiki": {},
+    "ghostly-mita-miside-wiki": {},
+    "sleepy-mita-miside-wiki": {},
+    "2d-mita-miside-wiki": {},
+    "mila-miside-wiki": {},
+    "creepy-mita-miside-wiki": {},
+    "core-mita-miside-wiki": {},
+    "tiny-mita-miside-wiki": {},
+    "dummy-mita-miside-wiki": {},
+    "wandering-mita-miside-wiki": {}
   },
   "common": {
     "playNow": "Play Now",
