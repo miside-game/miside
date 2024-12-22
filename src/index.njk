@@ -17,6 +17,38 @@ layout: base.njk
   {% set translations = i18n["en"] %}
 {% endif %}
 
+ <style>
+    .flip-card {
+        perspective: 1000px;
+        height: 300px;
+    }
+
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flip-card-back {
+        transform: rotateY(180deg);
+    }
+</style>
+
 <main class="bg-green bg-opacity-90 px-10 py-16 text-md mx-auto font-mono">
     <section class="hero-section text-center">
         <div class="flex flex-col md:flex-row items-center gap-4">
@@ -84,25 +116,42 @@ layout: base.njk
         </div>
     </section>
 
-    {# <section class="mt-32" id="guides">
-        <h2 class="text-2xl font-bold mb-2 text-center font-sg text-light">{{ translations.pages.blogentry.title }}</h2>
-        <p class="mb-10 opacity-75 text-md w-full md:w-2/3 mx-auto text-center">{{ translations.pages.blogentry.description }}</p>
-    
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {% for post in translations.pages.blogentry.blogs %}
-            <div class="w-full cursor-pointer hover:brightness-50 overflow-hidden rounded-lg">
-                <a href="{{ post.path }}" class="">
-                    <img src="{{ post.media.url }}" alt="{{ post.media.alt }}" title="{{ post.media.title }}" style="height: 200px; width: 100%;">
-                    <div class="w-full bg-red text-light bg-opacity-20 p-4">
-                    <p class="mb-2 text-xs">{{ post.date }}</p>
-                    <h3 class="text-sm font-bold">{{ post.name }}</h3>
-                    <p class="mt-2 text-xs line-clamp-4">{{ post.desc }}</p>
+    <section class="mt-32" id="mitas">
+        <h2 class="text-2xl font-bold mb-2 text-center font-sg text-light">{{ translations.pages.index.mitas.title }}</h2>
+        <p class="mb-10 opacity-75 text-md w-full md:w-2/3 mx-auto text-center">{{ translations.pages.index.mitas.subtitle }}</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            {% for item in translations.pages.index.mitas.content %}
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <!-- 正面 -->
+                    <div class="flip-card-front bg-red bg-opacity-20 rounded-lg overflow-hidden shadow-lg">
+                        <img src="{{ translations.pages[item.path].media.url }}" alt="{{ translations.pages[item.path].character }}" class="w-full h-60 object-cover object-top">
+                        <p class="text-md font-bold p-4 text-center font-sg text-light">{{ translations.pages[item.path].character }}</p>
                     </div>
-                </a>
+                    <!-- 背面 -->
+                    <div class="flip-card-back bg-red bg-opacity-20 rounded-lg overflow-hidden shadow-lg p-6 text-xs">
+                        <h3 class="text-lg font-bold mb-4 font-sg text-light"> 
+                            <a href="/{{ item.path }}" class="underline">
+                            {{ translations.pages[item.path].character }}
+                            </a>
+                        </h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="font-bold mb-2 text-light">Appearance</h4>
+                                <p class="opacity-75">{{ translations.pages[item.path]["quick-information"]["content"][1]["content"] }}</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2 text-light">Traits</h4>
+                                <p class="opacity-75">{{ translations.pages[item.path]["quick-information"]["content"][2]["content"] }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             {% endfor %}
-        </section>
-    </section> #}
+        </div>
+    </section>
+
 
     <section class="mt-32" id="reviews">
         <h2 class="text-2xl font-bold mb-2 text-center font-sg text-light">{{ translations.pages.index.reviews.title }}</h2>
