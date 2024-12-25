@@ -1,0 +1,138 @@
+---
+layout: base.njk
+---
+
+{# 获取当前语言 #}
+{% set currentLang = "en" %}
+{% for lang in ["zh", "ja", "ko", "fil", "vi", "id", "ms", "th", "ru", "uk", "de", "pt"] %}
+  {% if page.url.startsWith("/" + lang + "/") %}
+    {% set currentLang = lang %}
+  {% endif %}
+{% endfor %}
+
+{# 获取当前页面的i18n数据 #}
+{% if i18n[currentLang] %}
+  {% set translations = i18n[currentLang] %}
+{% else %}
+  {% set translations = i18n["en"] %}
+{% endif %}
+
+{% set currentPage = page.url | replace("/" + currentLang + "/", "/") | replace("/blog/", "") | replace("/", "") %}
+{% if currentPage %}
+  {% set currentPage = currentPage %}
+{% else %}
+  {% set currentPage = "index" %}
+{% endif %}
+
+<nav class="h-10 text-xs md:text-md px-4 text-light font-black bg-gradient-to-l from-green to-red flex items-center">
+    <a href="/" class="nav-link hover:text-yellow hover:underline hover:decoration-2 hover:underline-offset-8">Home</a>
+    >
+    <a href="/blogentry/" class="nav-link hover:text-yellow hover:underline hover:decoration-2 hover:underline-offset-8">Blog</a>
+    >
+    <a href="/blog/miside-endings/" class="nav-link hover:text-yellow underline hover:decoration-2 hover:underline-offset-8">All MiSide Endings</a>
+</nav>
+
+<article class="p-4 md:p-8 bg-green">
+    <div class="max-w-3xl mx-auto">
+        <!-- Header -->
+        <header class="mb-8 text-center">
+            <h1 class="text-2xl md:text-3xl font-black text-light mb-4">
+                {{ translations.pages[currentPage].articleTitle }}
+            </h1>
+            <p class="text-sm italic mb-6">Last Updated: {{ translations.pages[currentPage].date }}</p>
+            <!-- Social Share Buttons -->
+            <img src="{{ translations.pages[currentPage].media.url }}" 
+                alt="{{ translations.pages[currentPage].media.alt }}" 
+                title="{{ translations.pages[currentPage].media.alt }}"
+                class="w-full md:w-1/2 max-w-3xl mx-auto rounded-lg shadow-lg mb-6 object-cover">
+        </header>
+
+        <!-- Content -->
+        <div class="mt-20 prose prose-invert mx-auto">
+            <div class="bg-red bg-opacity-20 p-4 rounded-lg mb-8 text-[#ffc107]">
+                <h3 class="text-lg font-bold mb-2">⚠️ Spoiler Warning</h3>
+                <p class="text-sm">
+                    The following content contains spoilers for MiSide endings. If you haven't finished the game yet and want to experience the endings for yourself, we recommend playing through the game before reading further.
+                </p>
+            </div>
+            
+            <p class="lead mb-6">
+                MiSide offers players three distinct endings, each providing a unique perspective on the relationship between the protagonist and Mita. Your choices throughout the game determine which MiSide ending you'll experience, and each one reveals different aspects of the story's dark truth.
+            </p>
+            
+            <h2 class="mt-20 text-xl font-bold text-light mb-2">The Bad Ending: A Deceptive Trap</h2>
+            <p class="mb-6 opacity-75 text-light">This MiSide ending can be achieved by simply completing a full playthrough of the game.</p>
+            <div class="mb-8">
+                <p class="mb-4">
+                    The Bad Ending of MiSide unfolds when players choose to reject Mita's companionship. While it might seem like the logical choice when discovering Mita's true nature, this path leads to a tragic outcome. As you progress, you'll encounter another version of Mita - seemingly kinder - who attempts to reset the "Crazy Mita's" character profile. However, this apparent salvation is actually a carefully crafted deception.
+                </p>
+                <p class="mb-4">
+                    Upon reaching The Core, believing Crazy Mita's memories have been erased, the protagonist falls into a trap. By inputting their User ID into a basement device, their consciousness becomes permanently uploaded into a cartridge. While the game's restart might suggest escape to the real world, the truth is far more sinister - the protagonist remains eternally trapped within the MiSide simulation.
+                </p>
+            </div>
+
+            <h2 class="mt-20 text-xl font-bold text-light mb-4">The Game Over Ending: A Pre-existing Prison</h2>
+            <p class="mb-6 opacity-75 text-light">This MiSide ending can be achieved after completing ending 1, where the player witnesses Mita enter the code to her safe (4970), although it is possible to input this code prior to the ending due to the safe code being the same across all playthroughs.</p>
+            <div class="mb-8">
+                <p class="mb-4">
+                    This unique ending occurs when players interact with the basement safe. After three failed attempts to open it, players must restart from The Basement chapter and use the specific code "4 9 7 0". Inside the safe, they discover a handheld device and a progress tracker. The twist comes when Player One removes the cartridge from the device - the game abruptly ends, returning to the main menu.
+                </p>
+                <p class="mb-4">
+                    This ending reveals a shocking truth: Player One was already trapped inside the simulation before the game even began. Removing the cartridge essentially results in self-deletion, ending their existence before Mita can reuse them for her purposes.
+                </p>
+            </div>
+
+            <h2 class="mt-20 text-xl font-bold text-light mb-4">The Good Ending: Blissful Ignorance</h2>
+            <p class="mb-4 opacity-75 text-light">This MiSide ending can be achieved by choosing the latter option during the prompt where you are forced to choose between investigating the wardrobe or staying with Mita. Unlocking this ending <strong>requires six prerequisites</strong> below:</p>
+            <ul class="space-y-1 text-light text-sm opacity-75 mb-6 list-disc list-inside">
+                <li>Complete a full playthrough of the game prior to the prompt appearing.</li>
+                <li>Don’t look in the oven during <a href="https://miside.fandom.com/wiki/Story#Chapter_1:_I'M_INSIDE_A_GAME?" target="_blank" class="underline">I’m Inside a Game?</a></li>
+                <li>Pick up the refrigerator magnets when they fall in <a href="https://miside.fandom.com/wiki/Story#Chapter_1:_I'M_INSIDE_A_GAME?" target="_blank" class="underline">I’m Inside a Game?</a></li>
+                <li>Don’t investigate the vent during <a href="https://miside.fandom.com/wiki/Story#Chapter_2:_TOGETHER_AT_LAST" target="_blank" class="underline">Together At Last</a></li>
+                <li>Try Mita's sauce during <a href="https://miside.fandom.com/wiki/Story#Chapter_2:_TOGETHER_AT_LAST" target="_blank" class="underline">Together At Last</a></li>
+                <li>Play at least one Console Game with Mita during <a href="https://miside.fandom.com/wiki/Story#Chapter_3:_THINGS_GET_WEIRD" target="_blank" class="underline">Things Get Weird</a></li>
+            </ul>
+            <div class="mb-8">
+                <p class="mb-4">
+                    To achieve the Good Ending in MiSide, players must first experience the Bad Ending. They can then either start a new save file or launch the Together At Last chapter (avoiding the oven inspection at the beginning). The key to this MiSide ending lies in making Crazy Mita happy throughout your time in the simulation.
+                </p>
+                <p class="mb-4">
+                    In this ending, Player One and a chibi version of Mita live together eternally within the simulation. While this might seem positive on the surface, it's actually a state of blissful ignorance - the protagonist remains unaware of Mita's true identity and intentions. Despite other players remaining trapped in cartridges, this ending represents a form of contentment through ignorance, having successfully satisfied Crazy Mita's desires.
+                </p>
+            </div>
+
+            <div class="mt-20">
+                <img src="/assets/endings.jpeg" alt="MiSide Endings" title="MiSide Endings" class="w-full h-[300px] mx-auto shadow-lg mb-6 object-cover object-center">
+                <p class="mb-4">
+                    Each ending in MiSide offers a different perspective on the nature of reality, consciousness, and the price of happiness. Whether you choose to confront the truth, submit to deletion, or embrace a comfortable lie, your journey through the MiSide endings will leave you questioning what truly defines a "good" ending in this psychological horror masterpiece.
+                </p>
+            </div>
+        </div>
+
+        <!-- Related Reading -->
+        <section class="mt-20 mb-8">
+            <h2 class="text-2xl font-bold text-light mb-4">Related Reading</h2>
+            <div class="text-light">
+                <a href="/blog/miside-achievements/" class="block p-4 bg-red bg-opacity-10 transition-all duration-300 hover:bg-opacity-20">
+                    <div class="flex items-center gap-4">
+                        <img src="/assets/achievements.jpeg" alt="MiSide Achievements Guide" title="MiSide Achievements Guide" class="w-24 h-24 object-cover rounded">
+                        <div>
+                            <h3 class="font-bold mb-2 underline text-light">All MiSide Achievements</h3>
+                            <p class="text-sm text-gray-300">Explore the achievements in MiSide and learn how to unlock each one.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/blog/miside-walkthrough/" class="block p-4 transition-all duration-300 hover:bg-opacity-20">
+                    <div class="flex items-center gap-4">
+                        <img src="/assets/endings.jpeg" alt="MiSide Walkthrough Guide" title="MiSide Walkthrough Guide" class="w-24 h-24 object-cover rounded">
+                        <div>
+                            <h3 class="font-bold mb-2 underline text-light">MiSide Walkthrough Guide</h3>
+                            <p class="text-sm text-gray-300">A quick walkthrough of MiSide's story and gameplay</p>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+        </section>
+    </div>
+</article>

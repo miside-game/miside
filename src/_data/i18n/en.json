@@ -18,6 +18,10 @@
         "url": "/mita-miside-wiki/"
       },
       {
+        "title": "Blog",
+        "url": "/blogentry/"
+      },
+      {
         "title": "FAQs",
         "url": "/#faqs"
       }
@@ -189,6 +193,11 @@
           }
         ]
       },
+      "guides": {
+        "title": "MiSide Latest Guides",
+        "subtitle": "Explore the latest guides for MiSide"
+        
+      },
       "reviews": {
         "title": "What Players Say About MiSide",
         "subtitle": "Why people love MiSide so much",
@@ -285,13 +294,78 @@
       "description": "Privacy policy for MiSide. Learn how we protect your information while you explore our content."
     },
     "blogentry": {
-      "title": "MiSide Latest Guide",
+      "title": "MiSide Guide & Blogs",
       "description": "Explore the comprehensive MiSide guide to learn about the game's latest updates, player choices, multiple endings, and more.",
       "subtitle": "Latest MiSide Guides",
       "blogs": [
-
+        {
+          "name": "All MiSide Endings",
+          "date": "December 25, 2024",
+          "desc": "Learn about MiSide's multiple endings, including their significance and how to unlock them.",
+          "path": "/blog/miside-endings/",
+          "media": {
+            "url": "/assets/choice.jpeg",
+            "alt": "MiSide Endings",
+            "title": "MiSide Endings"
+          }
+        },
+        {
+          "name": "All MiSide Achievements",
+          "date": "December 25, 2024",
+          "desc": "Discover MiSide's 26 unique achievements that players can unlock and how to unlock them.",
+          "path": "/blog/miside-achievements/",
+          "media": {
+            "url": "/assets/achievements.jpeg",
+            "alt": "MiSide Achievements",
+            "title": "MiSide Achievements"
+          }
+        },
+        {
+          "name": "A Quick MiSide Walkthrough",
+          "date": "December 24, 2024",
+          "desc": "Get a quick overview of MiSide's story and gameplay, including the prologue, chapters, and challenges.",
+          "path": "/blog/miside-walkthrough/",
+          "media": {
+            "url": "/assets/endings.jpeg",
+            "alt": "MiSide Walkthrough",
+            "title": "MiSide Walkthrough"
+          }
+        }
       ]
 
+    },
+    "miside-endings":{
+      "title": "All MiSide Endings - MiSide Guide",
+      "description": "MiSide features three main endings that players can achieve based on their choices throughout the game. Here’s a detailed overview of each ending:",
+      "articleTitle": "All Three MiSide Endings Explained",
+      "date": "December 25, 2024",
+      "media": {
+        "url": "/assets/choice.jpeg",
+        "alt": "MiSide Endings",
+        "title": "MiSide Endings"
+      }
+    },
+    "miside-achievements": {
+      "title": "All MiSide Achievements - MiSide Guide",
+      "description": "MiSide features 26 unique achievements that players can unlock through various tasks during gameplay. Here’s a detailed overview of each achievement:",
+      "articleTitle": "All MiSide Achievements Collectible Guide",
+      "date": "December 25, 2024",
+      "media": {
+        "url": "/assets/achievements.jpeg",
+        "alt": "MiSide Achievements",
+        "title": "MiSide Achievements"
+      }
+    },
+    "miside-walkthrough": {
+      "title": "A Quick MiSide Walkthrough - MiSide Guide",
+      "description": "Get a quick overview of MiSide's story and gameplay, including the prologue, chapters, and challenges. This walkthrough will help you enter MiSide world asap.",
+      "articleTitle": "A Quick MiSide Walkthrough",
+      "date": "December 24, 2024",
+      "media": {
+        "url": "/assets/endings.jpeg",
+        "alt": "MiSide Walkthrough",
+        "title": "MiSide Walkthrough"
+      }
     },
     "mita-miside-wiki": {
       "title": "Mita MiSide Character Wiki | MiSide",
@@ -299,8 +373,26 @@
       "subtitle": "MiSide Mita",
       "navigation": [
         {
-          "name": "Main Page",
+          "name": "Home",
           "path": "/"
+        },
+        {
+          "name": "Blog",
+          "path": "/blogentry/",
+          "children": [
+            {
+              "name": "All MiSide Endings",
+              "path": "/blog/miside-endings/"
+            },
+            {
+              "name": "All MiSide Achievements",
+              "path": "/blog/miside-achievements/"
+            },
+            {
+              "name": "A Quick MiSide Walkthrough",
+              "path": "/blog/miside-walkthrough/"
+            }
+          ]
         },
         {
           "name": "The Mitas",
@@ -439,8 +531,26 @@
       "subtitle": "MiSide Chibi Mita",
       "navigation": [
         {
-          "name": "Main Page",
+          "name": "Home",
           "path": "/"
+        },
+        {
+          "name": "Blog",
+          "path": "/blogentry/",
+          "children": [
+            {
+              "name": "All MiSide Endings",
+              "path": "/blog/miside-endings/"
+            },
+            {
+              "name": "All MiSide Achievements",
+              "path": "/blog/miside-achievements/"
+            },
+            {
+              "name": "A Quick MiSide Walkthrough",
+              "path": "/blog/miside-walkthrough/"
+            }
+          ]
         },
         {
           "name": "The Mitas",
@@ -580,8 +690,26 @@
       "subtitle": "MiSide Short Haired Mita",
       "navigation": [
         {
-          "name": "Main Page",
+          "name": "Home",
           "path": "/"
+        },
+        {
+          "name": "Blog",
+          "path": "/blogentry/",
+          "children": [
+            {
+              "name": "All MiSide Endings",
+              "path": "/blog/miside-endings/"
+            },
+            {
+              "name": "All MiSide Achievements",
+              "path": "/blog/miside-achievements/"
+            },
+            {
+              "name": "A Quick MiSide Walkthrough",
+              "path": "/blog/miside-walkthrough/"
+            }
+          ]
         },
         {
           "name": "The Mitas",
@@ -722,8 +850,26 @@
       "subtitle": "MiSide Kind Mita",
       "navigation": [
         {
-          "name": "Main Page",
+          "name": "Home",
           "path": "/"
+        },
+        {
+          "name": "Blog",
+          "path": "/blogentry/",
+          "children": [
+            {
+              "name": "All MiSide Endings",
+              "path": "/blog/miside-endings/"
+            },
+            {
+              "name": "All MiSide Achievements",
+              "path": "/blog/miside-achievements/"
+            },
+            {
+              "name": "A Quick MiSide Walkthrough",
+              "path": "/blog/miside-walkthrough/"
+            }
+          ]
         },
         {
           "name": "The Mitas",
@@ -862,8 +1008,26 @@
       "subtitle": "MiSide Cool Mita",
       "navigation": [
         {
-          "name": "Main Page",
+          "name": "Home",
           "path": "/"
+        },
+        {
+          "name": "Blog",
+          "path": "/blogentry/",
+          "children": [
+            {
+              "name": "All MiSide Endings",
+              "path": "/blog/miside-endings/"
+            },
+            {
+              "name": "All MiSide Achievements",
+              "path": "/blog/miside-achievements/"
+            },
+            {
+              "name": "A Quick MiSide Walkthrough",
+              "path": "/blog/miside-walkthrough/"
+            }
+          ]
         },
         {
           "name": "The Mitas",
@@ -1003,8 +1167,26 @@
       "subtitle": "MiSide Ghostly Mita",
       "navigation": [
         {
-          "name": "Main Page",
+          "name": "Home",
           "path": "/"
+        },
+        {
+          "name": "Blog",
+          "path": "/blogentry/",
+          "children": [
+            {
+              "name": "All MiSide Endings",
+              "path": "/blog/miside-endings/"
+            },
+            {
+              "name": "All MiSide Achievements",
+              "path": "/blog/miside-achievements/"
+            },
+            {
+              "name": "A Quick MiSide Walkthrough",
+              "path": "/blog/miside-walkthrough/"
+            }
+          ]
         },
         {
           "name": "The Mitas",
@@ -1141,8 +1323,26 @@
       "subtitle": "MiSide Sleepy Mita",
       "navigation": [
         {
-          "name": "Main Page",
+          "name": "Home",
           "path": "/"
+        },
+        {
+          "name": "Blog",
+          "path": "/blogentry/",
+          "children": [
+            {
+              "name": "All MiSide Endings",
+              "path": "/blog/miside-endings/"
+            },
+            {
+              "name": "All MiSide Achievements",
+              "path": "/blog/miside-achievements/"
+            },
+            {
+              "name": "A Quick MiSide Walkthrough",
+              "path": "/blog/miside-walkthrough/"
+            }
+          ]
         },
         {
           "name": "The Mitas",
@@ -1280,8 +1480,26 @@
       "subtitle": "MiSide 2D Mita",
       "navigation": [
         {
-          "name": "Main Page",
+          "name": "Home",
           "path": "/"
+        },
+        {
+          "name": "Blog",
+          "path": "/blogentry/",
+          "children": [
+            {
+              "name": "All MiSide Endings",
+              "path": "/blog/miside-endings/"
+            },
+            {
+              "name": "All MiSide Achievements",
+              "path": "/blog/miside-achievements/"
+            },
+            {
+              "name": "A Quick MiSide Walkthrough",
+              "path": "/blog/miside-walkthrough/"
+            }
+          ]
         },
         {
           "name": "The Mitas",
@@ -1418,8 +1636,26 @@
       "subtitle": "MiSide Mila",
       "navigation": [
         {
-          "name": "Main Page",
+          "name": "Home",
           "path": "/"
+        },
+        {
+          "name": "Blog",
+          "path": "/blogentry/",
+          "children": [
+            {
+              "name": "All MiSide Endings",
+              "path": "/blog/miside-endings/"
+            },
+            {
+              "name": "All MiSide Achievements",
+              "path": "/blog/miside-achievements/"
+            },
+            {
+              "name": "A Quick MiSide Walkthrough",
+              "path": "/blog/miside-walkthrough/"
+            }
+          ]
         },
         {
           "name": "The Mitas",
@@ -1557,8 +1793,26 @@
       "subtitle": "MiSide Creepy Mita",
       "navigation": [
         {
-          "name": "Main Page",
+          "name": "Home",
           "path": "/"
+        },
+        {
+          "name": "Blog",
+          "path": "/blogentry/",
+          "children": [
+            {
+              "name": "All MiSide Endings",
+              "path": "/blog/miside-endings/"
+            },
+            {
+              "name": "All MiSide Achievements",
+              "path": "/blog/miside-achievements/"
+            },
+            {
+              "name": "A Quick MiSide Walkthrough",
+              "path": "/blog/miside-walkthrough/"
+            }
+          ]
         },
         {
           "name": "The Mitas",
@@ -1697,8 +1951,26 @@
       "subtitle": "MiSide Core Mita",
       "navigation": [
         {
-          "name": "Main Page",
+          "name": "Home",
           "path": "/"
+        },
+        {
+          "name": "Blog",
+          "path": "/blogentry/",
+          "children": [
+            {
+              "name": "All MiSide Endings",
+              "path": "/blog/miside-endings/"
+            },
+            {
+              "name": "All MiSide Achievements",
+              "path": "/blog/miside-achievements/"
+            },
+            {
+              "name": "A Quick MiSide Walkthrough",
+              "path": "/blog/miside-walkthrough/"
+            }
+          ]
         },
         {
           "name": "The Mitas",
@@ -1837,8 +2109,26 @@
       "subtitle": "MiSide Tiny Mita",
       "navigation": [
         {
-          "name": "Main Page",
+          "name": "Home",
           "path": "/"
+        },
+        {
+          "name": "Blog",
+          "path": "/blogentry/",
+          "children": [
+            {
+              "name": "All MiSide Endings",
+              "path": "/blog/miside-endings/"
+            },
+            {
+              "name": "All MiSide Achievements",
+              "path": "/blog/miside-achievements/"
+            },
+            {
+              "name": "A Quick MiSide Walkthrough",
+              "path": "/blog/miside-walkthrough/"
+            }
+          ]
         },
         {
           "name": "The Mitas",
@@ -1978,8 +2268,26 @@
       "subtitle": "MiSide Dummy Mita",
       "navigation": [
         {
-          "name": "Main Page",
+          "name": "Home",
           "path": "/"
+        },
+        {
+          "name": "Blog",
+          "path": "/blogentry/",
+          "children": [
+            {
+              "name": "All MiSide Endings",
+              "path": "/blog/miside-endings/"
+            },
+            {
+              "name": "All MiSide Achievements",
+              "path": "/blog/miside-achievements/"
+            },
+            {
+              "name": "A Quick MiSide Walkthrough",
+              "path": "/blog/miside-walkthrough/"
+            }
+          ]
         },
         {
           "name": "The Mitas",
@@ -2119,8 +2427,26 @@
       "subtitle": "MiSide Wandering Mita",
       "navigation": [
         {
-          "name": "Main Page",
+          "name": "Home",
           "path": "/"
+        },
+        {
+          "name": "Blog",
+          "path": "/blogentry/",
+          "children": [
+            {
+              "name": "All MiSide Endings",
+              "path": "/blog/miside-endings/"
+            },
+            {
+              "name": "All MiSide Achievements",
+              "path": "/blog/miside-achievements/"
+            },
+            {
+              "name": "A Quick MiSide Walkthrough",
+              "path": "/blog/miside-walkthrough/"
+            }
+          ]
         },
         {
           "name": "The Mitas",
