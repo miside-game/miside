@@ -90,14 +90,15 @@ layout: base.njk
                   </div>
 
                 </div>
-
+                
                 {# adsterra Native Banner #}
                 <div class="py-6">
                     <script async="async" data-cfasync="false" src="//pl25394580.profitablecpmrate.com/eab122b053e4ac0bfb8d0492fdcec2fd/invoke.js"></script>
                     <div id="container-eab122b053e4ac0bfb8d0492fdcec2fd"></div>
                 </div>
-                {# adsterra Native Banner #}  
+                {# adsterra Native Banner #}
             </header>
+
 
 
             <!-- Overview Section -->
@@ -126,27 +127,32 @@ layout: base.njk
 
             <!-- Gameplay Role Section -->
             <section id="narrative-role" class="mb-8">
-                <h2 class="text-xl font-bold text-light mb-4">Narrative Role</h2>
-                {% for item in translations.pages[currentPage]['narrative-role'] %}
-                <p class="mb-4">{{ item | safe }}</p>
+                <h2 class="text-xl font-bold text-light mb-4">Hobby</h2>
+                <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
+                {% for item in translations.pages[currentPage]['hobby'] %}
+                    <li>{{ item | safe }}</li>
                 {% endfor %}
+                </ul>
             </section>
 
+            <section id="narrative-role" class="mb-8">
+                <h2 class="text-xl font-bold text-light mb-4">How to Unlock</h2>
+                <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
+                {% for item in translations.pages[currentPage]['how-to-unlock'] %}
+                    <li>{{ item | safe }}</li>
+                {% endfor %}
+                </ul>
+            </section>
 
-            <!-- Related Links -->
-            {# <section class="mt-12">
-                <h2 class="text-xl font-bold text-light mb-4">Related Pages</h2>
-                <div class="grid gap-4">
-                    <a href="/blog/homicipher-characters/" class="block p-4 bg-red bg-opacity-10 hover:bg-opacity-20 rounded-lg">
-                        <h3 class="font-bold">All Homicipher Characters</h3>
-                        <p class="text-sm">Explore the complete cast of characters</p>
-                    </a>
-                    <a href="/blog/homicipher-all-endings-walkthrough/" class="block p-4 bg-red bg-opacity-10 hover:bg-opacity-20 rounded-lg">
-                        <h3 class="font-bold">All Homicipher Endings Guide</h3>
-                        <p class="text-sm">Discover how Mr. Crawling influences different endings</p>
-                    </a>
-                </div>
-            </section> #}
+            <section id="narrative-role" class="mb-8">
+                <h2 class="text-xl font-bold text-light mb-4">Fun Facts</h2>
+                <ul class="list-disc list-inside ml-6 mt-1 space-y-1">
+                {% for item in translations.pages[currentPage]['fun-facts'] %}
+                    <li>{{ item | safe }}</li>
+                {% endfor %}
+                </ul>
+            </section>
+
         </article>
     </main>
 </div>

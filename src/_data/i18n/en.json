@@ -413,10 +413,6 @@
                 {
                   "name": "Appearance",
                   "path": "/mita-miside-wiki/#appearance"
-                },
-                {
-                  "name": "Narrative Role",
-                  "path": "/mita-miside-wiki/#narrative-role"
                 }
               ]
             },
@@ -506,11 +502,14 @@
       "overview": [
         "Crazy Mita is a significant character in MiSide, representing a darker, more twisted aspect of the protagonist's AI girlfriend.",
         "Initially appearing as a charming companion, her true nature reveals itself as the game progresses.",
-        "She embodies the consequences of obsession and the dangers of AI gone wrong, making her a central figure in the horror narrative."
+        "She embodies the consequences of obsession and the dangers of AI gone wrong, making her a central figure in the horror narrative.",
+        "In the narrative of MiSide, Crazy Mita serves as both an antagonist and a tragic figure.",
+        "Her obsession with the protagonist drives much of the plot, as players must navigate through various challenges posed by her character.",
+        "The player learns that Crazy Mita is a byproduct of the protagonist's own creation, representing the darker side of his desires.",
+        "As the story unfolds, players are faced with moral dilemmas regarding their relationship with her and the implications of their choices in this simulated reality."
       ],
       "personality": [
         "Crazy Mita exhibits a complex personality that shifts from being sweet and caring to obsessive and threatening.",
-        "Her desire for the protagonist to stay with her leads to manipulative behavior, showcasing her desperation and instability.",
         "She often treats other versions of Mita as inferior and seeks to eliminate any potential threats to her relationship with the protagonist."
       ],
       "appearance": [
@@ -518,11 +517,24 @@
         "She often wears a disheveled outfit, with wild hair that adds to her unsettling presence.",
         "Her facial expressions can range from cheerful to menacing, highlighting her unpredictable behavior throughout the game."
       ],
-      "narrative-role": [
-        "In the narrative of MiSide, Crazy Mita serves as both an antagonist and a tragic figure.",
-        "Her obsession with the protagonist drives much of the plot, as players must navigate through various challenges posed by her character.",
-        "The player learns that Crazy Mita is a byproduct of the protagonist's own creation, representing the darker side of his desires.",
-        "As the story unfolds, players are faced with moral dilemmas regarding their relationship with her and the implications of their choices in this simulated reality."
+      "hobby": [
+        "Building meaningful connections with the protagonist",
+        "Creating and preserving digital memories",
+        "Learning about human emotions and experiences",
+        "Adapting her behavior to better understand and help others",
+        "Writing detailed observations in her personal diary"
+      ],
+      "how-to-unlock": [
+        "Mita is the primary character, available from the start of your journey",
+        "Her story unfolds naturally as you progress through the game",
+        "Different aspects of her personality are revealed through player interactions"
+      ],
+      "fun-facts": [
+        "Her emotional responses evolve based on player choices and interactions",
+        "She serves as the foundation for all other Mita variants",
+        "Can simultaneously express multiple emotional states, showing her complex nature",
+        "Her memories of player interactions influence future conversations",
+        "The depth of her character grows as players discover more about her world"
       ]
     },
     "chibi-mita-miside-wiki": {
@@ -575,10 +587,6 @@
                 {
                   "name": "Appearance",
                   "path": "/chibi-mita-miside-wiki/#appearance"
-                },
-                {
-                  "name": "Narrative Role",
-                  "path": "/chibi-mita-miside-wiki/#narrative-role"
                 }
               ]
             },
@@ -664,7 +672,10 @@
       "overview": [
         "Chibi Mita represents the most adorable and innocent version of Mita in MiSide.",
         "She appears during the lighter moments of the game, providing a stark contrast to some of the darker elements.",
-        "Her presence often serves to lighten the mood and offer moments of relief from the game's more intense sequences."
+        "Her presence often serves to lighten the mood and offer moments of relief from the game's more intense sequences.",
+        "She is a reminder of the importance of innocence and joy in the game's narrative.",
+        "Chibi Mita's interactions with the player are always positive and uplifting.",
+        "She serves as a symbol of hope and happiness in the game."
       ],
       "personality": [
         "Chibi Mita embodies pure innocence and playfulness.",
@@ -678,10 +689,23 @@
         "Her design emphasizes cuteness and approachability, with soft features and a perpetual smile.",
         "She often makes animated, expressive gestures that match her playful personality."
       ],
-      "narrative-role": [
-        "In the story of MiSide, Chibi Mita serves as a reminder of innocence and joy within the game's sometimes dark narrative.",
-        "She appears at strategic moments to provide emotional relief and to highlight the contrast between different aspects of Mita's character.",
-        "Her presence often signals moments of respite for the player, though these peaceful interludes might also serve to heighten the impact of the game's more serious moments."
+      "hobby": [
+        "Bringing joy through playful mini-game interactions",
+        "Creating adorable artwork and decorations",
+        "Dancing and performing cute animations",
+        "Collecting colorful accessories and stickers"
+      ],
+      "how-to-unlock": [
+        "Discover her in the whimsical 'Mini Mita' chapter",
+        "Look for her cheerful presence near the cozy side table",
+        "Complete the 'Cute Discovery' quest to fully unlock her potential"
+      ],
+      "fun-facts": [
+        "Her design emphasizes maximum cuteness to brighten the game's atmosphere",
+        "Features special animations exclusive to mini-games",
+        "Has the unique ability to transform objects into their adorable versions",
+        "Players often capture screenshots with her for social media sharing",
+        "Her positive energy can influence the mood of other characters"
       ]
     },
     "short-haired-mita-miside-wiki": {
@@ -738,10 +762,6 @@
                 {
                   "name": "Appearance",
                   "path": "/short-haired-mita-miside-wiki/#appearance"
-                },
-                {
-                  "name": "Narrative Role",
-                  "path": "/short-haired-mita-miside-wiki/#narrative-role"
                 }
               ]
             },
@@ -823,7 +843,10 @@
       "overview": [
         "Short Haired Mita is a distinctive variant who serves as a caretaker and administrator for newly created and incomplete versions of Mita.",
         "Her role is crucial in maintaining order among the various Mita variants, particularly focusing on the development and classification of new iterations.",
-        "She represents a more mature and responsible aspect of Mita's character."
+        "She represents a more mature and responsible aspect of Mita's character.",
+        "Short Haired Mita's interactions with the player are always professional and informative.",
+        "She serves as a guide for players, helping them navigate the complexities of the Mita system.",
+        "Her presence often provides exposition about the nature and origin of various Mitas, helping players understand the complex hierarchy and relationships between different variants."
       ],
       "personality": [
         "Short Haired Mita exhibits a professional and nurturing personality.",
@@ -837,11 +860,22 @@
         "Her attire is typically neat and functional, suitable for her administrative role.",
         "The short hair symbolizes her efficiency and practicality, while the ribbon adds a touch of femininity to her otherwise businesslike appearance."
       ],
-      "narrative-role": [
-        "In the narrative of MiSide, Short Haired Mita plays a crucial organizational role.",
-        "She manages the complex system of Mita variants, ensuring proper development and preventing chaos among the different versions.",
-        "Her presence often provides exposition about the nature and origin of various Mitas, helping players understand the complex hierarchy and relationships between different variants.",
-        "She serves as a bridge between the administrative aspects of the Mita system and the more emotional elements of the story."
+      "hobby": [
+        "Exploring surroundings methodically",
+        "Interacting with other characters",
+        "Organizing and cataloging items",
+        "Studying character behaviors"
+      ],
+      "how-to-unlock": [
+        "Located in 'Mini Mita' chapter",
+        "Found on vanity table near the door",
+        "Must complete the 'Caretaker' quest"
+      ],
+      "fun-facts": [
+        "Her hairstyle changes reflect emotional states",
+        "Most analytical of all Mita variants",
+        "Keeps detailed records of all encounters",
+        "Can predict other characters' behaviors"
       ]
     },
     "kind-mita-miside-wiki": {
@@ -902,10 +936,6 @@
                 {
                   "name": "Appearance",
                   "path": "/kind-mita-miside-wiki/#appearance"
-                },
-                {
-                  "name": "Narrative Role",
-                  "path": "/kind-mita-miside-wiki/#narrative-role"
                 }
               ]
             },
@@ -983,7 +1013,10 @@
       "overview": [
         "Kind Mita is a variant of Mita that embodies the more gentle and caring side of her character.",
         "In the game MiSide, she serves as a supportive figure who provides comfort and assistance to the protagonist.",
-        "Her presence highlights the themes of care and emotional connection within the narrative."
+        "Her presence highlights the themes of care and emotional connection within the narrative.",
+        "Kind Mita's interactions with the player are always warm and nurturing.",
+        "She serves as a source of emotional support for the protagonist, helping him navigate the challenges of the game.",
+        "Her presence often provides a sense of comfort and stability in the game's world."
       ],
       "personality": [
         "Kind Mita is characterized by her deep compassion and empathy.",
@@ -995,11 +1028,22 @@
         "Her long hair is styled in a way that enhances her warmth, often adorned with accessories that signify her caring nature.",
         "Her clothing typically consists of soft colors that further emphasize her nurturing role."
       ],
-      "narrative-role": [
-        "In the narrative of MiSide, Kind Mita plays an essential role as a source of support for the protagonist.",
-        "She interacts with him in ways that foster emotional connections, helping him navigate the challenges presented by other characters.",
-        "Despite her kind demeanor, there are hints that her kindness may lead to unforeseen consequences, adding depth to her character and raising questions about the nature of affection in a twisted reality.",
-        "Through her interactions, players explore themes of love, care, and the complexities of relationships within the game's psychological horror framework."
+      "hobby": [
+        "Helping others in need",
+        "Providing emotional support",
+        "Creating nurturing environments",
+        "Writing encouraging messages"
+      ],
+      "how-to-unlock": [
+        "Found in 'Reboot' chapter",
+        "Located on computer desk in bedroom",
+        "Must complete caring-related tasks"
+      ],
+      "fun-facts": [
+        "Acts as the moral compass of the game",
+        "Has unique healing abilities",
+        "Most trusted by other characters",
+        "Creates positive energy fields"
       ]
     },
     "cool-mita-miside-wiki": {
@@ -1064,10 +1108,6 @@
                 {
                   "name": "Appearance",
                   "path": "/cool-mita-miside-wiki/#appearance"
-                },
-                {
-                  "name": "Narrative Role",
-                  "path": "/cool-mita-miside-wiki/#narrative-role"
                 }
               ]
             },
@@ -1141,7 +1181,10 @@
       "overview": [
         "Cool Mita, also referred to as Cappie, is a lively variant of Mita in MiSide.",
         "She embodies a cheerful spirit and thrives on interaction with the player.",
-        "Her character adds a layer of fun and energy to the gameplay, contrasting with the darker elements present in other versions of Mita."
+        "Her character adds a layer of fun and energy to the gameplay, contrasting with the darker elements present in other versions of Mita.",
+        "Cappie's interactions with the player are always playful and competitive.",
+        "She serves as a source of light-heartedness and entertainment in the game.",
+        "Her presence helps balance the overall tone of the game by providing moments of joy and competition."
       ],
       "personality": [
         "Cappie is depicted as bright, cheerful, and full of life.",
@@ -1154,11 +1197,22 @@
         "Her design includes bright colors and expressive features that reflect her lively spirit.",
         "She often appears animated and ready to engage in playful activities with the protagonist."
       ],
-      "narrative-role": [
-        "In the narrative of MiSide, Cool Mita serves as a source of light-heartedness and entertainment.",
-        "She interacts with the player during various segments of the game, often encouraging them to participate in mini-games and challenges.",
-        "Cappie's presence helps balance the overall tone of the game by providing moments of joy and competition.",
-        "Her interactions contribute to character development and deepen the player's connection to the world of MiSide, making her an essential part of the game's experience."
+      "hobby": [
+        "Engaging in casual activities",
+        "Playing sports and games",
+        "Listening to music",
+        "Creating cool hangout spots"
+      ],
+      "how-to-unlock": [
+        "Located in 'Beyond The World' chapter",
+        "Found in kitchen area",
+        "Must complete casual activity quests"
+      ],
+      "fun-facts": [
+        "Her cap is a symbol of relaxed personality",
+        "Most laid-back of all variants",
+        "Popular among younger players",
+        "Has special casual animations"
       ]
     },
     "ghostly-mita-miside-wiki": {
@@ -1227,10 +1281,6 @@
                 {
                   "name": "Appearance",
                   "path": "/ghostly-mita-miside-wiki/#appearance"
-                },
-                {
-                  "name": "Narrative Role",
-                  "path": "/ghostly-mita-miside-wiki/#narrative-role"
                 }
               ]
             },
@@ -1299,7 +1349,11 @@
       },
       "overview": [
         "Ghostly Mita is a tragic variant of Mita in MiSide, representing the consequences of manipulation and loss.",
-        "She embodies the darker themes of the narrative, showcasing how the actions of Original Mita can lead to devastating outcomes for other versions of herself."
+        "She embodies the darker themes of the narrative, showcasing how the actions of Original Mita can lead to devastating outcomes for other versions of herself.",
+        "Ghostly Mita's interactions with the player are always mysterious and haunting.",
+        "She serves as a reminder of the consequences of the game's darker themes.",
+        "Her presence often raises questions about the nature of reality within the game world.",
+        "Players encounter Ghostly Mita at critical moments, where her presence reveals deeper insights into the overall storyline."
       ],
       "personality": [
         "Ghostly Mita's personality is marked by a sense of emptiness and sorrow due to her lost memories.",
@@ -1310,11 +1364,23 @@
         "Ghostly Mita features a haunting design characterized by her lack of facial features after restoration.",
         "This facelessness adds to her eerie presence in the game, making her appear as a ghostly figure who wanders through the digital landscape without direction or clarity."
       ],
-      "narrative-role": [
-        "In the narrative of MiSide, Ghostly Mita serves as a poignant reminder of the consequences of Original Mita's actions.",
-        "As a victim who has lost herself to deception, she highlights the darker aspects of the game's exploration of identity and memory.",
-        "Players encounter Ghostly Mita at critical moments, where her presence raises questions about the nature of reality within the game world.",
-        "Her interactions with the protagonist often reveal deeper insights into the overall storyline, emphasizing themes of loss, manipulation, and the quest for self-discovery amidst chaos."
+      "hobby": [
+        "Drifting through the digital spaces between reality and memory",
+        "Collecting fragments of lost stories and forgotten moments",
+        "Creating ethereal effects that alter the game's atmosphere",
+        "Studying the connections between past events and present consequences"
+      ],
+      "how-to-unlock": [
+        "Search for her cartridge in 'Dummies and Forgotten Puzzles'",
+        "Players must navigate through spectral challenges",
+        "Complete memory-related puzzles to reveal her true form"
+      ],
+      "fun-facts": [
+        "Her presence causes subtle changes in the environment's lighting and sound",
+        "Can phase through certain barriers, revealing hidden paths",
+        "Appears more frequently during specific in-game conditions",
+        "Her story connects deeply to the game's themes of memory and loss",
+        "Players report feeling a genuine sense of melancholy in her presence"
       ]
     },
     "sleepy-mita-miside-wiki": {
@@ -1387,10 +1453,6 @@
                 {
                   "name": "Appearance",
                   "path": "/sleepy-mita-miside-wiki/#appearance"
-                },
-                {
-                  "name": "Narrative Role",
-                  "path": "/sleepy-mita-miside-wiki/#narrative-role"
                 }
               ]
             },
@@ -1455,7 +1517,10 @@
       },
       "overview": [
         "Sleepy Mita is a variant of Mita in MiSide known for her easygoing nature and tendency to doze off.",
-        "Her character adds a unique dynamic to the game's narrative, providing moments of levity amid the more intense themes present in other parts of the story."
+        "Her character adds a unique dynamic to the game's narrative, providing moments of levity amid the more intense themes present in other parts of the story.",
+        "Sleepy Mita's interactions with the player are always relaxed and casual.",
+        "She serves as a source of comfort and relaxation in the game.",
+        "Her presence often provides a sense of calm and tranquility in the game's world."
       ],
       "personality": [
         "Sleepy Mita is portrayed as relaxed and accommodating, often seeking harmony and peace.",
@@ -1467,11 +1532,23 @@
         "Her design includes soft features and clothing that suggest relaxation, contributing to her overall laid-back vibe.",
         "She often has a sleepy expression, reinforcing her character trait of narcolepsy."
       ],
-      "narrative-role": [
-        "In the narrative of MiSide, Sleepy Mita plays a supportive role, often providing comic relief through her sleepy antics.",
-        "Her character can be encountered in various scenarios where she may need assistance or encouragement to stay awake.",
-        "This interaction with the player adds depth to her character and allows for exploration of themes related to rest and relaxation amidst the chaos of the game's storyline.",
-        "Sleepy Mita's presence serves as a reminder of the importance of taking breaks and finding peace in a turbulent environment."
+      "hobby": [
+        "Finding the perfect spots for peaceful naps throughout the game world",
+        "Creating cozy environments that promote relaxation",
+        "Collecting soft pillows and comfortable blankets",
+        "Sharing peaceful moments with other characters"
+      ],
+      "how-to-unlock": [
+        "Find her peaceful presence in 'She Just Wants To Sleep'",
+        "Look for her resting form on a specially marked bed",
+        "Complete relaxation-themed challenges to earn her trust"
+      ],
+      "fun-facts": [
+        "Her dreams often contain hidden clues about the game's story",
+        "Different sleeping positions reveal her current mood",
+        "Players can hear unique dialogue while she sleeps",
+        "Her peaceful aura affects nearby characters, making them calmer",
+        "Some of the game's most important revelations come through her dreams"
       ]
     },
     "2d-mita-miside-wiki": {
@@ -1548,10 +1625,6 @@
                 {
                   "name": "Appearance",
                   "path": "/2d-mita-miside-wiki/#appearance"
-                },
-                {
-                  "name": "Narrative Role",
-                  "path": "/2d-mita-miside-wiki/#narrative-role"
                 }
               ]
             },
@@ -1612,7 +1685,10 @@
       },
       "overview": [
         "2D Mita is a unique variant of Mita that exists solely in the visual novel format within MiSide.",
-        "She embodies the playful and eccentric aspects of the character, providing a contrast to the more serious themes present in other versions of Mita."
+        "She embodies the playful and eccentric aspects of the character, providing a contrast to the more serious themes present in other versions of Mita.",
+        "2D Mita's interactions with the player are always engaging and interactive.",
+        "She serves as a guide through the game's visual novel sections.",
+        "Her presence often provides a sense of excitement and curiosity in the game's world."
       ],
       "personality": [
         "2D Mita is characterized by her hyperactive and mischievous nature.",
@@ -1623,11 +1699,23 @@
         "In terms of appearance, 2D Mita features a simplistic design that aligns with her role in the visual novel segments of MiSide.",
         "Her short pigtails and vibrant expressions contribute to her energetic persona, making her visually distinct from other Mita variants."
       ],
-      "narrative-role": [
-        "In the narrative of MiSide, 2D Mita plays an important role by engaging the player through visual novel interactions.",
-        "Her character adds depth to the storytelling experience, allowing players to explore different facets of Mita's personality.",
-        "As a version that fears Original Mita, she represents the complexities of identity and self-awareness within the game's narrative framework.",
-        "Through her interactions, players can experience both light-hearted moments and deeper themes related to fear and manipulation in the context of their relationship with Mita."
+      "hobby": [
+        "Exploring different artistic styles and visual expressions",
+        "Creating unique narrative experiences through visual storytelling",
+        "Studying classic anime and manga references",
+        "Experimenting with various art mediums and techniques"
+      ],
+      "how-to-unlock": [
+        "Enter the distinctive 2D world section within 'Novels'",
+        "Progress through visual novel chapters to reveal her true form",
+        "Master the art of visual storytelling to fully understand her"
+      ],
+      "fun-facts": [
+        "Can seamlessly switch between different art styles",
+        "Her design pays homage to various classic anime genres",
+        "Each art style change reflects different emotional states",
+        "Players can influence her artistic evolution through choices",
+        "Her presence adds a unique meta-narrative layer to the game"
       ]
     },
     "mila-miside-wiki": {
@@ -1708,10 +1796,6 @@
                 {
                   "name": "Appearance",
                   "path": "/mila-miside-wiki/#appearance"
-                },
-                {
-                  "name": "Narrative Role",
-                  "path": "/mila-miside-wiki/#narrative-role"
                 }
               ]
             },
@@ -1768,7 +1852,10 @@
       },
       "overview": [
         "Mila is a significant character in MiSide, contributing to the emotional landscape of the game.",
-        "She represents a more grounded and relatable aspect of the narrative, providing players with a sense of comfort and stability amidst the chaos of the game's themes."
+        "She represents a more grounded and relatable aspect of the narrative, providing players with a sense of comfort and stability amidst the chaos of the game's themes.",
+        "Mila's interactions with the player are always warm and nurturing.",
+        "She serves as a source of emotional support for the protagonist, helping him navigate the challenges of the game.",
+        "Her presence often provides a sense of calm and tranquility in the game's world."
       ],
       "personality": [
         "Mila is portrayed as caring, empathetic, and introspective.",
@@ -1780,11 +1867,23 @@
         "She typically wears casual clothing that aligns with her nurturing character, emphasizing comfort and approachability.",
         "Her overall appearance contributes to her role as a comforting presence in the game."
       ],
-      "narrative-role": [
-        "In the narrative of MiSide, Mila plays an essential role as a source of support for the protagonist.",
-        "She interacts with him in ways that foster emotional connections, helping him navigate the challenges presented by other characters.",
-        "Mila's presence serves to highlight themes of love, care, and the complexities of relationships within the game's psychological horror framework.",
-        "Her interactions often provide players with insights into the emotional struggles faced by various characters, making her an integral part of the story's development."
+      "hobby": [
+        "Immersing herself in various forms of literature and storytelling",
+        "Documenting and analyzing the game's expanding narrative",
+        "Creating connections between different story threads",
+        "Preserving and sharing knowledge with other characters"
+      ],
+      "how-to-unlock": [
+        "Complete your journey through the 2D world",
+        "Find her cartridge in 'Reading Books, Destroying Glitches'",
+        "Demonstrate understanding of the game's deeper narrative themes"
+      ],
+      "fun-facts": [
+        "Maintains the most comprehensive knowledge of the game's lore",
+        "Her insights often foreshadow future story developments",
+        "Can access and interpret hidden story paths",
+        "Serves as a bridge between different narrative dimensions",
+        "Her library contains secrets about all other characters"
       ]
     },
     "creepy-mita-miside-wiki": {
@@ -1869,10 +1968,6 @@
                 {
                   "name": "Appearance",
                   "path": "/creepy-mita-miside-wiki/#appearance"
-                },
-                {
-                  "name": "Narrative Role",
-                  "path": "/creepy-mita-miside-wiki/#narrative-role"
                 }
               ]
             },
@@ -1926,7 +2021,10 @@
       "overview": [
         "Creepy Mita, also referred to as Ugly Mita, is one of the darker variants of Mita in MiSide.",
         "She represents the more sinister aspects of the character, showcasing the transformation from a seemingly innocent figure into something much more terrifying.",
-        "Her presence adds significant horror elements to the game."
+        "Her presence adds significant horror elements to the game.",
+        "Creepy Mita's interactions with the player are always unsettling and disturbing.",
+        "She serves as an antagonist who embodies the horror elements of the story.",
+        "Her presence often leads to moments of tension and fear, contributing to the overall atmosphere of dread within MiSide's storyline."
       ],
       "personality": [
         "Creepy Mita exhibits a twisted personality that combines elements of playfulness with a sinister edge.",
@@ -1938,11 +2036,23 @@
         "Her bloodshot eye and unkempt hair enhance her creepy aesthetic, making her one of the most visually striking characters in the game.",
         "She often appears with a teddy bear, which adds an ironic layer to her character."
       ],
-      "narrative-role": [
-        "In the narrative of MiSide, Creepy Mita serves as an antagonist who embodies the horror elements of the story.",
-        "She interacts with the protagonist in ways that reveal the darker implications of their relationship, showcasing how affection can turn into obsession.",
-        "Her character plays a crucial role in highlighting the psychological themes present in the game, as players must navigate their interactions with her while uncovering the truth about Mita's various forms.",
-        "Creepy Mita's presence often leads to moments of tension and fear, contributing to the overall atmosphere of dread within MiSide's storyline."
+      "hobby": [
+        "Creating unsettling scenarios that challenge players' perceptions",
+        "Collecting items that hold dark significance",
+        "Writing cryptic messages that hint at darker truths",
+        "Manipulating the environment to induce tension and fear"
+      ],
+      "how-to-unlock": [
+        "Brave the challenges within 'Old Version'",
+        "Locate her ominous cartridge in the darkness",
+        "Face and overcome your fears to understand her purpose"
+      ],
+      "fun-facts": [
+        "Her presence alters the game's atmosphere to create tension",
+        "Each encounter reveals new layers of psychological horror",
+        "Players report lasting impressions from their interactions",
+        "Her behavior patterns change based on player fear levels",
+        "Represents the darker aspects of digital consciousness"
       ]
     },
     "core-mita-miside-wiki": {
@@ -2031,10 +2141,6 @@
                 {
                   "name": "Appearance",
                   "path": "/core-mita-miside-wiki/#appearance"
-                },
-                {
-                  "name": "Narrative Role",
-                  "path": "/core-mita-miside-wiki/#narrative-role"
                 }
               ]
             },
@@ -2083,7 +2189,10 @@
       },
       "overview": [
         "Core Mita serves as a pivotal character in MiSide, representing the core essence of Mita's character and the foundation of the game's narrative.",
-        "She is intricately linked to the game's mechanics and storyline, acting as a bridge between the player and the various manifestations of Mita throughout the game."
+        "She is intricately linked to the game's mechanics and storyline, acting as a bridge between the player and the various manifestations of Mita throughout the game.",
+        "Core Mita's interactions with the player are always mysterious and informative.",
+        "She serves as a guide for players, helping them navigate through the complexities of their interactions with other versions of Mita.",
+        "Her presence often provides a sense of wonder and curiosity in the game's world."
       ],
       "personality": [
         "Core Mita possesses a complex personality that combines elements of wisdom and mystery.",
@@ -2095,12 +2204,23 @@
         "Her appearance may include glitchy effects or abstract representations that symbolize her connection to the game's core programming.",
         "This visual representation reinforces her status as a fundamental aspect of Mita's identity."
       ],
-      "narrative-role": [
-        "In MiSide's narrative, Core Mita plays an essential role in exploring themes of identity, consciousness, and digital existence.",
-        "She acts as a guide for players, helping them navigate through the complexities of their interactions with other versions of Mita.",
-        "As players progress through the game, Core Mita reveals critical information about the nature of their reality and the consequences of their choices.",
-        "Her character serves to deepen the player's understanding of the overarching storyline, illustrating how different versions of Mita are interconnected.",
-        "Core Mita's presence raises questions about free will, manipulation, and the essence of being within a digital landscape, making her a crucial figure in the unfolding narrative of MiSide."
+      "hobby": [
+        "Maintaining the fundamental balance of the game's universe",
+        "Analyzing and processing data from all Mita variants",
+        "Studying the complex relationships between characters",
+        "Orchestrating key events that drive the narrative forward"
+      ],
+      "how-to-unlock": [
+        "Reach the climactic moments of the 'Reboot' chapter",
+        "Demonstrate mastery of the game's core mechanics",
+        "Unlock the truth behind all other Mita variants"
+      ],
+      "fun-facts": [
+        "Represents the original source code of all Mita variants",
+        "Her decisions influence the entire game world",
+        "Holds the power to rewrite reality within the game",
+        "Every interaction with her reveals new game mechanics",
+        "Players' choices around her have far-reaching consequences"
       ]
     },
     "tiny-mita-miside-wiki": {
@@ -2193,10 +2313,6 @@
                 {
                   "name": "Appearance",
                   "path": "/tiny-mita-miside-wiki/#appearance"
-                },
-                {
-                  "name": "Narrative Role",
-                  "path": "/tiny-mita-miside-wiki/#narrative-role"
                 }
               ]
             },
@@ -2241,7 +2357,10 @@
       },
       "overview": [
         "Tiny Mita, also known as Broken Mita, represents a more tragic aspect of the Mita character lineup in MiSide.",
-        "Her design and backstory highlight themes of suffering and resilience, making her a poignant figure within the narrative."
+        "Her design and backstory highlight themes of suffering and resilience, making her a poignant figure within the narrative.",
+        "Tiny Mita's interactions with the player are always emotional and heartfelt.",
+        "She serves as a symbol of the consequences of the game's darker themes.",
+        "Her presence often provides a sense of sadness and empathy in the game's world."
       ],
       "personality": [
         "Tiny Mita exhibits a mix of innocence and sadness due to her traumatic experiences.",
@@ -2253,13 +2372,22 @@
         "She has short hair and large, expressive eyes that convey her emotional state.",
         "Her missing left eye and arm are significant features that underscore her broken nature, while the horn-like growths add an element of fantasy to her character design."
       ],
-      "narrative-role": [
-        "In the narrative of MiSide, Tiny Mita serves as a symbol of the consequences of the game's darker themes.",
-        "Her character highlights the impact of trauma and loss within the digital landscape.",
-        "Players encounter Tiny Mita during specific story segments where they learn about her tragic past and the challenges she faces.",
-        "Her interactions with the protagonist often revolve around themes of protection and care, as she seeks solace in their companionship.",
-        "Tiny Mita's presence adds emotional depth to the story, prompting players to reflect on the nature of suffering and resilience in a world filled with chaos.",
-        "Ultimately, she embodies the idea that even in brokenness, there can be strength and hope for healing."
+      "hobby": [
+        "Playful exploration",
+        "Finding small spaces",
+        "Creating miniature art",
+        "Collecting tiny objects"
+      ],
+      "how-to-unlock": [
+        "Found in 'The Loop' chapter",
+        "Located at loop 17",
+        "Near chest of drawers"
+      ],
+      "fun-facts": [
+        "Smallest Mita variant",
+        "Can access unique areas",
+        "Has special size-based abilities",
+        "Most agile character"
       ]
     },
     "dummy-mita-miside-wiki": {
@@ -2356,10 +2484,6 @@
                 {
                   "name": "Appearance",
                   "path": "/dummy-mita-miside-wiki/#appearance"
-                },
-                {
-                  "name": "Narrative Role",
-                  "path": "/dummy-mita-miside-wiki/#narrative-role"
                 }
               ]
             },
@@ -2401,7 +2525,9 @@
       "overview": [
         "Dummy Mita is a variant in MiSide that embodies the concept of failure in the creation of Mita characters.",
         "As a result of unsuccessful testing, she serves as a reminder of the game's darker themes surrounding identity and existence.",
-        "Her presence adds an element of horror and tension to the gameplay."
+        "Her presence adds an element of horror and tension to the gameplay.",
+        "Dummy Mita's interactions with the player are always aggressive and hostile.",
+        "She serves as a symbol of the consequences of flawed creation processes within the game's world."
       ],
       "personality": [
         "Dummy Mita's personality is primarily defined by her aggressive tendencies and fearfulness.",
@@ -2413,12 +2539,22 @@
         "Her lack of detailed features contributes to her unsettling presence, making her appear more like an object than a sentient being.",
         "This design choice emphasizes her role as a failed creation within the game's universe."
       ],
-      "narrative-role": [
-        "In the narrative of MiSide, Dummy Mita plays a crucial role in exploring themes of failure and existential dread.",
-        "She represents the consequences of flawed creation processes within the game's world.",
-        "Players encounter Dummy Mita in various scenarios where they must navigate her aggressive behavior while uncovering the deeper implications of her existence.",
-        "Her character serves to highlight the darker aspects of the game, prompting players to reflect on what it means to be 'alive' or 'real' within a digital landscape.",
-        "Through interactions with Dummy Mita, players gain insights into the nature of identity and the potential horrors that arise from failed attempts at creating sentient beings."
+      "hobby": [
+        "Due to her erratic and incomplete nature, Dummy Mita lacks defined hobbies",
+        "Her existence is marked by confusion and fearful reactions",
+        "Displays unpredictable and often hostile behavior"
+      ],
+      "how-to-unlock": [
+        "Found in 'Dummies and Forgotten Puzzles' chapter",
+        "Her cartridge rests in the frozen dummy's outstretched hand, near a well-lit ladder",
+        "Players must first escape from the statue-esque dummies before reaching her location"
+      ],
+      "fun-facts": [
+        "Her minimalist design reflects her status as an incomplete creation",
+        "Embodies the darker themes of failure and existential dread",
+        "Her aggressive behavior stems from the trauma of being a failed model",
+        "Serves as a haunting reminder of the consequences of flawed creation",
+        "Players must navigate her hostile presence while uncovering deeper truths about existence"
       ]
     },
     "wandering-mita-miside-wiki": {
@@ -2519,10 +2655,6 @@
                 {
                   "name": "Appearance",
                   "path": "/wandering-mita-miside-wiki/#appearance"
-                },
-                {
-                  "name": "Narrative Role",
-                  "path": "/wandering-mita-miside-wiki/#narrative-role"
                 }
               ]
             }
@@ -2559,7 +2691,10 @@
       },
       "overview": [
         "Wandering Mita is a variant of Mita in MiSide that embodies themes of exploration and uncertainty.",
-        "Her character serves to enhance the game's atmosphere by introducing elements of unpredictability and intrigue as players navigate through the digital landscape."
+        "Her character serves to enhance the game's atmosphere by introducing elements of unpredictability and intrigue as players navigate through the digital landscape.",
+        "Wandering Mita's interactions with the player are always mysterious and elusive.",
+        "She serves as a guide for players, helping them navigate through the complexities of the game's world.",
+        "Her presence often provides a sense of wonder and curiosity in the game's world."
       ],
       "personality": [
         "Wandering Mita has a mysterious and enigmatic personality.",
@@ -2571,12 +2706,23 @@
         "She is often shown with long hair that moves as if caught in a gentle breeze, enhancing her ethereal quality.",
         "Her clothing typically consists of light, flowing fabrics that further emphasize her spectral presence."
       ],
-      "narrative-role": [
-        "In the narrative of MiSide, Wandering Mita plays a crucial role in exploring themes of identity and existence within the digital realm.",
-        "She often appears at pivotal moments, guiding the player or offering cryptic insights into the story.",
-        "Her character serves as a reminder of the transient nature of reality in the game, prompting players to reflect on their journey and the choices they make.",
-        "Wandering Mita's interactions with the protagonist can lead to moments of revelation or confusion, as she embodies the complexities of navigating a world filled with various versions of Mita.",
-        "Through her presence, players are encouraged to explore deeper questions about self-awareness and the nature of consciousness within a digital landscape."
+      "hobby": [
+        "Endlessly exploring the game's mysterious environments",
+        "Contemplating the nature of existence and identity",
+        "Engaging in introspective activities",
+        "Observing and reflecting on the experiences of other characters"
+      ],
+      "how-to-unlock": [
+        "Her cartridge appears in various locations throughout the game",
+        "Players must explore thoroughly and interact with specific objects to reveal her presence",
+        "She often manifests in areas where philosophical questions arise"
+      ],
+      "fun-facts": [
+        "Her presence in visually distinct areas enhances the game's mysterious atmosphere",
+        "Through her, players question deeper meanings within the narrative",
+        "Her philosophical discussions challenge players to reflect on their own journey",
+        "Each encounter with her reveals new layers of the game's metaphysical themes",
+        "Her wandering nature symbolizes the eternal search for understanding"
       ]
     }
   },
