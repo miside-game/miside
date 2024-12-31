@@ -13,10 +13,7 @@
         "title": "Home",
         "url": "/"
       },
-      {
-        "title": "The Mitas",
-        "url": "/mita-miside-wiki/"
-      },
+ 
       {
         "title": "Blog",
         "url": "/blogentry/"
@@ -24,6 +21,10 @@
       {
         "title": "FAQs",
         "url": "/#faqs"
+      },
+      {
+        "title": "Download",
+        "url": "/#download"
       }
     ]
   },
