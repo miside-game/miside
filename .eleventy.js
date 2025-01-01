@@ -103,7 +103,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/fonts");
   eleventyConfig.addPassthroughCopy("src/sitemap.xml");
   eleventyConfig.addPassthroughCopy("src/ads.txt"); 
-
+  eleventyConfig.addPassthroughCopy("src/sw.js"); 
+  
   // Add filter to check if URL starts with a string
   eleventyConfig.addFilter("startsWith", function(str, prefix) {
     return str.startsWith(prefix);
