@@ -110,19 +110,6 @@ layout: base.njk
         </div>
     </section>
 
-    <section class="mt-32" id="features">
-        <h2 class="text-2xl font-bold mb-2 text-center font-sg text-light">{{ translations.pages.index.ingame.title }}</h2>
-        <p class="mb-10 opacity-75 text-md w-full md:w-2/3 mx-auto text-center">{{ translations.pages.index.ingame.subtitle }}</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {% for feature in translations.pages.index.ingame.content %}
-            <div class="feature-card flex flex-col p-4 rounded-lg bg-gradient-to-br from-green to-green via-red animate-gradient-x transition duration-300 hover:scale-105">
-                <h3 class="text-sm font-bold mb-3 font-sg">{{ feature.title }}</h3>
-                <p class="text-sm opacity-75">{{ feature.content }}</p>
-            </div>
-            {% endfor %}
-        </div>
-    </section>
-
     <section class="mt-32" id="mitas">
         <h2 class="text-2xl font-bold mb-2 text-center font-sg text-light">{{ translations.pages.index.mitas.title }}</h2>
         <p class="mb-10 opacity-75 text-md w-full md:w-2/3 mx-auto text-center">{{ translations.pages.index.mitas.subtitle }}</p>
@@ -138,9 +125,9 @@ layout: base.njk
                     <!-- 背面 -->
                     <div class="flip-card-back bg-red bg-opacity-20 rounded-lg overflow-hidden shadow-lg p-6 text-xs">
                         <h3 class="text-lg font-bold mb-4 font-sg text-light"> 
-                            {# <a href="/{{ item.path }}" class="underline"> #}
+                            <a href="/{{ item.path }}" class="underline">
                             {{ translations.pages[item.path].character }}
-                            {# </a> #}
+                            </a>
                         </h3>
                         <div class="space-y-4">
                             <div>
@@ -156,6 +143,35 @@ layout: base.njk
                 </div>
             </div>
             {% endfor %}
+            
+            {# adsterra square banner #}
+            <div class="flip-card bg-red bg-opacity-20 rounded-lg overflow-hidden shadow-lg flex justify-center">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : 'eafc659a8631d57bf0facfed079e022e',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/eafc659a8631d57bf0facfed079e022e/invoke.js"></script>
+            </div>
+
+            <div class="flip-card bg-red bg-opacity-20 rounded-lg overflow-hidden shadow-lg flex justify-center">
+                <script type="text/javascript">
+                    atOptions = {
+                        'key' : 'eafc659a8631d57bf0facfed079e022e',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script type="text/javascript" src="//www.highperformanceformat.com/eafc659a8631d57bf0facfed079e022e/invoke.js"></script>
+            </div>
+            {# adsterra square banner #}
+
         </div>
     </section>
 
@@ -179,6 +195,19 @@ layout: base.njk
         </section>  
     </section>
 
+    <section class="mt-32" id="features">
+        <h2 class="text-2xl font-bold mb-2 text-center font-sg text-light">{{ translations.pages.index.ingame.title }}</h2>
+        <p class="mb-10 opacity-75 text-md w-full md:w-2/3 mx-auto text-center">{{ translations.pages.index.ingame.subtitle }}</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {% for feature in translations.pages.index.ingame.content %}
+            <div class="feature-card flex flex-col p-4 rounded-lg bg-gradient-to-br from-green to-green via-red animate-gradient-x transition duration-300 hover:scale-105">
+                <h3 class="text-sm font-bold mb-3 font-sg">{{ feature.title }}</h3>
+                <p class="text-sm opacity-75">{{ feature.content }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    
     <section class="mt-32" id="reviews">
         <h2 class="text-2xl font-bold mb-2 text-center font-sg text-light">{{ translations.pages.index.reviews.title }}</h2>
         <p class="mb-10 opacity-75 text-md w-full md:w-2/3 mx-auto text-center">{{ translations.pages.index.reviews.subtitle }}</p>

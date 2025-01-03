@@ -13,7 +13,10 @@
         "title": "Home",
         "url": "/"
       },
- 
+      {
+        "title": "Mitas",
+        "url": "/mita-miside-wiki/"
+      },
       {
         "title": "Blog",
         "url": "/blogentry/"
