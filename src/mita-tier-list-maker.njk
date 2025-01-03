@@ -1,0 +1,897 @@
+---
+layout: base.njk
+---
+
+<style>
+    #tierList {
+        margin-bottom: 20px;
+    }
+
+    .add-tier-btn {
+        width: 100%;
+        padding: 12px;
+        background: #231a22;
+        /* opacity: 0.5; */
+        color: #ff549d;
+        border: 2px solid #5f2e6b;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .add-tier-btn:hover {
+        color: #ff549d
+    }
+
+    .tier-row {
+        display: flex;
+        margin-bottom: 4px;
+        min-height: 100px;
+        position: relative;
+    }
+
+    .tier-label {
+        shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        color: white;
+        font-size: 24px;
+        position: relative;
+        border-radius: 8px 0 0 8px;
+        cursor: pointer;
+    }
+
+    .tier-delete-btn {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        background: rgba(255,0,0,0.8);
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+        z-index: 10;
+    }
+
+    .tier-label:hover .tier-delete-btn {
+        opacity: 1;
+    }
+
+    .tier-label span {
+        font-size: 24px;
+        display: block;
+    }
+
+    .tier-label input[type="text"] {
+        width: 40px;
+        text-align: center;
+        background: transparent;
+        border: 1px solid rgba(255,255,255,0.5);
+        color: white;
+        border-radius: 4px;
+        padding: 2px;
+        display: none;
+    }
+
+    .tier-label.editing input[type="text"] {
+        display: block;
+    }
+
+    .tier-label.editing span {
+        display: none;
+    }
+
+    .tier-label input[type="color"] {
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        background: none;
+    }
+
+    .tier-content {
+        flex-grow: 1;
+        background: #5f2e6b;
+        padding: 4px;
+        min-height: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        border-radius: 0 8px 8px 0;
+        transition: all 0.3s ease;
+    }
+
+    .tier-content.drag-over {
+        background: #5f2e6b;
+        box-shadow: inset 0 0 0 2px #5f2e6b;
+    }
+
+    .image-section {
+        margin-top: 30px;
+        background: #5f2e6b;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .image-pool {
+        min-height: 150px;
+        display: flex;
+        flex-wrap: wrap;
+        background: #231a22;
+        gap: 12px;
+        padding: 16px;
+        border: 2px dashed #5f2e6b;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        transition: all 0.3s ease;
+    }
+
+    .image-pool.drag-over {
+        background: #5f2e6b;
+        border-color: #5f2e6b;
+    }
+
+    .upload-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background: #231a22;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .upload-section:hover {
+        background: #ff549d;
+    }
+
+    .upload-section p {
+        color: #fff;
+        text-align: center;
+    }
+
+    .draggable-item {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        cursor: move;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: all 0.2s ease;
+    }
+
+    .draggable-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .draggable-item.dragging {
+        opacity: 0.5;
+        transform: scale(1.05);
+    }
+
+    .draggable-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .draggable-item .delete-btn {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        background: rgba(255,0,0,0.8);
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+
+    .draggable-item:hover .delete-btn {
+        opacity: 1;
+    }
+
+    .export-btn {
+        width: 100%;
+        padding: 12px;
+        background: #5f2e6b;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .export-btn:hover {
+        background: #4f2c58;
+        transform: translateY(-1px);
+        /* opacity: 0.8; */
+    }
+
+
+    button {
+        padding: 10px 20px;
+        background: #5f2e6b;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.2s ease;
+    }
+
+    button:hover {
+        background: #5f2e6b;
+        transform: translateY(-1px);
+    }
+
+    .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.7);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #5f2e6b;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    .export-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 24px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        z-index: 1001;
+        display: none;
+        width: 90%;
+        max-width: 500px;
+    }
+
+    .export-modal h3 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .export-options {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    .watermark-input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-top: 8px;
+    }
+
+    #imageInput {
+        display: none;
+    }
+</style>
+<div class="bg-green bg-opacity-80 px-4 md:px-10 text-md mx-auto font-sg max-w-[1200px] md:flex md:space-x-4 relative">
+    <div class="tool w-full mx-auto bg-green bg-opacity-80 rounded-lg py-10 px-4">
+        <h1 class="text-2xl md:text-6xl font-black mb-4 text-center text-light">Create Your Mita Tier List</h1>
+        <p class="font-light text-sm md:text-md text-center text-light mb-4">Share Mita Tier List Maker with your friends and community!</p>
+        <!-- Social Share Buttons 1-->
+        <div class="flex justify-center items-center gap-3 mb-6">
+            <!-- Twitter/X -->
+            <a href="https://twitter.com/intent/tweet?url=https://miside.im/mita-tier-list-maker/" 
+                target="_blank"
+                class="flex items-center gap-2 px-3 py-2 bg-red bg-opacity-100 rounded-lg hover:bg-opacity-20 transition-all duration-300 text-light text-sm">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                </svg>
+                
+            </a>
+        
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://miside.im/mita-tier-list-maker/" 
+                target="_blank"
+                class="flex items-center gap-2 px-3 py-2 bg-red bg-opacity-100 rounded-lg hover:bg-opacity-20 transition-all duration-300 text-light text-sm">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                </svg>
+                
+            </a>
+        
+            <!-- reddit -->
+            <a href="https://www.reddit.com/submit?url=https://miside.im/mita-tier-list-maker/" 
+                target="_blank"
+                class="flex items-center gap-2 px-3 py-2 bg-red bg-opacity-100 rounded-lg hover:bg-opacity-20 transition-all duration-300 text-light text-sm">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="#ff549d" viewBox="0 0 30 30">
+                    <path d="M20.3032 16.2506C20.3032 16.659 20.141 17.0507 19.8522 17.3395C19.5634 17.6283 19.1717 17.7905 18.7633 17.7905C18.3548 17.7905 17.9631 17.6283 17.6743 17.3395C17.3855 17.0507 17.2233 16.659 17.2233 16.2506C17.2233 15.8422 17.3855 15.4505 17.6743 15.1617C17.9631 14.8729 18.3548 14.7106 18.7633 14.7106C19.1717 14.7106 19.5634 14.8729 19.8522 15.1617C20.141 15.4505 20.3032 15.8422 20.3032 16.2506ZM11.2305 17.79C11.6388 17.79 12.0303 17.6278 12.319 17.3391C12.6077 17.0504 12.7699 16.6589 12.7699 16.2506C12.7699 15.8423 12.6077 15.4507 12.319 15.162C12.0303 14.8733 11.6388 14.7111 11.2305 14.7111C10.8222 14.7111 10.4306 14.8733 10.1419 15.162C9.85323 15.4507 9.69104 15.8423 9.69104 16.2506C9.69104 16.6589 9.85323 17.0504 10.1419 17.3391C10.4306 17.6278 10.8222 17.79 11.2305 17.79ZM11.6486 19.5795C11.4699 19.4743 11.2573 19.4429 11.0558 19.4918C10.8543 19.5407 10.6798 19.6661 10.5692 19.8414C10.4586 20.0168 10.4205 20.2283 10.4631 20.4312C10.5057 20.6341 10.6257 20.8124 10.7975 20.9285L11.1645 21.1604C12.3114 21.8838 13.6396 22.2676 14.9955 22.2676C16.3515 22.2676 17.6797 21.8838 18.8266 21.1604L19.1936 20.9295C19.2823 20.8736 19.3592 20.8008 19.4197 20.7152C19.4803 20.6297 19.5234 20.533 19.5467 20.4307C19.5699 20.3285 19.5727 20.2227 19.555 20.1193C19.5374 20.016 19.4995 19.9171 19.4436 19.8284C19.3877 19.7397 19.3149 19.6629 19.2293 19.6023C19.1438 19.5417 19.0471 19.4986 18.9448 19.4754C18.8426 19.4521 18.7368 19.4493 18.6334 19.467C18.5301 19.4846 18.4312 19.5225 18.3425 19.5784L17.9755 19.8103C17.0834 20.373 16.0503 20.6717 14.9955 20.6717C13.9408 20.6717 12.9077 20.373 12.0156 19.8103L11.6486 19.5795Z" fill="#FF4500"></path><path d="M23.4684 3.75C22.5396 3.75 21.7279 4.2596 21.3002 5.01389L17.4702 4.22768C17.2897 4.19071 17.102 4.21735 16.9389 4.30306C16.7758 4.38877 16.6474 4.52829 16.5755 4.69792C16.1382 5.72562 15.4829 7.28421 14.935 8.61831C14.7414 9.09067 14.5605 9.53644 14.4084 9.92156C12.2306 10.0088 10.2135 10.578 8.56342 11.5004C8.29782 11.055 7.92984 10.6793 7.49003 10.4045C7.05021 10.1298 6.55122 9.96386 6.03445 9.92052C5.51768 9.87719 4.99802 9.95769 4.51858 10.1553C4.03914 10.353 3.61375 10.6621 3.27767 11.0571C2.94159 11.452 2.70453 11.9214 2.58614 12.4263C2.46775 12.9312 2.47145 13.457 2.59692 13.9602C2.7224 14.4634 2.96604 14.9294 3.30764 15.3196C3.64923 15.7098 4.07893 16.0129 4.5611 16.2038C4.42067 16.7144 4.34726 17.2432 4.34726 17.79C4.34726 20.0688 5.63349 22.0583 7.5655 23.4467C9.49963 24.8371 12.1295 25.6712 14.9999 25.6712C17.8692 25.6712 20.5001 24.8371 22.4343 23.4477C24.3663 22.0583 25.6525 20.0688 25.6525 17.79C25.6525 17.2432 25.578 16.7134 25.4397 16.2048C25.9217 16.0138 26.3513 15.7107 26.6927 15.3205C27.0342 14.9304 27.2777 14.4644 27.4031 13.9613C27.5286 13.4583 27.5322 12.9325 27.4139 12.4277C27.2955 11.923 27.0585 11.4537 26.7226 11.0587C26.3866 10.6638 25.9613 10.3547 25.482 10.157C25.0027 9.95928 24.4832 9.87866 23.9665 9.92183C23.4499 9.96501 22.9509 10.1307 22.5111 10.4052C22.0712 10.6798 21.7032 11.0552 21.4374 11.5004C19.9193 10.6524 18.0915 10.1024 16.1148 9.95135C16.2085 9.72155 16.3074 9.47686 16.4127 9.22366C16.8574 8.13744 17.3766 6.89908 17.7894 5.92244L21.0002 6.58205C21.0653 7.05616 21.2656 7.50149 21.577 7.86485C21.8885 8.22821 22.2979 8.49424 22.7565 8.63115C23.2151 8.76806 23.7034 8.77008 24.163 8.63695C24.6227 8.50382 25.0343 8.24118 25.3488 7.8804C25.6632 7.51962 25.8671 7.07595 25.9362 6.60239C26.0053 6.12883 25.9365 5.6454 25.7382 5.20985C25.54 4.77429 25.2205 4.40503 24.818 4.14616C24.4155 3.88729 23.9469 3.74976 23.4684 3.75ZM22.5726 6.2416C22.5726 6.00389 22.667 5.7759 22.8351 5.60781C23.0032 5.43972 23.2312 5.34529 23.4689 5.34529C23.7066 5.34529 23.9346 5.43972 24.1027 5.60781C24.2708 5.7759 24.3652 6.00389 24.3652 6.2416C24.3652 6.47932 24.2708 6.70731 24.1027 6.8754C23.9346 7.04349 23.7066 7.13792 23.4689 7.13792C23.2312 7.13792 23.0032 7.04349 22.8351 6.8754C22.667 6.70731 22.5726 6.47932 22.5726 6.2416ZM14.9999 11.5057C15.1637 11.5057 15.3265 11.5089 15.4893 11.5153C15.4876 11.5489 15.4833 11.5823 15.4765 11.6153L15.4744 11.6206L15.4776 11.6099L15.5084 11.5163C17.8745 11.6078 19.9778 12.3355 21.5023 13.4313C23.1375 14.6058 24.0567 16.158 24.0567 17.7911C24.0567 19.4252 23.1364 20.9774 21.5034 22.153C19.8693 23.3254 17.5734 24.0765 14.9999 24.0765C12.4264 24.0765 10.1305 23.3254 8.49746 22.1519C6.86227 20.9774 5.94308 19.4252 5.94308 17.7911C5.94308 16.158 6.86227 14.6058 8.49639 13.4313C10.1316 12.2546 12.4274 11.5036 14.9999 11.5036V11.5057ZM4.09512 13.1706C4.09521 12.7993 4.21938 12.4386 4.4479 12.1459C4.67642 11.8531 4.9962 11.6451 5.35644 11.5549C5.71669 11.4647 6.09674 11.4974 6.43626 11.6479C6.77577 11.7984 7.05527 12.058 7.23038 12.3855C6.38034 13.0557 5.67392 13.8462 5.17283 14.7303C4.85604 14.6106 4.58323 14.3972 4.39071 14.1186C4.19818 13.84 4.09508 13.5093 4.09512 13.1706ZM24.8269 14.7303C24.3258 13.8473 23.6194 13.0547 22.7694 12.3855C22.8965 12.1481 23.0792 11.9451 23.3018 11.7938C23.5245 11.6424 23.7806 11.5473 24.0481 11.5166C24.3156 11.4859 24.5865 11.5204 24.8377 11.6173C25.0889 11.7142 25.3129 11.8705 25.4905 12.0729C25.6681 12.2753 25.794 12.5177 25.8574 12.7793C25.9208 13.041 25.9199 13.3141 25.8546 13.5754C25.7894 13.8366 25.6618 14.0781 25.4829 14.2793C25.3039 14.4804 25.0788 14.6352 24.8269 14.7303Z" fill="#FF4500"></path>
+                </svg>
+                
+            </a>
+            
+            <!-- Pinterest -->
+            <a href="https://pinterest.com/pin/create/button/?url=https://miside.im/mita-tier-list-maker/" 
+                target="_blank"
+                class="flex items-center gap-2 px-3 py-2 bg-red bg-opacity-100 rounded-lg hover:bg-opacity-20 transition-all duration-300 text-light text-sm">
+                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
+                </svg>
+                
+            </a>
+        </div>
+        
+        <div id="tierList">
+            <!-- Tier rows will be generated by JavaScript -->
+        </div>
+        <div class="flex justify-between items-center gap-8">
+          <button class="add-tier-btn text-sm md:text-lg" onclick="addTier()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            Add New Tier
+          </button>
+
+          <button class="export-btn text-sm md:text-lg" onclick="exportImage()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Export Image
+          </button>
+        </div>
+
+        <div class="image-section">
+            <div class="image-pool" 
+                 id="imagePool"
+                 ondrop="handleDrop(event)" 
+                 ondragover="handleDragOver(event)"
+                 ondragleave="handleDragLeave(event)">
+            </div>
+            <div class="upload-section" onclick="triggerFileInput()">
+                <p>Drag and drop images here or click to upload</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <input type="file" id="imageInput" accept="image/*" multiple>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+    // 初始化默认tier
+    const defaultTiers = [
+        { name: 'S', color: '#ff7f7f' },
+        { name: 'A', color: '#ffbf7f' },
+        { name: 'B', color: '#ff7fff' }
+        // { name: 'D', color: '#7f7fff' },
+        // { name: 'B', color: '#ffff7f' },
+        // { name: 'C', color: '#7fff7f' },
+    ];
+
+    // 默认图片
+    const defaultImages = [
+        '/assets/ShortHairedMitaFullbody.webp',
+        '/assets/2D_Mita.jpeg',
+        '/assets/CappieFullBody.webp',
+        '/assets/ChibiMitaFullBody.webp',
+        '/assets/Core_Mita_Fullbody.webp',
+        '/assets/Crazy_Mita_Revealed.webp',
+        '/assets/Ghostly_Mita_Fullbody.jpeg',
+        '/assets/Creepy_Mita_Fullbody.webp',
+        '/assets/Wandering_Mita.webp',
+        '/assets/Tiny_Mita_Fullbody.webp',
+        '/assets/Sleepy_Mita_Fullbody.webp',
+        '/assets/Mila_Fullbody.webp',
+        '/assets/KindMitaFullBody.webp',
+        '/assets/Dummy_Mita_Fullbody.webp',
+        '/assets/FullBodyMita.webp'
+    ];
+    // 初始化
+    function initialize() {
+        const tierList = document.getElementById('tierList');
+        defaultTiers.forEach(tier => {
+            addTier(tier.name, tier.color);
+        });
+
+        // 添加默认图片
+        const imagePool = document.getElementById('imagePool');
+        defaultImages.forEach(imgSrc => {
+            const item = createDraggableItem(imgSrc);
+            imagePool.appendChild(item);
+        });
+
+        // 设置文件拖拽事件
+        document.addEventListener('dragover', (e) => {
+            e.preventDefault();
+        });
+
+        document.addEventListener('drop', (e) => {
+            e.preventDefault();
+        });
+
+        // 添加移动端触摸事件支持
+        document.addEventListener('touchmove', (e) => {
+            if (e.target.closest('.draggable-item')) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+    }
+
+    // 添加新的tier
+    function addTier(name = 'New', color = '#cccccc') {
+        const tierRow = document.createElement('div');
+        tierRow.className = 'tier-row';
+        tierRow.innerHTML = `
+            <div class="tier-label shrink-0 w-20 md:w-28" style="background-color: ${color}; padding: 4px;" onclick="toggleTierEdit(this)">
+                <button class="tier-delete-btn" onclick="deleteTierRow(this, event)">×</button>
+                <span style="color: black; font-size: 18px; word-wrap: break-word; max-width: 100%; text-align: center;">${name}</span>
+                <input type="text" style="width: 100%; height: 90%; font-size: 18px; color: black;" value="${name}" onchange="updateTierName(this)" onblur="finishTierEdit(this)">
+                <input type="color" class="color-picker" value="${color}" 
+                        onchange="updateTierColor(this)" onclick="event.stopPropagation()">
+            </div>
+            <div class="tier-content" 
+                  ondrop="handleDrop(event)" 
+                  ondragover="handleDragOver(event)"
+                  ondragleave="handleDragLeave(event)">
+            </div>
+        `;
+        document.getElementById('tierList').appendChild(tierRow);
+    }
+
+    // 删除tier行
+    function deleteTierRow(btn, event) {
+        event.stopPropagation(); // 防止触发label的点击事件
+        const tierRow = btn.closest('.tier-row');
+        const imagePool = document.getElementById('imagePool');
+        
+        // 将该行中的所有图片移动到图片池
+        const images = tierRow.querySelectorAll('.draggable-item');
+        images.forEach(image => {
+            imagePool.appendChild(image);
+        });
+        
+        // 删除整行
+        tierRow.remove();
+    }
+
+    // 更新tier名称
+    function updateTierName(input) {
+        const label = input.closest('.tier-label');
+        const span = label.querySelector('span');
+        span.textContent = input.value;
+        finishTierEdit(input);
+    }
+
+    function toggleTierEdit(label) {
+        label.classList.add('editing');
+        const input = label.querySelector('input[type="text"]');
+        input.style.display = 'block';
+        input.focus();
+    }
+
+    function finishTierEdit(input) {
+        const label = input.closest('.tier-label');
+        label.classList.remove('editing');
+        input.style.display = 'none';
+    }
+
+    // 更新tier颜色
+    function updateTierColor(input) {
+        input.closest('.tier-label').style.backgroundColor = input.value;
+    }
+
+    // 处理文件上传
+    function triggerFileInput() {
+        document.getElementById('imageInput').click();
+    }
+
+    document.getElementById('imageInput').addEventListener('change', handleFileSelect);
+
+    function handleFileSelect(e) {
+        const files = e.target.files;
+        handleFiles(files);
+    }
+
+    function handleFiles(files, skipCheck = false) {
+        if (!skipCheck && !files) return;
+        
+        const imagePool = document.getElementById('imagePool');
+        
+        Array.from(files).forEach(file => {
+            if (!file.type.startsWith('image/')) return;
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const item = createDraggableItem(e.target.result);
+                imagePool.appendChild(item);
+            };
+            reader.readAsDataURL(file);
+        });
+    }
+
+    function createDraggableItem(imgSrc) {
+        const container = document.createElement('div');
+        container.className = 'draggable-item';
+        container.draggable = true;
+        container.innerHTML = `
+            <img src="${imgSrc}" style="width: 100px; height: 100px; border-radius: 8px;">
+            <button class="delete-btn" onclick="deleteItem(this)">×</button>
+        `;
+
+        // Add drag event listeners to the container
+        container.addEventListener('dragstart', handleDragStart);
+        container.addEventListener('dragend', handleDragEnd);
+        container.addEventListener('drag', (e) => {
+            e.stopPropagation();
+        });
+
+        // Add touch event listeners for mobile
+        container.addEventListener('touchstart', handleTouchStart, {passive: false});
+        container.addEventListener('touchmove', handleTouchMove, {passive: false});
+        container.addEventListener('touchend', handleTouchEnd, {passive: false});
+
+        return container;
+    }
+
+    // 删除项目
+    function deleteItem(btn) {
+        const item = btn.closest('.draggable-item');
+        const imagePool = document.getElementById('imagePool');
+        
+        // 如果在tier中删除，移动到图片池
+        if (!item.closest('#imagePool')) {
+            imagePool.appendChild(item);
+            return;
+        }
+        
+        // 如果在图片池中删除，直接移除
+        item.remove();
+    }
+
+    // 拖拽处理
+    function handleDragStart(e) {
+        const item = e.target.closest('.draggable-item');
+        if (!item) return;
+        
+        item.classList.add('dragging');
+        e.dataTransfer.setData('text/plain', '');
+        e.dataTransfer.effectAllowed = 'move';
+    }
+
+    function handleDragEnd(e) {
+        const item = e.target.closest('.draggable-item');
+        if (!item) return;
+        
+        item.classList.remove('dragging');
+    }
+
+    function handleDragOver(e) {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+        const dropZone = e.target.closest('.tier-content, .image-pool');
+        if (dropZone) {
+            dropZone.classList.add('drag-over');
+            
+            const draggable = document.querySelector('.dragging');
+            if (!draggable) return;
+
+            const siblings = [...dropZone.querySelectorAll('.draggable-item:not(.dragging)')];
+            const nextSibling = siblings.find(sibling => {
+                const rect = sibling.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                return e.clientX < centerX;
+            });
+
+            if (nextSibling) {
+                dropZone.insertBefore(draggable, nextSibling);
+            } else {
+                dropZone.appendChild(draggable);
+            }
+        }
+    }
+
+    function handleDragLeave(e) {
+        const dropZone = e.target.closest('.tier-content, .image-pool');
+        if (dropZone) {
+            dropZone.classList.remove('drag-over');
+        }
+    }
+
+    function handleDrop(e) {
+        e.preventDefault();
+        const dropZone = e.target.closest('.tier-content, .image-pool');
+        const draggedItem = document.querySelector('.dragging');
+
+        if (dropZone) {
+            dropZone.classList.remove('drag-over');
+            
+            if (draggedItem) {
+                const siblings = [...dropZone.querySelectorAll('.draggable-item:not(.dragging)')];
+                const nextSibling = siblings.find(sibling => {
+                    const rect = sibling.getBoundingClientRect();
+                    const centerX = rect.left + rect.width / 2;
+                    return e.clientX < centerX;
+                });
+
+                if (nextSibling) {
+                    dropZone.insertBefore(draggedItem, nextSibling);
+                } else {
+                    dropZone.appendChild(draggedItem);
+                }
+            }
+            
+            // 处理文件拖拽上传，只在拖拽到image-pool时处理
+            if (!draggedItem && dropZone.id === 'imagePool' && e.dataTransfer.files.length > 0) {
+                handleFiles(e.dataTransfer.files, true);
+            }
+        }
+    }
+
+    // Touch event handlers
+    let touchDragging = null;
+    let touchOffset = { x: 0, y: 0 };
+
+    function handleTouchStart(e) {
+        e.preventDefault();
+        const touch = e.touches[0];
+        const item = e.target.closest('.draggable-item');
+        if (!item) return;
+
+        const rect = item.getBoundingClientRect();
+        touchOffset.x = touch.clientX - rect.left;
+        touchOffset.y = touch.clientY - rect.top;
+
+        touchDragging = item;
+        item.classList.add('dragging');
+        
+        // Create a visual clone for dragging
+        const clone = item.cloneNode(true);
+        clone.style.position = 'fixed';
+        clone.style.zIndex = '1000';
+        clone.style.opacity = '0.8';
+        clone.style.pointerEvents = 'none';
+        document.body.appendChild(clone);
+        touchDragging.clone = clone;
+        
+        updateDragPosition(touch.clientX, touch.clientY);
+    }
+
+    function handleTouchMove(e) {
+        e.preventDefault();
+        if (!touchDragging) return;
+        
+        const touch = e.touches[0];
+        updateDragPosition(touch.clientX, touch.clientY);
+        
+        // Find and highlight drop target
+        const dropTarget = findDropTarget(touch.clientX, touch.clientY);
+        if (dropTarget) {
+            const siblings = [...dropTarget.querySelectorAll('.draggable-item:not(.dragging)')];
+            const nextSibling = siblings.find(sibling => {
+                const rect = sibling.getBoundingClientRect();
+                return touch.clientY < rect.top + rect.height / 2;
+            });
+            
+            if (nextSibling) {
+                dropTarget.insertBefore(touchDragging, nextSibling);
+            } else {
+                dropTarget.appendChild(touchDragging);
+            }
+        }
+    }
+
+    function handleTouchEnd(e) {
+        e.preventDefault();
+        if (!touchDragging) return;
+        
+        touchDragging.classList.remove('dragging');
+        if (touchDragging.clone) {
+            touchDragging.clone.remove();
+            delete touchDragging.clone;
+        }
+        touchDragging = null;
+    }
+
+    function updateDragPosition(x, y) {
+        if (!touchDragging || !touchDragging.clone) return;
+        touchDragging.clone.style.left = (x - touchOffset.x) + 'px';
+        touchDragging.clone.style.top = (y - touchOffset.y) + 'px';
+    }
+
+    function findDropTarget(x, y) {
+        const elements = document.elementsFromPoint(x, y);
+        return elements.find(el => 
+            el.classList.contains('tier-content') || 
+            el.id === 'imagePool'
+        );
+    }
+
+    // 导出相关功能
+    function showExportModal() {
+        document.getElementById('exportModal').style.display = 'block';
+    }
+
+    function hideExportModal() {
+        document.getElementById('exportModal').style.display = 'none';
+    }
+
+    async function exportImage() {
+        const loadingOverlay = document.querySelector('.loading-overlay');
+        loadingOverlay.style.display = 'flex';
+
+        try {
+            const container = document.createElement('div');
+            container.style.background = '#231a22';
+            container.style.padding = '20px';
+            container.style.width = document.querySelector('.tool').offsetWidth + 'px';
+
+            // 克隆tier list
+            const tierListClone = document.getElementById('tierList').cloneNode(true);
+            
+            // 隐藏所有颜色选择器
+            tierListClone.querySelectorAll('input[type="color"]').forEach(colorPicker => {
+                colorPicker.style.display = 'none';
+            });
+
+            console.log(tierListClone);
+                        
+            container.appendChild(tierListClone);
+
+            // 添加水印
+            const watermark = document.createElement('div');
+            watermark.style.position = 'absolute';
+            watermark.style.bottom = '40px';
+            watermark.style.right = '20px';
+            watermark.style.width = '100%';
+            watermark.style.textAlign = 'right';
+            watermark.style.color = '#ff549d';
+            watermark.style.fontSize = '14px';
+            watermark.style.display = 'flex';
+            watermark.style.alignItems = 'end';
+            watermark.style.justifyContent = 'flex-end';
+            watermark.innerHTML = 'Created on <a href="https://miside.im" target="_blank" style="margin-left: 8px; font-size: 28px; color: #ff549d; text-decoration: underline;"><i>miside.im</i></a>';
+            container.style.position = 'relative';
+            container.appendChild(watermark);
+
+            // 临时添加到文档以供截图
+            document.body.appendChild(container);
+
+            // 使用html2canvas截图
+            const canvas = await html2canvas(container, {
+                scale: 2,
+                backgroundColor: '#5f2e6b',
+                useCORS: true,
+                allowTaint: true,
+                onclone: function(clonedDoc) {
+                    // 确保克隆的文档中的图片保持正确的样式和比例
+                    clonedDoc.querySelectorAll('.draggable-item img').forEach(img => {
+                        const aspectRatio = img.naturalWidth / img.naturalHeight;
+                        img.style.width = '100%';
+                        img.style.height = `${100 / aspectRatio}%`;
+                        img.style.objectFit = 'contain';
+                        img.style.objectPosition = 'top';
+                        img.style.borderRadius = '8px';
+                        img.parentElement.style.display = 'flex';
+                        img.parentElement.style.alignItems = 'start';
+                        img.parentElement.style.justifyContent = 'center';
+                    });
+                }
+            });
+
+            // 移除临时元素
+            document.body.removeChild(container);
+
+            // 下载图片
+            const link = document.createElement('a');
+            const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+            link.download = `mita-tier-list-${timestamp}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        } catch (error) {
+            console.error('Export failed:', error);
+        } finally {
+            loadingOverlay.style.display = 'none';
+        }
+    }
+
+    // 初始化应用
+    initialize();
+
+    // 添加文件拖拽上传支持
+    const uploadSection = document.querySelector('.upload-section');
+    uploadSection.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        uploadSection.style.background = '#ff549d';
+    });
+
+    uploadSection.addEventListener('dragleave', () => {
+        uploadSection.style.background = '#231a22';
+    });
+
+    uploadSection.addEventListener('drop', (e) => {
+        e.preventDefault();
+        uploadSection.style.background = '#231a22';
+        if (e.dataTransfer.files.length > 0) {
+            handleFiles(e.dataTransfer.files);
+        }
+    });
+
+    // 图片池的文件拖拽处理
+    // const imagePool = document.getElementById('imagePool');
+    // imagePool.addEventListener('dragover', (e) => {
+    //     e.preventDefault();
+    //     if (e.dataTransfer.types.includes('Files')) {
+    //         imagePool.classList.add('drag-over');
+    //     }
+    // });
+
+    // imagePool.addEventListener('dragleave', () => {
+    //     imagePool.classList.remove('drag-over');
+    // });
+
+    // imagePool.addEventListener('drop', (e) => {
+    //     e.preventDefault();
+    //     imagePool.classList.remove('drag-over');
+    //     if (e.dataTransfer.files.length > 0) {
+    //         handleFiles(e.dataTransfer.files);
+    //     }
+    // });
+</script>

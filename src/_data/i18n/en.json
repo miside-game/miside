@@ -18,12 +18,12 @@
         "url": "/mita-miside-wiki/"
       },
       {
-        "title": "Blog",
-        "url": "/blogentry/"
+        "title": "Mita Tier List",
+        "url": "/mita-tier-list-maker/"
       },
       {
-        "title": "FAQs",
-        "url": "/#faqs"
+        "title": "Blog",
+        "url": "/blogentry/"
       },
       {
         "title": "Download",
@@ -44,7 +44,8 @@
           "alt": "MiSide Hero Image",
           "title": "MiSide"
         },
-        "buttonText": "Play Now →"
+        "buttonText": "Create Mita Tier List →",
+        "buttonLink": "/mita-tier-list-maker/"
       },
       "about": {
         "title": "About MiSide",
@@ -296,6 +297,10 @@
     "privacy": {
       "title": "Privacy Policy | MiSide",
       "description": "Privacy policy for MiSide. Learn how we protect your information while you explore our content."
+    },
+    "mita-tier-list-maker": {
+      "title": "MiSide Mita Tier List Maker",
+      "description": "Create your own MiSide Mita Tier List with our Tier List Maker. Share your tier list with your friends and community. Add more fun to your MiSide gaming experience."
     },
     "blogentry": {
       "title": "MiSide Guide & Blog",
@@ -1325,7 +1330,7 @@
       ],
       "character": "Ghostly Mita",
       "media": {
-        "url": "/assets/Ghostly_Mita_Fullbody.webp",
+        "url": "/assets/Ghostly_Mita_Fullbody.jpeg",
         "alt": "Ghostly Mita MiSide Character Wiki",
         "title": "Ghostly Mita MiSide Character Wiki"
       },
