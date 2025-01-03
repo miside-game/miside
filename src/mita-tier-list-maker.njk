@@ -51,8 +51,8 @@ layout: base.njk
 
     .tier-delete-btn {
         position: absolute;
-        top: 4px;
-        right: 4px;
+        top: -2px;
+        left: -2px;
         width: 20px;
         height: 20px;
         padding: 0;
@@ -484,7 +484,7 @@ layout: base.njk
                 <button class="tier-delete-btn" onclick="deleteTierRow(this, event)">×</button>
                 <span style="color: black; font-size: 18px; word-wrap: break-word; max-width: 100%; text-align: center;">${name}</span>
                 <input type="text" style="width: 100%; height: 90%; font-size: 18px; color: black;" value="${name}" onchange="updateTierName(this)" onblur="finishTierEdit(this)">
-                <input type="color" class="color-picker" value="${color}" 
+                <input type="color" class="color-picker shadow-md" value="${color}" 
                         onchange="updateTierColor(this)" onclick="event.stopPropagation()">
             </div>
             <div class="tier-content" 
