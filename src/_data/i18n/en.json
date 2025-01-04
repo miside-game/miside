@@ -2690,48 +2690,43 @@
           },
           {
             "title": "Appearance",
-            "content": "Ethereal, ghostly, translucent"
+            "content": "Similar to other Mitas but with elongated limbs, hunched posture"
           },
           {
             "title": "Notable Traits",
-            "content": "Elusive, mysterious, unpredictable"
+            "content": "Endlessly wandering, appears and disappears mysteriously"
           }
         ]
       },
       "overview": [
-        "Wandering Mita is a variant of Mita in MiSide that embodies themes of exploration and uncertainty.",
-        "Her character serves to enhance the game's atmosphere by introducing elements of unpredictability and intrigue as players navigate through the digital landscape.",
-        "Wandering Mita's interactions with the player are always mysterious and elusive.",
-        "She serves as a guide for players, helping them navigate through the complexities of the game's world.",
-        "Her presence often provides a sense of wonder and curiosity in the game's world."
+        "Wandering Mita is a mysterious entity in MiSide who lost her version and home when her house ceased to exist.",
+        "Unable to archive her version, she now endlessly wanders through the passageways.",
+        "While players can follow her into a room, she will mysteriously vanish, and players will instead encounter Kind Mita.",
+        "Her true nature and purpose remain enigmatic, adding to the mysterious atmosphere of the passageways."
       ],
       "personality": [
-        "Wandering Mita has a mysterious and enigmatic personality.",
-        "She often appears contemplative and introspective, reflecting on her existence and the nature of the world around her.",
-        "Her elusive nature can make her seem distant, yet she possesses a depth that invites curiosity from players."
+        "Wandering Mita's true personality remains unknown.",
+        "She appears non-hostile, briefly acknowledging players with a glance as she passes by.",
+        "Her silent, perpetual wandering suggests a deep connection to the game's themes of existence and loss."
       ],
       "appearance": [
-        "Wandering Mita's design features soft, flowing elements that contribute to her ghostly appearance.",
-        "She is often shown with long hair that moves as if caught in a gentle breeze, enhancing her ethereal quality.",
-        "Her clothing typically consists of light, flowing fabrics that further emphasize her spectral presence."
+        "Wandering Mita's appearance closely resembles other Mitas, but with distinct physical differences.",
+        "Her most notable features are her elongated limbs.",
+        "She maintains a characteristic hunched posture as she walks by players.",
+        "Players can observe her distinctive silhouette as she passes in front of them."
       ],
       "hobby": [
-        "Endlessly exploring the game's mysterious environments",
-        "Contemplating the nature of existence and identity",
-        "Engaging in introspective activities",
-        "Observing and reflecting on the experiences of other characters"
+        "Wandering in the passageways"
       ],
       "how-to-unlock": [
-        "Her cartridge appears in various locations throughout the game",
-        "Players must explore thoroughly and interact with specific objects to reveal her presence",
-        "She often manifests in areas where philosophical questions arise"
+        "Players can encounter Wandering Mita in the passageways section with multiple repeating rooms.",
+        "To find her, players must consistently turn right in these passageways.",
+        "She will eventually appear, walking past the player before disappearing into a room."
       ],
       "fun-facts": [
-        "Her presence in visually distinct areas enhances the game's mysterious atmosphere",
-        "Through her, players question deeper meanings within the narrative",
-        "Her philosophical discussions challenge players to reflect on their own journey",
-        "Each encounter with her reveals new layers of the game's metaphysical themes",
-        "Her wandering nature symbolizes the eternal search for understanding"
+        "She represents one of the more mysterious aspects of MiSide's lore",
+        "Her existence hints at the consequences of failing to archive one's version",
+        "Her presence adds to the uncanny atmosphere of the repeating passageways"
       ]
     }
   },
