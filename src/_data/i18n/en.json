@@ -334,6 +334,17 @@
       "subtitle": "Latest MiSide Guides",
       "blogs": [
         {
+          "name": "All MiSide Achievements",
+          "date": "January 5, 2025",
+          "desc": "Discover MiSide's 26 unique achievements that players can unlock and how to unlock them.",
+          "path": "/blog/miside-achievements/",
+          "media": {
+            "url": "/assets/achievements.jpeg",
+            "alt": "MiSide Achievements",
+            "title": "MiSide Achievements"
+          }
+        },
+        {
           "name": "All MiSide Endings",
           "date": "December 25, 2024",
           "desc": "Learn about MiSide's multiple endings, including their significance and how to unlock them.",
@@ -342,17 +353,6 @@
             "url": "/assets/choice.jpeg",
             "alt": "MiSide Endings",
             "title": "MiSide Endings"
-          }
-        },
-        {
-          "name": "All MiSide Achievements",
-          "date": "December 25, 2024",
-          "desc": "Discover MiSide's 26 unique achievements that players can unlock and how to unlock them.",
-          "path": "/blog/miside-achievements/",
-          "media": {
-            "url": "/assets/achievements.jpeg",
-            "alt": "MiSide Achievements",
-            "title": "MiSide Achievements"
           }
         },
         {
@@ -384,7 +384,7 @@
       "title": "All MiSide Achievements - MiSide Guide",
       "description": "MiSide features 26 unique achievements that players can unlock through various tasks during gameplay. Here’s a detailed overview of each achievement:",
       "articleTitle": "All MiSide Achievements Collectible Guide",
-      "date": "December 25, 2024",
+      "date": "January 5, 2025",
       "media": {
         "url": "/assets/achievements.jpeg",
         "alt": "MiSide Achievements",
