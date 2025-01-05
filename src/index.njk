@@ -62,6 +62,14 @@ layout: base.njk
             </div>
             <div class="w-full md:w-1/2 order-first md:order-last">
                 <img src="{{ translations.pages.index.hero.media.url }}" alt="{{ translations.pages.index.hero.media.alt }}" title="{{ translations.pages.index.hero.media.title }}" class="w-full m-auto rounded-lg shadow-lg">
+                <div class="hidden md:block mt-8 space-y-2 text-left text-sm">
+                    {% for info in translations.pages.index.hero.gameInfo %}
+                    <div class="flex items-center">
+                        <span class="font-bold text-light mr-2">{{ info.title }}:</span>
+                        <span class="text-gray-300">{{ info.content }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </section>

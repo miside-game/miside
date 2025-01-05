@@ -22,6 +22,10 @@
         "url": "/mita-tier-list-maker/"
       },
       {
+        "title": "Achievements Tier List",
+        "url": "/achievements-tier-list-maker/"
+      },
+      {
         "title": "Blog",
         "url": "/blogentry/"
       },
@@ -44,6 +48,24 @@
           "alt": "MiSide Hero Image",
           "title": "MiSide"
         },
+        "gameInfo": [
+          {
+            "title": "Release Date",
+            "content": "Dec 11, 2024"
+          },
+          {
+            "title": "Developer",
+            "content": "AIHASTO"
+          },
+          {
+            "title": "Publisher",
+            "content": "IndieArk, Shochiku (Japan)"
+          },
+          {
+            "title": "All Reviews",
+            "content": "10/10 on Steam"
+          }
+        ],
         "buttonText": "Create Mita Tier List →",
         "buttonLink": "/mita-tier-list-maker/"
       },
@@ -300,7 +322,11 @@
     },
     "mita-tier-list-maker": {
       "title": "MiSide Mita Tier List Maker",
-      "description": "Create your own MiSide Mita Tier List with our Tier List Maker. Share your tier list with your friends and community. Add more fun to your MiSide gaming experience."
+      "description": "Create your own MiSide Mita Tier List now! Share your tier list with your friends and community. Add more fun to your MiSide gaming experience."
+    },
+    "achievements-tier-list-maker": {
+      "title": "MiSide Achievements Tier List Maker",
+      "description": "Create your own MiSide Achievements Tier List now! Share your achievements tier list with your friends and add more fun to your MiSide gaming experience."
     },
     "blogentry": {
       "title": "MiSide Guide & Blog",
