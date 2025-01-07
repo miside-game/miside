@@ -118,5 +118,36 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
-    
+
+    <url>
+        <loc>https://miside.im/achievements-tier-list-maker/</loc>
+        <lastmod>2025-1-7</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://miside.im/blogentry/</loc>
+        <lastmod>2025-01-7</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://miside.im/blog/miside-achievements/</loc>
+        <lastmod>2025-01-7</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://miside.im/blog/miside-endings/</loc>
+        <lastmod>2025-01-7</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://miside.im/blog/miside-walkthrough/</loc>
+        <lastmod>2025-01-7</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>
