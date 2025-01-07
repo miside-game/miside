@@ -326,103 +326,165 @@ layout: base.njk
         display: none;
     }
 </style>
-<div class="bg-green bg-opacity-80 px-4 md:px-10 text-md mx-auto font-sg max-w-[1200px] md:flex md:space-x-4 relative">
-    <div class="tool w-full mx-auto bg-green bg-opacity-80 rounded-lg py-10 px-4">
-        <h1 class="text-2xl md:text-5xl font-black mb-4 text-center text-light">Create Your MiSide Achievements Tier List</h1>
-        <p class="font-light text-sm md:text-md text-center text-light mb-4">Share MiSide Achievements Tier List Maker with your friends and community!</p>
-        <!-- Social Share Buttons 1-->
-        <div class="flex justify-center items-center gap-3 mb-6">
-            <!-- Twitter/X -->
-            <a href="https://twitter.com/intent/tweet?url=https://miside.im/achievements-tier-list-maker/" 
-                target="_blank"
-                class="flex items-center gap-2 px-3 py-2 bg-red bg-opacity-100 rounded-lg hover:bg-opacity-20 transition-all duration-300 text-light text-sm">
-                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
-                </svg>
-                
-            </a>
-        
-            <!-- Facebook -->
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://miside.im/achievements-tier-list-maker/" 
-                target="_blank"
-                class="flex items-center gap-2 px-3 py-2 bg-red bg-opacity-100 rounded-lg hover:bg-opacity-20 transition-all duration-300 text-light text-sm">
-                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-                </svg>
-                
-            </a>
-        
-            <!-- reddit -->
-            <a href="https://www.reddit.com/submit?url=https://miside.im/achievements-tier-list-maker/" 
-                target="_blank"
-                class="flex items-center gap-2 px-3 py-2 bg-red bg-opacity-100 rounded-lg hover:bg-opacity-20 transition-all duration-300 text-light text-sm">
-                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="#ff549d" viewBox="0 0 30 30">
-                    <path d="M20.3032 16.2506C20.3032 16.659 20.141 17.0507 19.8522 17.3395C19.5634 17.6283 19.1717 17.7905 18.7633 17.7905C18.3548 17.7905 17.9631 17.6283 17.6743 17.3395C17.3855 17.0507 17.2233 16.659 17.2233 16.2506C17.2233 15.8422 17.3855 15.4505 17.6743 15.1617C17.9631 14.8729 18.3548 14.7106 18.7633 14.7106C19.1717 14.7106 19.5634 14.8729 19.8522 15.1617C20.141 15.4505 20.3032 15.8422 20.3032 16.2506ZM11.2305 17.79C11.6388 17.79 12.0303 17.6278 12.319 17.3391C12.6077 17.0504 12.7699 16.6589 12.7699 16.2506C12.7699 15.8423 12.6077 15.4507 12.319 15.162C12.0303 14.8733 11.6388 14.7111 11.2305 14.7111C10.8222 14.7111 10.4306 14.8733 10.1419 15.162C9.85323 15.4507 9.69104 15.8423 9.69104 16.2506C9.69104 16.6589 9.85323 17.0504 10.1419 17.3391C10.4306 17.6278 10.8222 17.79 11.2305 17.79ZM11.6486 19.5795C11.4699 19.4743 11.2573 19.4429 11.0558 19.4918C10.8543 19.5407 10.6798 19.6661 10.5692 19.8414C10.4586 20.0168 10.4205 20.2283 10.4631 20.4312C10.5057 20.6341 10.6257 20.8124 10.7975 20.9285L11.1645 21.1604C12.3114 21.8838 13.6396 22.2676 14.9955 22.2676C16.3515 22.2676 17.6797 21.8838 18.8266 21.1604L19.1936 20.9295C19.2823 20.8736 19.3592 20.8008 19.4197 20.7152C19.4803 20.6297 19.5234 20.533 19.5467 20.4307C19.5699 20.3285 19.5727 20.2227 19.555 20.1193C19.5374 20.016 19.4995 19.9171 19.4436 19.8284C19.3877 19.7397 19.3149 19.6629 19.2293 19.6023C19.1438 19.5417 19.0471 19.4986 18.9448 19.4754C18.8426 19.4521 18.7368 19.4493 18.6334 19.467C18.5301 19.4846 18.4312 19.5225 18.3425 19.5784L17.9755 19.8103C17.0834 20.373 16.0503 20.6717 14.9955 20.6717C13.9408 20.6717 12.9077 20.373 12.0156 19.8103L11.6486 19.5795Z" fill="#FF4500"></path><path d="M23.4684 3.75C22.5396 3.75 21.7279 4.2596 21.3002 5.01389L17.4702 4.22768C17.2897 4.19071 17.102 4.21735 16.9389 4.30306C16.7758 4.38877 16.6474 4.52829 16.5755 4.69792C16.1382 5.72562 15.4829 7.28421 14.935 8.61831C14.7414 9.09067 14.5605 9.53644 14.4084 9.92156C12.2306 10.0088 10.2135 10.578 8.56342 11.5004C8.29782 11.055 7.92984 10.6793 7.49003 10.4045C7.05021 10.1298 6.55122 9.96386 6.03445 9.92052C5.51768 9.87719 4.99802 9.95769 4.51858 10.1553C4.03914 10.353 3.61375 10.6621 3.27767 11.0571C2.94159 11.452 2.70453 11.9214 2.58614 12.4263C2.46775 12.9312 2.47145 13.457 2.59692 13.9602C2.7224 14.4634 2.96604 14.9294 3.30764 15.3196C3.64923 15.7098 4.07893 16.0129 4.5611 16.2038C4.42067 16.7144 4.34726 17.2432 4.34726 17.79C4.34726 20.0688 5.63349 22.0583 7.5655 23.4467C9.49963 24.8371 12.1295 25.6712 14.9999 25.6712C17.8692 25.6712 20.5001 24.8371 22.4343 23.4477C24.3663 22.0583 25.6525 20.0688 25.6525 17.79C25.6525 17.2432 25.578 16.7134 25.4397 16.2048C25.9217 16.0138 26.3513 15.7107 26.6927 15.3205C27.0342 14.9304 27.2777 14.4644 27.4031 13.9613C27.5286 13.4583 27.5322 12.9325 27.4139 12.4277C27.2955 11.923 27.0585 11.4537 26.7226 11.0587C26.3866 10.6638 25.9613 10.3547 25.482 10.157C25.0027 9.95928 24.4832 9.87866 23.9665 9.92183C23.4499 9.96501 22.9509 10.1307 22.5111 10.4052C22.0712 10.6798 21.7032 11.0552 21.4374 11.5004C19.9193 10.6524 18.0915 10.1024 16.1148 9.95135C16.2085 9.72155 16.3074 9.47686 16.4127 9.22366C16.8574 8.13744 17.3766 6.89908 17.7894 5.92244L21.0002 6.58205C21.0653 7.05616 21.2656 7.50149 21.577 7.86485C21.8885 8.22821 22.2979 8.49424 22.7565 8.63115C23.2151 8.76806 23.7034 8.77008 24.163 8.63695C24.6227 8.50382 25.0343 8.24118 25.3488 7.8804C25.6632 7.51962 25.8671 7.07595 25.9362 6.60239C26.0053 6.12883 25.9365 5.6454 25.7382 5.20985C25.54 4.77429 25.2205 4.40503 24.818 4.14616C24.4155 3.88729 23.9469 3.74976 23.4684 3.75ZM22.5726 6.2416C22.5726 6.00389 22.667 5.7759 22.8351 5.60781C23.0032 5.43972 23.2312 5.34529 23.4689 5.34529C23.7066 5.34529 23.9346 5.43972 24.1027 5.60781C24.2708 5.7759 24.3652 6.00389 24.3652 6.2416C24.3652 6.47932 24.2708 6.70731 24.1027 6.8754C23.9346 7.04349 23.7066 7.13792 23.4689 7.13792C23.2312 7.13792 23.0032 7.04349 22.8351 6.8754C22.667 6.70731 22.5726 6.47932 22.5726 6.2416ZM14.9999 11.5057C15.1637 11.5057 15.3265 11.5089 15.4893 11.5153C15.4876 11.5489 15.4833 11.5823 15.4765 11.6153L15.4744 11.6206L15.4776 11.6099L15.5084 11.5163C17.8745 11.6078 19.9778 12.3355 21.5023 13.4313C23.1375 14.6058 24.0567 16.158 24.0567 17.7911C24.0567 19.4252 23.1364 20.9774 21.5034 22.153C19.8693 23.3254 17.5734 24.0765 14.9999 24.0765C12.4264 24.0765 10.1305 23.3254 8.49746 22.1519C6.86227 20.9774 5.94308 19.4252 5.94308 17.7911C5.94308 16.158 6.86227 14.6058 8.49639 13.4313C10.1316 12.2546 12.4274 11.5036 14.9999 11.5036V11.5057ZM4.09512 13.1706C4.09521 12.7993 4.21938 12.4386 4.4479 12.1459C4.67642 11.8531 4.9962 11.6451 5.35644 11.5549C5.71669 11.4647 6.09674 11.4974 6.43626 11.6479C6.77577 11.7984 7.05527 12.058 7.23038 12.3855C6.38034 13.0557 5.67392 13.8462 5.17283 14.7303C4.85604 14.6106 4.58323 14.3972 4.39071 14.1186C4.19818 13.84 4.09508 13.5093 4.09512 13.1706ZM24.8269 14.7303C24.3258 13.8473 23.6194 13.0547 22.7694 12.3855C22.8965 12.1481 23.0792 11.9451 23.3018 11.7938C23.5245 11.6424 23.7806 11.5473 24.0481 11.5166C24.3156 11.4859 24.5865 11.5204 24.8377 11.6173C25.0889 11.7142 25.3129 11.8705 25.4905 12.0729C25.6681 12.2753 25.794 12.5177 25.8574 12.7793C25.9208 13.041 25.9199 13.3141 25.8546 13.5754C25.7894 13.8366 25.6618 14.0781 25.4829 14.2793C25.3039 14.4804 25.0788 14.6352 24.8269 14.7303Z" fill="#FF4500"></path>
-                </svg>
-                
-            </a>
+
+<main class="bg-green bg-opacity-80 px-4 md:px-10 text-md mx-auto font-sg max-w-[1200px] relative">
+    <div class="md:flex md:space-x-4 relative">
+        <div class="tool w-full mx-auto bg-green bg-opacity-80 rounded-lg py-10 px-4">
+            <h1 class="text-2xl md:text-5xl font-black mb-4 text-center text-light">Create Your MiSide Achievements Tier List</h1>
+            <p class="font-light text-sm md:text-md text-center text-light mb-4">Share MiSide Achievements Tier List Maker with your friends and community!</p>
+            <!-- Social Share Buttons 1-->
+            <div class="flex justify-center items-center gap-3 mb-6">
+                <!-- Twitter/X -->
+                <a href="https://twitter.com/intent/tweet?url=https://miside.im/achievements-tier-list-maker/" 
+                    target="_blank"
+                    class="flex items-center gap-2 px-3 py-2 bg-red bg-opacity-100 rounded-lg hover:bg-opacity-20 transition-all duration-300 text-light text-sm">
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+                    </svg>
+                    
+                </a>
             
-            <!-- Pinterest -->
-            <a href="https://pinterest.com/pin/create/button/?url=https://miside.im/achievements-tier-list-maker/" 
-                target="_blank"
-                class="flex items-center gap-2 px-3 py-2 bg-red bg-opacity-100 rounded-lg hover:bg-opacity-20 transition-all duration-300 text-light text-sm">
-                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
-                </svg>
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://miside.im/achievements-tier-list-maker/" 
+                    target="_blank"
+                    class="flex items-center gap-2 px-3 py-2 bg-red bg-opacity-100 rounded-lg hover:bg-opacity-20 transition-all duration-300 text-light text-sm">
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                    </svg>
+                    
+                </a>
+            
+                <!-- reddit -->
+                <a href="https://www.reddit.com/submit?url=https://miside.im/achievements-tier-list-maker/" 
+                    target="_blank"
+                    class="flex items-center gap-2 px-3 py-2 bg-red bg-opacity-100 rounded-lg hover:bg-opacity-20 transition-all duration-300 text-light text-sm">
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="#ff549d" viewBox="0 0 30 30">
+                        <path d="M20.3032 16.2506C20.3032 16.659 20.141 17.0507 19.8522 17.3395C19.5634 17.6283 19.1717 17.7905 18.7633 17.7905C18.3548 17.7905 17.9631 17.6283 17.6743 17.3395C17.3855 17.0507 17.2233 16.659 17.2233 16.2506C17.2233 15.8422 17.3855 15.4505 17.6743 15.1617C17.9631 14.8729 18.3548 14.7106 18.7633 14.7106C19.1717 14.7106 19.5634 14.8729 19.8522 15.1617C20.141 15.4505 20.3032 15.8422 20.3032 16.2506ZM11.2305 17.79C11.6388 17.79 12.0303 17.6278 12.319 17.3391C12.6077 17.0504 12.7699 16.6589 12.7699 16.2506C12.7699 15.8423 12.6077 15.4507 12.319 15.162C12.0303 14.8733 11.6388 14.7111 11.2305 14.7111C10.8222 14.7111 10.4306 14.8733 10.1419 15.162C9.85323 15.4507 9.69104 15.8423 9.69104 16.2506C9.69104 16.6589 9.85323 17.0504 10.1419 17.3391C10.4306 17.6278 10.8222 17.79 11.2305 17.79ZM11.6486 19.5795C11.4699 19.4743 11.2573 19.4429 11.0558 19.4918C10.8543 19.5407 10.6798 19.6661 10.5692 19.8414C10.4586 20.0168 10.4205 20.2283 10.4631 20.4312C10.5057 20.6341 10.6257 20.8124 10.7975 20.9285L11.1645 21.1604C12.3114 21.8838 13.6396 22.2676 14.9955 22.2676C16.3515 22.2676 17.6797 21.8838 18.8266 21.1604L19.1936 20.9295C19.2823 20.8736 19.3592 20.8008 19.4197 20.7152C19.4803 20.6297 19.5234 20.533 19.5467 20.4307C19.5699 20.3285 19.5727 20.2227 19.555 20.1193C19.5374 20.016 19.4995 19.9171 19.4436 19.8284C19.3877 19.7397 19.3149 19.6629 19.2293 19.6023C19.1438 19.5417 19.0471 19.4986 18.9448 19.4754C18.8426 19.4521 18.7368 19.4493 18.6334 19.467C18.5301 19.4846 18.4312 19.5225 18.3425 19.5784L17.9755 19.8103C17.0834 20.373 16.0503 20.6717 14.9955 20.6717C13.9408 20.6717 12.9077 20.373 12.0156 19.8103L11.6486 19.5795Z" fill="#FF4500"></path><path d="M23.4684 3.75C22.5396 3.75 21.7279 4.2596 21.3002 5.01389L17.4702 4.22768C17.2897 4.19071 17.102 4.21735 16.9389 4.30306C16.7758 4.38877 16.6474 4.52829 16.5755 4.69792C16.1382 5.72562 15.4829 7.28421 14.935 8.61831C14.7414 9.09067 14.5605 9.53644 14.4084 9.92156C12.2306 10.0088 10.2135 10.578 8.56342 11.5004C8.29782 11.055 7.92984 10.6793 7.49003 10.4045C7.05021 10.1298 6.55122 9.96386 6.03445 9.92052C5.51768 9.87719 4.99802 9.95769 4.51858 10.1553C4.03914 10.353 3.61375 10.6621 3.27767 11.0571C2.94159 11.452 2.70453 11.9214 2.58614 12.4263C2.46775 12.9312 2.47145 13.457 2.59692 13.9602C2.7224 14.4634 2.96604 14.9294 3.30764 15.3196C3.64923 15.7098 4.07893 16.0129 4.5611 16.2038C4.42067 16.7144 4.34726 17.2432 4.34726 17.79C4.34726 20.0688 5.63349 22.0583 7.5655 23.4467C9.49963 24.8371 12.1295 25.6712 14.9999 25.6712C17.8692 25.6712 20.5001 24.8371 22.4343 23.4477C24.3663 22.0583 25.6525 20.0688 25.6525 17.79C25.6525 17.2432 25.578 16.7134 25.4397 16.2048C25.9217 16.0138 26.3513 15.7107 26.6927 15.3205C27.0342 14.9304 27.2777 14.4644 27.4031 13.9613C27.5286 13.4583 27.5322 12.9325 27.4139 12.4277C27.2955 11.923 27.0585 11.4537 26.7226 11.0587C26.3866 10.6638 25.9613 10.3547 25.482 10.157C25.0027 9.95928 24.4832 9.87866 23.9665 9.92183C23.4499 9.96501 22.9509 10.1307 22.5111 10.4052C22.0712 10.6798 21.7032 11.0552 21.4374 11.5004C19.9193 10.6524 18.0915 10.1024 16.1148 9.95135C16.2085 9.72155 16.3074 9.47686 16.4127 9.22366C16.8574 8.13744 17.3766 6.89908 17.7894 5.92244L21.0002 6.58205C21.0653 7.05616 21.2656 7.50149 21.577 7.86485C21.8885 8.22821 22.2979 8.49424 22.7565 8.63115C23.2151 8.76806 23.7034 8.77008 24.163 8.63695C24.6227 8.50382 25.0343 8.24118 25.3488 7.8804C25.6632 7.51962 25.8671 7.07595 25.9362 6.60239C26.0053 6.12883 25.9365 5.6454 25.7382 5.20985C25.54 4.77429 25.2205 4.40503 24.818 4.14616C24.4155 3.88729 23.9469 3.74976 23.4684 3.75ZM22.5726 6.2416C22.5726 6.00389 22.667 5.7759 22.8351 5.60781C23.0032 5.43972 23.2312 5.34529 23.4689 5.34529C23.7066 5.34529 23.9346 5.43972 24.1027 5.60781C24.2708 5.7759 24.3652 6.00389 24.3652 6.2416C24.3652 6.47932 24.2708 6.70731 24.1027 6.8754C23.9346 7.04349 23.7066 7.13792 23.4689 7.13792C23.2312 7.13792 23.0032 7.04349 22.8351 6.8754C22.667 6.70731 22.5726 6.47932 22.5726 6.2416ZM14.9999 11.5057C15.1637 11.5057 15.3265 11.5089 15.4893 11.5153C15.4876 11.5489 15.4833 11.5823 15.4765 11.6153L15.4744 11.6206L15.4776 11.6099L15.5084 11.5163C17.8745 11.6078 19.9778 12.3355 21.5023 13.4313C23.1375 14.6058 24.0567 16.158 24.0567 17.7911C24.0567 19.4252 23.1364 20.9774 21.5034 22.153C19.8693 23.3254 17.5734 24.0765 14.9999 24.0765C12.4264 24.0765 10.1305 23.3254 8.49746 22.1519C6.86227 20.9774 5.94308 19.4252 5.94308 17.7911C5.94308 16.158 6.86227 14.6058 8.49639 13.4313C10.1316 12.2546 12.4274 11.5036 14.9999 11.5036V11.5057ZM4.09512 13.1706C4.09521 12.7993 4.21938 12.4386 4.4479 12.1459C4.67642 11.8531 4.9962 11.6451 5.35644 11.5549C5.71669 11.4647 6.09674 11.4974 6.43626 11.6479C6.77577 11.7984 7.05527 12.058 7.23038 12.3855C6.38034 13.0557 5.67392 13.8462 5.17283 14.7303C4.85604 14.6106 4.58323 14.3972 4.39071 14.1186C4.19818 13.84 4.09508 13.5093 4.09512 13.1706ZM24.8269 14.7303C24.3258 13.8473 23.6194 13.0547 22.7694 12.3855C22.8965 12.1481 23.0792 11.9451 23.3018 11.7938C23.5245 11.6424 23.7806 11.5473 24.0481 11.5166C24.3156 11.4859 24.5865 11.5204 24.8377 11.6173C25.0889 11.7142 25.3129 11.8705 25.4905 12.0729C25.6681 12.2753 25.794 12.5177 25.8574 12.7793C25.9208 13.041 25.9199 13.3141 25.8546 13.5754C25.7894 13.8366 25.6618 14.0781 25.4829 14.2793C25.3039 14.4804 25.0788 14.6352 24.8269 14.7303Z" fill="#FF4500"></path>
+                    </svg>
+                    
+                </a>
                 
-            </a>
-        </div>
-        
-        <div id="tierList">
-            <!-- Tier rows will be generated by JavaScript -->
-        </div>
-        <div class="flex justify-between items-center gap-8">
-          <button class="add-tier-btn text-sm md:text-lg" onclick="addTier()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="12" y1="5" x2="12" y2="19"></line>
-              <line x1="5" y1="12" x2="19" y2="12"></line>
-            </svg>
-            Add New Tier
-          </button>
-
-          <button class="export-btn text-sm md:text-lg" onclick="exportImage()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-              <polyline points="7 10 12 15 17 10"></polyline>
-              <line x1="12" y1="15" x2="12" y2="3"></line>
-            </svg>
-            Export Image
-          </button>
-        </div>
-
-        <div class="image-section">
-            <div class="image-pool" 
-                 id="imagePool"
-                 ondrop="handleDrop(event)" 
-                 ondragover="handleDragOver(event)"
-                 ondragleave="handleDragLeave(event)">
-            </div>
-            <div class="upload-section" onclick="triggerFileInput()">
-                <p>Drag and drop images here or click to upload</p>
+                <!-- Pinterest -->
+                <a href="https://pinterest.com/pin/create/button/?url=https://miside.im/achievements-tier-list-maker/" 
+                    target="_blank"
+                    class="flex items-center gap-2 px-3 py-2 bg-red bg-opacity-100 rounded-lg hover:bg-opacity-20 transition-all duration-300 text-light text-sm">
+                    <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"/>
+                    </svg>
+                    
+                </a>
             </div>
             
-            {# adsterra Native Banner #}
-            <div class="py-6">
-                <script async="async" data-cfasync="false" src="//pl25394580.profitablecpmrate.com/eab122b053e4ac0bfb8d0492fdcec2fd/invoke.js"></script>
-                <div id="container-eab122b053e4ac0bfb8d0492fdcec2fd"></div>
+            <div id="tierList">
+                <!-- Tier rows will be generated by JavaScript -->
             </div>
-            {# adsterra Native Banner #}
+            <div class="flex justify-between items-center gap-8">
+            <button class="add-tier-btn text-sm md:text-lg" onclick="addTier()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                Add New Tier
+            </button>
+
+            <button class="export-btn text-sm md:text-lg" onclick="exportImage()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Export Image
+            </button>
+            </div>
+
+            <div class="image-section">
+                <div class="image-pool" 
+                    id="imagePool"
+                    ondrop="handleDrop(event)" 
+                    ondragover="handleDragOver(event)"
+                    ondragleave="handleDragLeave(event)">
+                </div>
+                <div class="upload-section" onclick="triggerFileInput()">
+                    <p>Drag and drop images here or click to upload</p>
+                </div>
+                
+                {# adsterra Native Banner #}
+                <div class="py-6">
+                    <script async="async" data-cfasync="false" src="//pl25394580.profitablecpmrate.com/eab122b053e4ac0bfb8d0492fdcec2fd/invoke.js"></script>
+                    <div id="container-eab122b053e4ac0bfb8d0492fdcec2fd"></div>
+                </div>
+                {# adsterra Native Banner #}
+            </div>
+
         </div>
 
+        <div class="loading-overlay">
+            <div class="loading-spinner"></div>
+        </div>
+
+        <input type="file" id="imageInput" accept="image/*" multiple>
+
     </div>
+    
+    <div class="bg-purple bg-opacity-20 p-6 rounded-lg mb-8">
+        <h2 class="text-xl md:text-2xl font-bold mb-4 text-light">MiSide.im Fun Tool - Achievement Tier List Creator</h2>
+    
+        <img src="/assets/achievement-tierlist.jpeg" alt="MiSide Achievements Tier List" class="mb-6"/>
 
-    <div class="loading-overlay">
-        <div class="loading-spinner"></div>
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold text-light mb-3">Understanding Achievement Rankings</h3>
+            <p class="leading-relaxed">Achievement tier lists serve as a comprehensive way to categorize and evaluate gaming accomplishments based on their difficulty, rarity, and significance. For MiSide players, this tool offers a unique opportunity to analyze and discuss the various achievements available in the game, helping both newcomers and veterans understand which achievements to prioritize in their gaming journey.</p>
+        </div>
+        
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold text-light mb-3">The Value of Achievement Analysis</h3>
+            <p class="leading-relaxed">Creating achievement tier lists helps players in multiple ways: it provides insights into game progression, highlights particularly challenging or rewarding achievements, and helps players set meaningful goals. Whether you're a completionist aiming for 100% completion or a casual player looking to maximize your gaming experience, understanding achievement hierarchies can significantly enhance your gameplay strategy and enjoyment.</p>
+        </div>
+        
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold text-light mb-3">Tool Features & Capabilities</h3>
+            <ul class="list-none space-y-3">
+                <li class="flex items-start">
+                    <span class="text-pink-400 mr-2">✦</span>
+                    <span><strong class="text-light">Achievement Organization:</strong> Sort and categorize achievements based on various criteria such as difficulty, time investment, or personal preference. Create custom tiers to match your evaluation system.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-pink-400 mr-2">✦</span>
+                    <span><strong class="text-light">Visual Representation:</strong> Upload achievement icons or screenshots to create visually appealing and informative tier lists that are easy to understand and share.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-pink-400 mr-2">✦</span>
+                    <span><strong class="text-light">Flexible Customization:</strong> Adjust tier colors, labels, and layouts to create a personalized ranking system that best represents your achievement evaluation criteria.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-pink-400 mr-2">✦</span>
+                    <span><strong class="text-light">Community Sharing:</strong> Export your tier list as an image and share it across social media platforms to spark discussions and help other players plan their achievement hunting strategy.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-pink-400 mr-2">✦</span>
+                    <span><strong class="text-light">Progress Tracking:</strong> Use the tier list as a visual roadmap for your achievement hunting journey, helping you track completed achievements and plan future goals.</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="mb-6">
+            <h3 class="text-lg font-semibold text-light mb-3">Creating Your Achievement Tier List</h3>
+            <ol class="list-decimal list-inside space-y-2 leading-relaxed">
+                <li><strong class="text-light">Setup Your Tiers:</strong> Start with the default S/A/B/C tiers or create custom tiers that match your achievement evaluation criteria.</li>
+                <li><strong class="text-light">Add Achievement Images:</strong> Upload achievement icons or screenshots using the "Choose Files" button or drag-and-drop interface.</li>
+                <li><strong class="text-light">Organize & Evaluate:</strong> Drag achievements into appropriate tiers based on your assessment of their difficulty, value, or any other criteria you choose.</li>
+                <li><strong class="text-light">Refine Your List:</strong> Adjust tier colors and labels to create a clear visual hierarchy that reflects your achievement ranking system.</li>
+                <li><strong class="text-light">Share Your Insights:</strong> Export your completed tier list and share it with the MiSide community to contribute to achievement hunting discussions.</li>
+            </ol>
+        </div>
+        
+        <div class="bg-purple bg-opacity-30 p-4 rounded-lg">
+            <p class="text-light text-sm leading-relaxed">
+                <strong>Achievement Hunter's Tip:</strong> When ranking achievements, consider multiple factors such as time requirement, skill level needed, RNG elements, and overall satisfaction upon completion. Remember that achievement difficulty can be subjective - what's challenging for one player might be easier for another. Share your reasoning to help others understand your perspective and foster meaningful discussions within the community.
+            </p>
+        </div>
     </div>
-
-    <input type="file" id="imageInput" accept="image/*" multiple>
-
-</div>
+</main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 <script>
     // 初始化默认tier
@@ -860,7 +922,7 @@ layout: base.njk
             // 下载图片
             const link = document.createElement('a');
             const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-            link.download = `mita-tier-list-${timestamp}.png`;
+            link.download = `achievement-tier-list-${timestamp}.png`;
             link.href = canvas.toDataURL('image/png');
             link.click();
         } catch (error) {

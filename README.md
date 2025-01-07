@@ -52,7 +52,7 @@ MiSide is available on:
 - [Demo on itch.io](https://aihasto.itch.io/miside)
 
 For guides and community discussions:
-- MiSide: [miside.im](https://miside.im)
+- MiSide: [miside.im](https://link.zhihu.com/?target=https%3A%2F%2Fmiside.im)
 - MiSide Guides: [Walkthrough, Achievements and Endings](https://miside.im/blogentry/)
 - MiSide Characters: [The Mitas](https://miside.im/mita-miside-wiki/)
 

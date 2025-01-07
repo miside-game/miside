@@ -97,27 +97,6 @@ layout: base.njk
         </div>
     </section>
 
-
-    <section class="mt-32" id="gameplay">
-        <h2 class="text-2xl font-bold mb-2 text-center font-sg text-light">{{ translations.pages.index.gameplay.title }}</h2>
-        <p class="mb-10 opacity-75 text-md w-full md:w-2/3 mx-auto text-center">{{ translations.pages.index.gameplay.subtitle }}</p>
-        <div class="flex flex-col gap-8">
-            {% for feature in translations.pages.index.gameplay.content %}
-            <div class="relative mb-8 overflow-hidden rounded-lg flex flex-col md:flex-row md:h-72">
-                <div class="w-full md:w-1/2 {% if loop.index is even %}md:order-2{% endif %}">
-                    <img src="{{ feature.media.url }}" alt="{{ feature.media.alt }}" class="w-full h-64 md:h-full object-cover hover:scale-110 transition duration-300" title="{{ feature.media.title }}"/>
-                </div>
-                <div class="w-full md:w-1/2 bg-red bg-opacity-50 flex items-center justify-center {% if loop.index is even %}md:order-1{% endif %}">
-                    <div class="text-white p-8">
-                        <h3 class="text-xl font-bold mb-4 font-sg text-light">{{ feature.title }}</h3>
-                        <p class="text-md opacity-75">{{ feature.content }}</p>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </section>
-
     <section class="mt-32" id="mitas">
         <h2 class="text-2xl font-bold mb-2 text-center font-sg text-light">{{ translations.pages.index.mitas.title }}</h2>
         <p class="mb-10 opacity-75 text-md w-full md:w-2/3 mx-auto text-center">{{ translations.pages.index.mitas.subtitle }}</p>
@@ -203,6 +182,27 @@ layout: base.njk
                 
         </section>  
     </section>
+
+    <section class="mt-32" id="gameplay">
+        <h2 class="text-2xl font-bold mb-2 text-center font-sg text-light">{{ translations.pages.index.gameplay.title }}</h2>
+        <p class="mb-10 opacity-75 text-md w-full md:w-2/3 mx-auto text-center">{{ translations.pages.index.gameplay.subtitle }}</p>
+        <div class="flex flex-col gap-8">
+            {% for feature in translations.pages.index.gameplay.content %}
+            <div class="relative mb-8 overflow-hidden rounded-lg flex flex-col md:flex-row md:h-72">
+                <div class="w-full md:w-1/2 {% if loop.index is even %}md:order-2{% endif %}">
+                    <img src="{{ feature.media.url }}" alt="{{ feature.media.alt }}" class="w-full h-64 md:h-full object-cover hover:scale-110 transition duration-300" title="{{ feature.media.title }}"/>
+                </div>
+                <div class="w-full md:w-1/2 bg-red bg-opacity-50 flex items-center justify-center {% if loop.index is even %}md:order-1{% endif %}">
+                    <div class="text-white p-8">
+                        <h3 class="text-xl font-bold mb-4 font-sg text-light">{{ feature.title }}</h3>
+                        <p class="text-md opacity-75">{{ feature.content }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
 
     <section class="mt-32" id="features">
         <h2 class="text-2xl font-bold mb-2 text-center font-sg text-light">{{ translations.pages.index.ingame.title }}</h2>
