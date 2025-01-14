@@ -231,33 +231,48 @@
         "content": [
           {
             "name": "Horror Enthusiast",
-            "role": "Game Critic",
-            "content": "MiSide perfectly utilizes every element of the horror genre, particularly its audiovisuals. The tension-driven atmosphere and jarring aesthetics create a truly frightening experience."
+            "role": "GameSpace Reviewer",
+            "content": "MiSide masterfully blends kawaii aesthetics with horror elements, creating a deceptively friendly atmosphere that enhances the horror experience. The emotional spectrum is expertly explored, offering moments of laughter, fear, and tears."
           },
           {
             "name": "Visual Novel Expert",
-            "role": "Content Creator",
-            "content": "The blend of charming characters and surreal horror elements in MiSide is masterfully done. The ambiguous narrative encourages players to piece together events on their own."
+            "role": "Kotaku Writer",
+            "content": "MiSide has quickly gained popularity for good reason. Its unique blend of horror and visual novel elements, combined with charming mini-games and engaging character interactions, creates an experience that stands out in the genre."
           },
           {
             "name": "Adventure Gamer",
-            "role": "Veteran Player",
-            "content": "The gameplay mechanics in MiSide are reminiscent of classic adventure horror, with exploration and puzzle-solving being key components that keep you engaged."
+            "role": "Steam Community",
+            "content": "A perfect 4-5 hour experience that expertly balances horror segments with anime tropes and mini-games. The gameplay variety keeps you engaged throughout the entire journey."
           },
           {
             "name": "Sound Designer",
             "role": "Industry Professional",
-            "content": "The top-tier audiovisual experience in MiSide creates an unnerving atmosphere without overwhelming the player. The transition from warm melodies to eerie ambient sounds is particularly effective."
+            "content": "For a game made by just two people, the technical achievement is impressive. The graphics and sound design work together to create an atmosphere that's both charming and unsettling."
           },
           {
             "name": "Story Analyst",
-            "role": "Gaming Journalist",
-            "content": "Despite using the familiar trope of being sucked into a game, the story in MiSide remains engaging with compelling characters and excellent voice acting."
+            "role": "NeoGAF Contributor",
+            "content": "The effective blend of cute and scary elements in MiSide contributes to its overwhelmingly positive reception. The story is competently crafted, touching on important topics while maintaining player engagement."
           },
           {
             "name": "Technical Reviewer",
-            "role": "Game Tester",
-            "content": "While there are occasional bugs and pacing issues, the overall experience is polished with a variety of minigames and collectibles that add depth to gameplay."
+            "role": "ResetEra Member",
+            "content": "More than just a dating sim, MiSide offers a sincere experience that authentically reflects Japanese culture. The various gameplay elements are woven together seamlessly."
+          },
+          {
+            "name": "Cultural Critic",
+            "role": "Gaming Journalist",
+            "content": "The MiSide game is filled with clever references to other cultural works, adding layers of depth for attentive players. Its appeal crosses language barriers, resonating with audiences worldwide."
+          },
+          {
+            "name": "Streaming Personality",
+            "role": "Content Creator",
+            "content": "MiSide's popularity among streamers like Markiplier isn't surprising. The game's unpredictable nature and emotional depth create perfect moments for both reactions and meaningful discussions."
+          },
+          {
+            "name": "Player Experience Designer",
+            "role": "Game Developer",
+            "content": "The way MiSide breaks up its horror segments with mini-games and lighter moments is brilliant game design. It creates a rhythm that keeps players engaged while building tension effectively."
           }
         ]
       },
@@ -267,51 +282,59 @@
         "content": [
           {
             "question": "What is MiSide?",
-            "answer": "MiSide is an adventure game with horror elements that tells the story of a simple guy who mysteriously finds himself in a mobile simulation."
+            "answer": "MiSide is a psychological horror adventure game that blends first-person exploration with visual novel elements. Developed by Aihasto, it tells the story of an ordinary protagonist who mysteriously finds themselves trapped within a mobile simulation game."
           },
           {
             "question": "What kind of gameplay can I expect?",
-            "answer": "MiSide combines adventure horror with visual novel elements, featuring exploration, puzzle-solving, and character interactions. Players explore dark rooms, interact with objects, and make choices that affect the story's outcome."
+            "answer": "MiSide combines adventure horror with visual novel elements, featuring exploration, puzzle-solving, and character interactions. The game includes an original musical soundtrack that transitions from warm melodies to atmospheric ambient sounds, creating a unique gaming experience."
           },
           {
             "question": "What platforms is MiSide available on?",
-            "answer": "MiSide is available on Windows and can be downloaded from platforms like itch.io and Steam."
+            "answer": "MiSide is currently available for PC through Steam. A demo version is also available for players who want to try the game before purchasing."
           },
           {
-            "question": "How long is the average gameplay session?",
-            "answer": "The average session lasts about half an hour."
+            "question": "How long does it take to complete MiSide?",
+            "answer": "While individual play sessions might last about half an hour, the total completion time varies depending on your choices and exploration. The game features multiple endings, which adds to its replayability."
           },
           {
-            "question": "Is there voice acting in MiSide?",
-            "answer": "Yes, MiSide includes voice acting, currently available in Russian. This adds depth to character interactions and enhances the storytelling experience."
+            "question": "What languages are supported in MiSide?",
+            "answer": "MiSide supports multiple languages including English, Simplified Chinese (简体中文), Japanese (日本語), and Korean (한국어). The game features Russian voice acting, which enhances the storytelling experience."
           },
           {
-            "question": "Are there multiple endings?",
-            "answer": "Yes, player choices throughout the game lead to different endings, enhancing replayability."
+            "question": "How many endings are there in MiSide?",
+            "answer": "MiSide features three distinct endings that players can discover based on their choices throughout the game. This encourages multiple playthroughs to experience all possible outcomes."
           },
           {
-            "question": "How many achievements are there in MiSide?",
-            "answer": "MiSide features 26 achievements that players can unlock through various tasks during gameplay."
+            "question": "Can I customize anything in MiSide game?",
+            "answer": "While direct character customization is limited, you can unlock various outfits for Mita throughout the game, enhancing the visual experience and adding to the collectible aspects."
           },
           {
-            "question": "Can I replay chapters?",
-            "answer": "Yes, players can revisit chapters from the main menu after completing the game. This feature allows you to unlock achievements or explore different narrative paths."
+            "question": "Are there achievements to unlock?",
+            "answer": "Yes, MiSide features 26 achievements that players can unlock through various tasks during gameplay. These add an extra layer of challenge and reward for completionists."
           },
           {
-            "question": "Will there be more content added to MiSide?",
-            "answer": "Yes, updates are expected to include new content and features based on player feedback. "
+            "question": "Can I replay specific chapters?",
+            "answer": "Yes, after completing the MiSide game, you can revisit chapters from the main menu. This feature is particularly useful for unlocking achievements or exploring different narrative paths."
           },
           {
-            "question": "Is there a planned sequel for MiSide?",
-            "answer": "While specific details are not confirmed, there is interest from both players and developers for potential sequels or expansions. "
+            "question": "What are the key features of MiSide?",
+            "answer": "MiSide offers an engaging plot with unexpected story developments, original musical accompaniment that transitions from warm to atmospheric, unique characters, and various mini-games and puzzles that enhance the gameplay experience."
           },
           {
-            "question": "Is there controller support in MiSide?",
-            "answer": "The game has controller support, but it may be buggy. If you experience issues, try disconnecting the controller and restarting the game."
+            "question": "Is there controller support?",
+            "answer": "Yes, MiSide has controller support, but it may have some issues. If you experience problems like the game continuously moving to the right, try disconnecting the controller and restarting the game."
           },
           {
-            "question": "What should I do if the game keeps moving to the right?",
-            "answer": "This issue may occur if you have a controller plugged in. Disconnecting it and restarting the game can resolve the problem."
+            "question": "How can I get help if I encounter issues?",
+            "answer": "You can join the MiSide community on platforms like Discord or visit the Steam Community page to connect with other players. For technical issues, ensure your system is up to date and try verifying game files through Steam."
+          },
+          {
+            "question": "Will there be future updates for MiSide?",
+            "answer": "Yes, updates are planned to include new content and features based on player feedback. While specific details about sequels aren't confirmed, there is interest from both players and developers for potential expansions."
+          },
+          {
+            "question": "Is there a demo available?",
+            "answer": "Yes, a demo version of MiSide is available for players who wish to try the game before purchasing. This allows you to experience the game's unique blend of horror and visual novel elements firsthand."
           }
         ]
       }
@@ -333,6 +356,28 @@
       "description": "Explore the comprehensive MiSide guide to learn about the game's latest updates, player choices, multiple endings, and more.",
       "subtitle": "Latest MiSide Guides",
       "blogs": [
+        {
+          "name": "All MiSide Mini Games",
+          "date": "January 14, 2025",
+          "desc": "Explore the collection of mini games featured in MiSide. Get a detailed overview of each mini game.",
+          "path": "/blog/miside-mini-games/",
+          "media": {
+            "url": "/assets/mini.jpeg",
+            "alt": "MiSide Mini Games",
+            "title": "MiSide Mini Games"
+          }
+        },
+        {
+          "name": "Unlock All Mita Outfits",
+          "date": "January 14, 2025",
+          "desc": "Learn how to unlock all of Mita's outfits in MiSide. Discover the secrets to customizing your character's appearance.",
+          "path": "/blog/miside-mita-outfits/",
+          "media": {
+            "url": "/assets/mita-clothes.jpeg",
+            "alt": "MiSide Mita Outfits",
+            "title": "MiSide Mita Outfits"
+          }
+        },
         {
           "name": "All MiSide Achievements",
           "date": "January 5, 2025",
@@ -380,6 +425,30 @@
         "title": "MiSide Endings"
       }
     },
+    "miside-mini-games":{
+      "title": "All 16 MiSide Mini Games - MiSide Guide",
+      "description": "MiSide features a collection of mini games that players can play during gameplay. Here’s a detailed overview of each mini game:",
+      "articleTitle": "All 16 Mini Games in MiSide",
+      "date": "January 14, 2025",
+      "media": {
+        "url": "/assets/mini.jpeg",
+        "alt": "MiSide Mini Games",
+        "title": "MiSide Mini Games"
+      }
+    },
+
+    "miside-mita-outfits":{
+      "title": "Unlock All Mita Outfits - MiSide Guide",
+      "description": "In MiSide, players can unlock three unique outfits for Mita, enhancing her appearance throughout the game. Here’s a detailed overview of how to unlock these outfits:",
+      "articleTitle": "Unlock All Mita Outfits in MiSide",
+      "date": "January 14, 2025",
+      "media": {
+        "url": "/assets/mita-clothes.jpeg",
+        "alt": "MiSide Mita Clothes",
+        "title": "MiSide Mita Clothes"
+      }
+    },
+     
     "miside-achievements": {
       "title": "All MiSide Achievements - MiSide Guide",
       "description": "MiSide features 26 unique achievements that players can unlock through various tasks during gameplay. Here’s a detailed overview of each achievement:",
