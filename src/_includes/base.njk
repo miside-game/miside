@@ -103,6 +103,17 @@
           {% for item in translations.navigation.navbar %}
             <a href="{{ item.url | localizeUrl(currentLang) }}" class="nav-link hover:text-light hover:underline hover:decoration-2 hover:underline-offset-8">{{ item.title }}</a>
           {% endfor %}
+          <!-- Other Guides Dropdown -->
+          <div class="relative">
+            <button id="guides-button-miside" class="nav-link hover:text-light hover:underline hover:decoration-2 hover:underline-offset-8 flex items-center gap-1" onclick="document.getElementById('guides-menu-miside').classList.toggle('hidden')">
+              Other Guides ▾
+            </button>
+            <div id="guides-menu-miside" class="absolute shadow-md right-0 mt-2 w-52 bg-green bg-opacity-80 rounded shadow-lg hidden" style="z-index:9999;">
+              <a href="https://welcometothegame3.net/" target="_blank" class="block px-4 py-2 hover:bg-red hover:bg-opacity-100 text-sm">Welcome to the Game 3</a>
+              <a href="https://shift-at-midnight.com/" target="_blank" class="block px-4 py-2 hover:bg-red hover:bg-opacity-100 text-sm">Shift At Midnight</a>
+              <a href="https://theforgecalculator.net/" target="_blank" class="block px-4 py-2 hover:bg-red hover:bg-opacity-100 text-sm">The Forge Calculator</a>
+            </div>
+          </div>
           <!-- Language Dropdown -->
           {# <div class="relative">
             <button id="language-button" class="border border-red text-xs px-2 py-1 flex items-center space-x-1 hover:bg-red hover:bg-opacity-80 rounded-lg">
@@ -143,11 +154,14 @@
     </div>
 
   </header>
-<a href="https://welcometothegame3.net/" target="_blank" 
-   class="block w-full text-center py-3 md:py-3.5 font-bold text-sm md:text-base tracking-wide"
+<div 
+   class="block w-full text-center py-3 md:py-3.5 text-sm md:text-base tracking-wide"
    style="background: linear-gradient(90deg, #ff6b6b, #ffd93d, #6bcb77, #4d96ff, #ff6b6b); background-size: 200% auto; animation: promoBanner 4s linear infinite; color: #1a1a2e;">
-  📖 <span style="border-bottom: 2px solid rgba(255,255,255,0.6);">New Game Guide!</span> Welcome to the Game 3 — Full Walkthrough → 📖
-</a>
+  <span style="font-weight:700;">📖 New Game Guides</span>
+  <span style="margin:0 0.5rem;opacity:0.5;">|</span>
+  <a href="https://welcometothegame3.net/" target="_blank" style="display:inline-block;padding:0.2rem 0.6rem;margin:0.15rem;background:rgba(0,0,0,0.1);border-radius:3px;color:#1a1a2e;text-decoration:none;font-weight:700;">Welcome to the Game 3</a>
+  <a href="https://shift-at-midnight.com/" target="_blank" style="display:inline-block;padding:0.2rem 0.6rem;margin:0.15rem;background:rgba(0,0,0,0.1);border-radius:3px;color:#1a1a2e;text-decoration:none;font-weight:700;">Shift At Midnight</a>
+</div>
 <style>
   @keyframes promoBanner {
     0% { background-position: 0% center; }
