@@ -154,23 +154,45 @@
     </div>
 
   </header>
-<div 
-   class="block w-full text-center py-3 md:py-3.5 text-sm md:text-base tracking-wide"
-   style="background: linear-gradient(90deg, #ff6b6b, #ffd93d, #6bcb77, #4d96ff, #ff6b6b); background-size: 200% auto; animation: promoBanner 4s linear infinite; color: #1a1a2e;">
-  <span style="font-weight:700;">📖 New Game Guides</span>
-  <span style="margin:0 0.5rem;opacity:0.5;">|</span>
-  <a href="https://welcometothegame3.net/" target="_blank" style="display:inline-block;padding:0.2rem 0.6rem;margin:0.15rem;background:rgba(0,0,0,0.1);border-radius:3px;color:#1a1a2e;text-decoration:none;font-weight:700;">Welcome to the Game 3</a>
-  <a href="https://shift-at-midnight.com/" target="_blank" style="display:inline-block;padding:0.2rem 0.6rem;margin:0.15rem;background:rgba(0,0,0,0.1);border-radius:3px;color:#1a1a2e;text-decoration:none;font-weight:700;">Shift At Midnight</a>
-</div>
-<style>
-  @keyframes promoBanner {
-    0% { background-position: 0% center; }
-    100% { background-position: 200% center; }
-  }
-</style>  
-  {{ content | safe }}
 
-  <section class="bg-green bg-gradient-to-l from-green via-red to-green" id="download">
+{{ content | safe }}
+
+  <!-- Related Sites -->
+  <div style="max-width:900px;margin:2rem auto;padding:0 1rem;">
+    <div style="margin-bottom:1rem;text-align:center;font-size:0.8rem;font-weight:bold;color:var(--text-muted);text-transform:uppercase;letter-spacing:2px;">More Game Guides</div>
+    
+    <a href="https://endacopiagame.com/" target="_blank" style="display:block;border:1px solid #ff6b6b;border-radius:8px;padding:1rem 1.5rem;margin-bottom:0.5rem;background:rgba(255,107,107,0.05);text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='#ff4444';this.style.background='rgba(255,107,107,0.12)'" onmouseout="this.style.borderColor='#ff6b6b';this.style.background='rgba(255,107,107,0.05)'">
+      <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
+        <div style="flex:1;min-width:150px;">
+          <div style="font-weight:bold;color:#ff6b6b;font-size:0.95rem;">Endacopia Guide</div>
+          <div style="color:var(--text-secondary);font-size:0.8rem;">Walkthrough, call center, endings &amp; play online.</div>
+        </div>
+        <div style="color:#ff6b6b;font-size:0.8rem;font-weight:bold;">Visit →</div>
+      </div>
+    </a>
+    
+    <a href="https://shift-at-midnight.com/" target="_blank" style="display:block;border:1px solid #4d96ff;border-radius:8px;padding:1rem 1.5rem;margin-bottom:0.5rem;background:rgba(77,150,255,0.05);text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='#2d7fff';this.style.background='rgba(77,150,255,0.12)'" onmouseout="this.style.borderColor='#4d96ff';this.style.background='rgba(77,150,255,0.05)'">
+      <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
+        <div style="flex:1;min-width:150px;">
+          <div style="font-weight:bold;color:#4d96ff;font-size:0.95rem;">Shift At Midnight Guide</div>
+          <div style="color:var(--text-secondary);font-size:0.8rem;">Detective horror walkthrough, bosses &amp; co-op guide.</div>
+        </div>
+        <div style="color:#4d96ff;font-size:0.8rem;font-weight:bold;">Visit →</div>
+      </div>
+    </a>
+    
+    <a href="https://welcometothegame3.net/" target="_blank" style="display:block;border:1px solid #6bcb77;border-radius:8px;padding:1rem 1.5rem;margin-bottom:0.5rem;background:rgba(107,203,119,0.05);text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='#4ab85a';this.style.background='rgba(107,203,119,0.12)'" onmouseout="this.style.borderColor='#6bcb77';this.style.background='rgba(107,203,119,0.05)'">
+      <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
+        <div style="flex:1;min-width:150px;">
+          <div style="font-weight:bold;color:#6bcb77;font-size:0.95rem;">Welcome to the Game 3 Guide</div>
+          <div style="color:var(--text-secondary);font-size:0.8rem;">Deep web puzzles, endings &amp; secrets guide.</div>
+        </div>
+        <div style="color:#6bcb77;font-size:0.8rem;font-weight:bold;">Visit →</div>
+      </div>
+    </a>
+  </div>
+
+  <footer
     <div class="text-center p-8 rounded-lg text-yellow">
         <h2 class="text-2xl font-bold mb-2 font-sg text-light">{{ translations.cta.title }}</h2>
         <p class="mb-6 opacity-75 font-sg text-light bg-clip-text text-transparent bg-gradient-to-r from-light to-yellow">{{ translations.cta.description }}</p>
