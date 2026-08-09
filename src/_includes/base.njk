@@ -158,8 +158,8 @@
 {{ content | safe }}
 
   <!-- Related Sites -->
-  <div style="max-width:900px;margin:2rem auto;padding:0 1rem;">
-    <div style="margin-bottom:1rem;text-align:center;font-size:0.8rem;font-weight:bold;color:var(--text-muted);text-transform:uppercase;letter-spacing:2px;">More Game Guides</div>
+  <div style="max-width:900px;margin:2rem auto;padding:0 1rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:0.6rem;">
+    <div style="grid-column:1/-1;margin-bottom:1rem;text-align:center;font-size:0.8rem;font-weight:bold;color:var(--text-muted);text-transform:uppercase;letter-spacing:2px;">More Game Guides</div>
     
     <a href="https://howmanydudes.net/" target="_blank" style="display:block;border:1px solid #b07cff;border-radius:8px;padding:1rem 1.5rem;margin-bottom:0.5rem;background:rgba(176,124,255,0.05);text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='#9a5dff';this.style.background='rgba(176,124,255,0.12)'" onmouseout="this.style.borderColor='#b07cff';this.style.background='rgba(176,124,255,0.05)'">
       <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
@@ -201,7 +201,16 @@
         <div style="color:#6bcb77;font-size:0.8rem;font-weight:bold;">Visit →</div>
       </div>
     </a>
-  </div>
+      <a href="https://big-walk.net/" target="_blank" style="display:block;border:1px solid #4d96ff;border-radius:8px;padding:0.8rem 1.2rem;background:rgba(77,150,255,0.05);text-decoration:none;transition:all 0.2s;" onmouseover="this.style.borderColor='#2d7fff';this.style.background='rgba(77,150,255,0.12)'" onmouseout="this.style.borderColor='#4d96ff';this.style.background='rgba(77,150,255,0.05)'">
+      <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
+        <div style="flex:1;min-width:150px;">
+          <div style="font-weight:bold;color:#4d96ff;font-size:0.9rem;">Big Walk Guide</div>
+          <div style="color:var(--text-secondary);font-size:0.75rem;">Full walkthrough, puzzles, collectibles &amp; achievements.</div>
+        </div>
+        <div style="color:#4d96ff;font-size:0.8rem;font-weight:bold;">Visit &rarr;</div>
+      </div>
+    </a>
+</div>
 
   <footer
     <div class="text-center p-8 rounded-lg text-yellow">
